@@ -49,6 +49,10 @@
     ScrollTrigger.create({ trigger: el, start: "top 92%", once: true, onEnter: function () { gsap.to(o, { v: target, duration: 1.3, ease: "expo.out", onUpdate: function () { out.textContent = Math.round(o.v); } }); } });
   });
 
+  /* faculty band accent variety (harmonious gold/steel tones, all AA-readable) */
+  var BAND_ACC = ["--steel", "--steel-deep", "--gold-deep", "--steel", "--gold", "--steel-deep", "--gold"];
+  qsa(".fac-band").forEach(function (b, i) { b.style.setProperty("--accent", "var(" + BAND_ACC[i % BAND_ACC.length] + ")"); });
+
   /* smooth scroll + reveals (motion only) */
   var lenis = null, tickFn = null, tilts = [];
   var mm = gsap.matchMedia();

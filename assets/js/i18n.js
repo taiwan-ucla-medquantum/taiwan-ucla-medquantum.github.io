@@ -5,7 +5,7 @@
   "use strict";
   var ZH = {
     "nav.home":"首頁","nav.program":"計畫綱要","nav.curriculum":"九週課程","nav.faculty":"講者陣容","nav.delegation":"代表團","nav.journal":"影像日誌",
-    "rail.from":"台灣",
+    "rail.from":"台灣","field.med":"醫學","field.q":"量子",
 
     "foot.org1":"<span class=\"mono\">承辦單位</span> 亞洲大學",
     "foot.org2":"<span class=\"mono\">合作單位</span> 美東台美產業科技協會 TAITA-East",
