@@ -280,6 +280,18 @@ body[data-lang="zh"] .hero__title-en{display:none}
 .mediaband::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,12,34,.25),rgba(6,12,34,.55))}
 .mediaband__cap{position:absolute;left:var(--pad);bottom:1.1rem;font-family:var(--f-mono);font-size:.74rem;color:rgba(231,239,255,.8)}
 
+/* ---- Generative scene art (SVG, navy plates; consistent in both themes) ---- */
+.scene-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:clamp(.8rem,1.6vw,1.2rem)}
+.scene-plate{position:relative;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#070C1E;aspect-ratio:5/3;box-shadow:var(--card-shadow)}
+.scene-plate img{width:100%;height:100%;object-fit:cover}
+.scene-plate figcaption{position:absolute;left:.8rem;bottom:.6rem;font-family:var(--f-mono);font-size:.7rem;color:rgba(231,239,255,.82)}
+.scene-band{position:relative;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#070C1E;aspect-ratio:16/4.5;box-shadow:var(--card-shadow)}
+.scene-band img{width:100%;height:100%;object-fit:cover}
+.scene-band figcaption{position:absolute;left:1rem;bottom:.7rem;font-family:var(--f-mono);font-size:.72rem;color:rgba(231,239,255,.82)}
+@media (max-width:600px){.scene-band{aspect-ratio:16/8}}
+.signal-card__scene{border-radius:10px;overflow:hidden;margin-bottom:1rem;aspect-ratio:16/7;background:#070C1E;border:1px solid var(--line)}
+.signal-card__scene img{width:100%;height:100%;object-fit:cover}
+
 /* ---- Journal ---- */
 .journal-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,240px),1fr));gap:clamp(.8rem,1.6vw,1.1rem)}
 .journal-cell{aspect-ratio:4/3;border:1px solid var(--line);border-radius:12px;background:var(--bg-3);display:grid;place-items:center;font-family:var(--f-mono);font-size:.74rem;color:var(--ink-2);overflow:hidden}
