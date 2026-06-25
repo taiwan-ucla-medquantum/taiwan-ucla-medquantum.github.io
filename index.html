@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>UCLA Biomedical Engineering × Quantum Science Elite Program — 醫工量子：UCLA 菁英計畫</title>
+<meta name="description" content="The 60-Day Codex — official site of the 2026 UCLA Biomedical Engineering × Quantum Science Elite Program (I-9-11 醫工量子：UCLA 菁英計畫), a Taiwan Global Pathfinders Initiative delegation organized by Asia University at UCLA." />
+<meta name="theme-color" content="#14181C" />
+<meta property="og:title" content="UCLA Biomedical Engineering × Quantum Science Elite Program · 醫工量子：UCLA 菁英計畫" />
+<meta property="og:description" content="A 60-day quantum-medical field journal: 9 Taiwan delegates, 9 weeks at UCLA, summer 2026." />
+<meta property="og:type" content="website" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2314181C'/%3E%3Ccircle cx='16' cy='16' r='9' fill='none' stroke='%23F4F1E8' stroke-width='1.5'/%3E%3Ccircle cx='16' cy='16' r='2.5' fill='%23C8412B'/%3E%3Cline x1='16' y1='16' x2='23' y2='10' stroke='%23D98A2B' stroke-width='1.5'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&family=Noto+Serif+TC:wght@400;500;600&family=Noto+Sans+TC:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body data-lang="en">
+
+<a class="skip-link" href="#brief">Skip to content</a>
+
+<!-- ══ Top binding bar ══ -->
+<header class="bind" id="bind">
+  <a class="bind__mark" href="#cover" aria-label="I-9-11 · UCLA Biomedical Engineering × Quantum Science Elite Program — home">
+    <span class="bind__code">I-9-11</span>
+    <span class="bind__mark-zh" lang="zh-Hant">醫工量子</span>
+  </a>
+  <nav class="bind__nav" aria-label="Sections">
+    <a href="#brief"        data-i18n="nav.brief">Brief</a>
+    <a href="#themes"       data-i18n="nav.themes">Themes</a>
+    <a href="#codex"        data-i18n="nav.codex">Codex</a>
+    <a href="#daily"        data-i18n="nav.daily">A Day</a>
+    <a href="#faculty"      data-i18n="nav.faculty">Faculty</a>
+    <a href="#delegation"   data-i18n="nav.delegation">Delegation</a>
+  </nav>
+  <button class="lang-switch" id="lang-switch" type="button" aria-label="Switch language to Traditional Chinese" aria-pressed="false">
+    <span class="lang-switch__opt is-active" data-lang-opt="en">EN</span>
+    <span class="lang-switch__sep" aria-hidden="true">/</span>
+    <span class="lang-switch__opt" data-lang-opt="zh" lang="zh-Hant">中文</span>
+  </button>
+</header>
+
+<!-- ══ Persistent margin instrument (decorative; text equivalents provided) ══ -->
+<aside class="margin" id="margin" aria-hidden="true">
+  <div class="margin__head">
+    <span class="margin__now" id="margin-now">D00</span>
+    <span class="margin__total">/ D60</span>
+  </div>
+  <div class="margin__ruler" id="ruler"></div>
+  <svg class="margin__signal" id="signal" viewBox="0 0 60 1000" preserveAspectRatio="none" focusable="false">
+    <path id="signal-path" d="" fill="none" />
+  </svg>
+  <span class="margin__week" id="margin-week">W—</span>
+</aside>
+<p class="sr-only" id="progress-status" aria-live="polite"></p>
+
+<main id="main">
+
+  <!-- ════════ COVER ════════ -->
+  <section class="cover" id="cover" aria-labelledby="cover-title">
+    <p class="cover__overline" data-i18n="cover.overline">
+      Ministry of Education · Taiwan Global Pathfinders Initiative
+      <span lang="zh-Hant">（青年百億海外圓夢基金計畫 · 海外翱翔組）</span>
+    </p>
+
+    <div class="cover__grid">
+      <div class="cover__masthead">
+        <p class="cover__kicker mono">Project I-9-11 · Vol. 2026</p>
+        <h1 class="cover__title" id="cover-title">
+          <span class="cover__title-en">UCLA Biomedical Engineering <span class="cross" aria-hidden="true">×</span> Quantum Science Elite Program</span>
+          <span class="cover__title-zh" lang="zh-Hant">醫工量子：UCLA 菁英計畫</span>
+        </h1>
+        <p class="cover__colophon mono">
+          <span>60 Days</span><span aria-hidden="true">·</span><span>9 Delegates</span><span aria-hidden="true">·</span><span>9 Weeks</span><span aria-hidden="true">·</span><span>UCLA, Westwood</span>
+        </p>
+        <p class="cover__dates mono">2026 / 07 / 06 — 2026 / 09 / 03</p>
+
+        <div class="cover__core">
+          <canvas id="coherence-core" width="200" height="200" aria-hidden="true"></canvas>
+          <p class="cover__core-cap mono" id="core-caption">state: |ψ⟩ superposition</p>
+          <p class="cover__core-sub" data-i18n="cover.coreSub">Scroll to measure the program — 60 days resolve from potential into a defined schedule.</p>
+        </div>
+      </div>
+
+      <figure class="cover__plate">
+        <div class="plate plate--royce">
+          <img src="assets/img/royce-hall.jpg" alt="UCLA Royce Hall, the Italian Romanesque Revival twin-tower building on Dickson Court, the program's host campus." width="1920" height="1152" loading="eager" />
+        </div>
+        <figcaption class="mono" data-i18n="cover.plateCap">UCLA Royce Hall — host campus, Westwood, Los Angeles.</figcaption>
+      </figure>
+    </div>
+
+    <!-- Org imprint, in the banner's real hierarchy -->
+    <div class="imprint-strip" aria-label="Organizing institutions">
+      <div class="imprint-strip__row">
+        <div class="org">
+          <span class="org__role mono" data-i18n="org.organized">Organized by · 承辦單位</span>
+          <span class="org__name">Asia University <span lang="zh-Hant">亞洲大學</span></span>
+        </div>
+        <div class="org">
+          <span class="org__role mono" data-i18n="org.partner">Partner · 合作單位</span>
+          <span class="org__name">TAITA-East <span lang="zh-Hant">美東台美產業科技協會</span></span>
+        </div>
+        <div class="org">
+          <span class="org__role mono" data-i18n="org.academic">Academic Partner · 學術合作單位</span>
+          <span class="org__name">UCLA Center for Quantum Science &amp; Engineering (CQSE)</span>
+        </div>
+      </div>
+      <div class="imprint-strip__row imprint-strip__row--co">
+        <span class="org__role mono" data-i18n="org.co">Co-organized by · 學術合作單位</span>
+        <span class="org__name">UCLA Samueli School of Engineering · David Geffen School of Medicine at UCLA · UCLA Joe C. Wen School of Nursing</span>
+      </div>
+    </div>
+    <p class="cover__scrollcue mono" data-i18n="cover.scrollcue" aria-hidden="true">↓ begin · D01</p>
+  </section>
+
+  <!-- ════════ BRIEF ════════ -->
+  <section class="brief" id="brief" aria-labelledby="brief-title">
+    <div class="chapter-head">
+      <span class="chapter-head__band mono">Folio 01 · The Brief <span lang="zh-Hant">· 計畫綱要</span></span>
+      <h2 class="chapter-head__title" id="brief-title" data-i18n="brief.title">A field study at the edge of medicine and the quantum.</h2>
+    </div>
+    <div class="brief__body">
+      <p class="lede" data-i18n="brief.lede"><span class="dropcap">N</span>ine delegates from Taiwan spend sixty days at UCLA — from <strong>July 6 to September 3, 2026</strong> — reading the working edge where biomedical engineering meets quantum science. This site is their field journal: a record of nine weeks, the people who taught them, and the questions they carried home.</p>
+      <p data-i18n="brief.p2">The program is part of Taiwan's <strong>Youth Overseas Dream Fund (青年百億海外圓夢基金計畫)</strong>, the Taiwan Global Pathfinders Initiative run by the Ministry of Education's Youth Development Administration. It is organized by <strong>Asia University (亞洲大學)</strong> with partner <strong>TAITA-East (美東台美產業科技協會)</strong>, and hosted academically by the <strong>UCLA Center for Quantum Science &amp; Engineering (CQSE)</strong>, co-organized with UCLA Samueli Engineering, the David Geffen School of Medicine, and the UCLA Joe C. Wen School of Nursing.</p>
+      <p data-i18n="brief.p3">It is led by <strong>Professor Kang L. Wang (王康隆)</strong>, Distinguished Professor at UCLA and a director of CQSE. The delegation is small by design — nine students, mixed in age and discipline — so that every person presents, questions, and builds rather than spectates.</p>
+      <div class="published-under">
+        <p class="mono published-under__label" data-i18n="brief.publishedLabel">Published under</p>
+        <ul class="published-under__list mono">
+          <li>Taiwan MOE · Youth Development Administration</li>
+          <li>Asia University <span lang="zh-Hant">亞洲大學</span> — organizer</li>
+          <li>TAITA-East <span lang="zh-Hant">美東台美產業科技協會</span> — partner</li>
+          <li>UCLA CQSE — academic partner</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ THEMES ════════ -->
+  <section class="themes" id="themes" aria-labelledby="themes-title">
+    <div class="chapter-head">
+      <span class="chapter-head__band mono">Folio 02 · Four Signals <span lang="zh-Hant">· 四個主題</span></span>
+      <h2 class="chapter-head__title" id="themes-title" data-i18n="themes.title">Four fields, read honestly — and the legend for what follows.</h2>
+      <p class="chapter-head__note" data-i18n="themes.note">Each theme maps to a waveform that recurs in the margin as you read. Two are coloured for medicine, two for the quantum.</p>
+    </div>
+    <div class="themes__list">
+      <article class="folio" data-signal="spindle" data-key="green" tabindex="0" aria-label="Theme: AI and brain / neuroscience">
+        <div class="folio__index mono"><span>Field A</span><svg class="folio__wave" viewBox="0 0 120 40" aria-hidden="true"><path d="" /></svg></div>
+        <h3 class="folio__title" data-i18n="theme.brain.t">AI <span class="cross">×</span> Brain &amp; Neuroscience</h3>
+        <p class="folio__desc" data-i18n="theme.brain.d">The most clinically mature thread. Deep learning reads MRI/PET and, in 2025, the first blood test for Alzheimer's was cleared in the US — yet the field treats AI as decision-support, not autonomous diagnosis. Honest framing over hype.</p>
+        <p class="folio__tag mono">Medicine · EEG sleep-spindle</p>
+      </article>
+
+      <article class="folio" data-signal="mass" data-key="green" tabindex="0" aria-label="Theme: AI and drug discovery, including Traditional Chinese Medicine">
+        <div class="folio__index mono"><span>Field B</span><svg class="folio__wave" viewBox="0 0 120 40" aria-hidden="true"><path d="" /></svg></div>
+        <h3 class="folio__title" data-i18n="theme.drug.t">AI <span class="cross">×</span> Drug Discovery &amp; 中醫</h3>
+        <p class="folio__desc" data-i18n="theme.drug.d">AI is accelerating pre-clinical work and is now reaching into Traditional Chinese Medicine (中醫) through network pharmacology. As of 2025 no AI-discovered drug has reached market — the promise is real, the timeline sober.</p>
+        <p class="folio__tag mono">Medicine · mass-spectrum peaks</p>
+      </article>
+
+      <article class="folio" data-signal="diffraction" data-key="amber" tabindex="0" aria-label="Theme: quantum computing and molecular and drug prediction">
+        <div class="folio__index mono"><span>Field C</span><svg class="folio__wave" viewBox="0 0 120 40" aria-hidden="true"><path d="" /></svg></div>
+        <h3 class="folio__title" data-i18n="theme.qc.t">Quantum Computing <span class="cross">×</span> Molecular Prediction</h3>
+        <p class="folio__desc" data-i18n="theme.qc.d">The least mature, the most discussed. Today's noisy devices cannot yet model real pharmaceutical molecules; serious value is widely placed in the 2030s. We study where it genuinely helps — and where it does not yet.</p>
+        <p class="folio__tag mono">Quantum · diffraction comb</p>
+      </article>
+
+      <article class="folio" data-signal="coherence" data-key="amber" tabindex="0" aria-label="Theme: biomedical engineering and quantum convergence">
+        <div class="folio__index mono"><span>Field D</span><svg class="folio__wave" viewBox="0 0 120 40" aria-hidden="true"><path d="" /></svg></div>
+        <h3 class="folio__title" data-i18n="theme.conv.t">Biomedical Engineering <span class="cross">×</span> Quantum Convergence</h3>
+        <p class="folio__desc" data-i18n="theme.conv.d">The convergence is institutionalizing at top universities — quantum sensing for biomagnetic imaging, instrumentation, materials. Aspirational, early, and exactly the frontier this delegation is sent to read.</p>
+        <p class="folio__tag mono">Quantum · coherence</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ════════ CODEX — 9 weeks ════════ -->
+  <section class="codex" id="codex" aria-labelledby="codex-title">
+    <div class="chapter-head">
+      <span class="chapter-head__band mono">Folio 03 · The Codex <span lang="zh-Hant">· 九週課程</span></span>
+      <h2 class="chapter-head__title" id="codex-title" data-i18n="codex.title">Sixty days, nine weeks. Morning is input; afternoon is output.</h2>
+      <p class="chapter-head__note" data-i18n="codex.note">The page is split the way the days are: a morning measure of input on the left, an afternoon measure of output on the right, divided by the noon rule.</p>
+    </div>
+
+    <div class="codex__legend mono" aria-hidden="true">
+      <span><i class="dot dot--in"></i> <span data-i18n="codex.morning">Morning · input</span></span>
+      <span><i class="dot dot--out"></i> <span data-i18n="codex.afternoon">Afternoon · output</span></span>
+    </div>
+
+    <!-- W1 -->
+    <article class="chapter" id="w1" data-signal="interference" data-key="amber" data-week="1" data-day-start="1" data-day-end="5">
+      <div class="chapter__head">
+        <span class="chapter__band mono">W1 · 7/06–7/10 · D01–D05</span>
+        <h3 class="chapter__title" data-i18n="w1.t">Quantum Science, AI &amp; Data Analytics</h3>
+      </div>
+      <div class="io">
+        <div class="io__in">
+          <span class="io__label mono" data-i18n="io.input">Morning · Input</span>
+          <p data-i18n="w1.in">Arrival and orientation, then the move from everyday science into the quantum world — kissing photons, electrons, and the grammar shared by AI and biology. Foundations of quantum science and engineering. With KS Huang (黃光旭), Mark Gyure (UCLA CQSE), and William Yu (UCLA Anderson).</p>
+        </div>
+        <div class="io__rule" aria-hidden="true"><span class="io__noon mono">noon</span></div>
+        <div class="io__out">
+          <span class="io__label mono" data-i18n="io.output">Afternoon · Output</span>
+          <p class="deliverable" data-i18n="w1.out">A shared-vocabulary concept map across electrons, photons, quantum science and AI — closing with a three-minute teach-back.</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- W2 -->
+    <article class="chapter" id="w2" data-signal="sequencing" data-key="green" data-week="2" data-day-start="6" data-day-end="10">
+      <div class="chapter__head">
+        <span class="chapter__band mono">W2 · 7/13–7/17 · D06–D10</span>
+        <h3 class="chapter__title" data-i18n="w2.t">Biology, Bioscience &amp; Health Data</h3>
+      </div>
+      <div class="io">
+        <div class="io__in">
+          <span class="io__label mono" data-i18n="io.input">Morning · Input</span>
+          <p data-i18n="w2.in">Quantum science and technology for sensing, imaging, computing, communication, AI and biomedical applications — including terahertz electronics and photonics with Mona Jarrahi (UCLA).</p>
+        </div>
+        <div class="io__rule" aria-hidden="true"><span class="io__noon mono">noon</span></div>
+        <div class="io__out">
+          <span class="io__label mono" data-i18n="io.output">Afternoon · Output</span>
+          <p class="deliverable" data-i18n="w2.out">A future computer-system design that integrates electronics, photonics, quantum science and AI architecture.</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- W3 -->
+    <article class="chapter" id="w3" data-signal="spindle" data-key="green" data-week="3" data-day-start="11" data-day-end="15">
+      <div class="chapter__head">
+        <span class="chapter__band mono">W3 · 7/20–7/24 · D11–D15</span>
+        <h3 class="chapter__title" data-i18n="w3.t">Neuroscience &amp; Brain Research</h3>
+      </div>
+      <div class="io">
+        <div class="io__in">
+          <span class="io__label mono" data-i18n="io.input">Morning · Input</span>
+          <p data-i18n="w3.in">Neuroscience and engineering; neurobehavioral genetics and neurodegenerative disease with C.Y. Daniel Lee; future health technology with photons, electrons, quantum and AI; brain research and lab tours with Gina Poe (UCLA Brain Research Institute).</p>
+        </div>
+        <div class="io__rule" aria-hidden="true"><span class="io__noon mono">noon</span></div>
+        <div class="io__out">
+          <span class="io__label mono" data-i18n="io.output">Afternoon · Output</span>
+          <p class="deliverable" data-i18n="w3.out">A healthcare-sensing case: select one disease or societal problem and design a sensing or AI solution for it.</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- W4 -->
+    <article class="chapter" id="w4" data-signal="diffraction" data-key="amber" data-week="4" data-day-start="16" data-day-end="22">
+      <div class="chapter__head">
+        <span class="chapter__band mono">W4 · 7/27–7/31 · D16–D22</span>
+        <h3 class="chapter__title" data-i18n="w4.t">Quantum Science, Semiconductors &amp; Materials</h3>
+      </div>
+      <div class="io">
+        <div class="io__in">
+          <span class="io__label mono" data-i18n="io.input">Morning · Input</span>
+          <p data-i18n="w4.in">Quantum science and engineering with lab tours (Richard Ross); semiconductor technologies (Marko Sokolich); solar energy and materials science (Yang Yang); continued brain research with Gina Poe.</p>
+        </div>
+        <div class="io__rule" aria-hidden="true"><span class="io__noon mono">noon</span></div>
+        <div class="io__out">
+          <span class="io__label mono" data-i18n="io.output">Afternoon · Output</span>
+          <p class="deliverable" data-i18n="w4.out">A laboratory or technology case study on applications in quantum science, semiconductors, materials, or neuroscience.</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- W5 -->
+    <article class="chapter" id="w5" data-signal="mass" data-key="green" data-week="5" data-day-start="23" data-day-end="29">
+      <div class="chapter__head">
+        <span class="chapter__band mono">W5 · 8/03–8/07 · D23–D29</span>
+        <h3 class="chapter__title" data-i18n="w5.t">Medical Pharmacology, Nanotech &amp; Biomarkers</h3>
+      </div>
+      <div class="io">
+        <div class="io__in">
+          <span class="io__label mono" data-i18n="io.input">Morning · Input</span>
+          <p data-i18n="w5.in">A bridge workshop and vocabulary bootcamp, then nanotech, liquid biopsy, biomarkers and digital twins with Hsian-Rong Tseng (UCLA / David Geffen School of Medicine); data science for health and security with Yuan Tian; convergent bioscience and biomedical engineering.</p>
+        </div>
+        <div class="io__rule" aria-hidden="true"><span class="io__noon mono">noon</span></div>
+        <div class="io__out">
+          <span class="io__label mono" data-i18n="io.output">Afternoon · Output</span>
+          <p class="deliverable" data-i18n="w5.out">A biomarker or digital-twin mini-proposal — the problem, the data, the method, and the risks.</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- W6 -->
+    <article class="chapter" id="w6" data-signal="packet" data-key="amber" data-week="6" data-day-start="30" data-day-end="36">
+      <div class="chapter__head">
+        <span class="chapter__band mono">W6 · 8/10–8/14 · D30–D36</span>
+        <h3 class="chapter__title" data-i18n="w6.t">Digital Health &amp; Innovation</h3>
+      </div>
+      <div class="io">
+        <div class="io__in">
+          <span class="io__label mono" data-i18n="io.input">Morning · Input</span>
+          <p data-i18n="w6.in">Digital health and innovation with Bijan Najafi (UCLA / David Geffen School of Medicine); a data-visualization and storytelling skill lab; quantum systems to date with Kang Wang; superconducting quantum computing with Alan Ho (QoLab); immunology and regulatory T-cells with Li-Fan Lu (UC San Diego).</p>
+        </div>
+        <div class="io__rule" aria-hidden="true"><span class="io__noon mono">noon</span></div>
+        <div class="io__out">
+          <span class="io__label mono" data-i18n="io.output">Afternoon · Output</span>
+          <p class="deliverable" data-i18n="w6.out">A digital-health prototype — user journey, data flow, and ethics / privacy considerations.</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- W7 -->
+    <article class="chapter" id="w7" data-signal="pulse" data-key="green" data-week="7" data-day-start="37" data-day-end="43">
+      <div class="chapter__head">
+        <span class="chapter__band mono">W7 · 8/17–8/21 · D37–D43</span>
+        <h3 class="chapter__title" data-i18n="w7.t">Integrative &amp; Traditional Chinese Medicine</h3>
+      </div>
+      <div class="io">
+        <div class="io__in">
+          <span class="io__label mono" data-i18n="io.input">Morning · Input</span>
+          <p data-i18n="w7.in">Chinese medicine, integrative medicine, herbal medicine and acupuncture with Hung-Rong Yen (顏宏融, China Medical University); integrative East-West medicine with Ka-Kit Hui (UCLA Center for East-West Medicine); semiconductor and diamond technologies.</p>
+        </div>
+        <div class="io__rule" aria-hidden="true"><span class="io__noon mono">noon</span></div>
+        <div class="io__out">
+          <span class="io__label mono" data-i18n="io.output">Afternoon · Output</span>
+          <p class="deliverable" data-i18n="w7.out">An integrative-medicine evidence map — how traditional and modern medicine can inform and validate one another.</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- W8 -->
+    <article class="chapter" id="w8" data-signal="collapse" data-key="amber" data-week="8" data-day-start="44" data-day-end="50">
+      <div class="chapter__head">
+        <span class="chapter__band mono">W8 · 8/24–8/28 · D44–D50</span>
+        <h3 class="chapter__title" data-i18n="w8.t">Quantum Science / Applied Quantum</h3>
+      </div>
+      <div class="io">
+        <div class="io__in">
+          <span class="io__label mono" data-i18n="io.input">Morning · Input</span>
+          <p data-i18n="w8.in">Theoretical quantum neuromorphics with Robert Huang (Caltech); quantum platforms from hardware to algorithms; quantum information and applied quantum science.</p>
+        </div>
+        <div class="io__rule" aria-hidden="true"><span class="io__noon mono">noon</span></div>
+        <div class="io__out">
+          <span class="io__label mono" data-i18n="io.output">Afternoon · Output</span>
+          <p class="deliverable" data-i18n="w8.out">A final-project draft — research question, technical pathway, expected impact, and limitations.</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- W9 -->
+    <article class="chapter" id="w9" data-signal="decay" data-key="ink" data-week="9" data-day-start="51" data-day-end="60">
+      <div class="chapter__head">
+        <span class="chapter__band mono">W9 · 8/31–9/03 · D51–D60</span>
+        <h3 class="chapter__title" data-i18n="w9.t">Final Integration, Report &amp; Return</h3>
+      </div>
+      <div class="io">
+        <div class="io__in">
+          <span class="io__label mono" data-i18n="io.input">Morning · Input</span>
+          <p data-i18n="w9.in">Final-project rehearsals and peer review — rubric-based scoring, time management, and slide-story revision.</p>
+        </div>
+        <div class="io__rule" aria-hidden="true"><span class="io__noon mono">noon</span></div>
+        <div class="io__out">
+          <span class="io__label mono" data-i18n="io.output">Afternoon · Output</span>
+          <p class="deliverable" data-i18n="w9.out">The final symposium — full project presentation, individual reflection, final portfolio, and thank-you notes. Then the return to Taiwan.</p>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <!-- ════════ A DAY IN CROSS-SECTION ════════ -->
+  <section class="daily" id="daily" aria-labelledby="daily-title">
+    <div class="chapter-head">
+      <span class="chapter-head__band mono">Folio 04 · One Day, in Cross-section <span lang="zh-Hant">· 一日的剖面</span></span>
+      <h2 class="chapter-head__title" id="daily-title" data-i18n="daily.title">How a single day is built.</h2>
+    </div>
+    <ol class="day-figure">
+      <li class="day-step" data-fig="1">
+        <span class="day-step__fig mono">Fig. 1 · AM</span>
+        <h3 class="day-step__t" data-i18n="day.am.t">Morning — input</h3>
+        <p data-i18n="day.am.d">A faculty or speaker lecture, a laboratory visit, or a topic introduction. Take notes, record questions, prepare for the afternoon's output.</p>
+      </li>
+      <li class="day-step" data-fig="2">
+        <span class="day-step__fig mono">Fig. 2 · PM</span>
+        <h3 class="day-step__t" data-i18n="day.pm.t">Afternoon — output</h3>
+        <p data-i18n="day.pm.d">A daily teach-back: three groups present for eight to ten minutes each, then five minutes of Q&amp;A — explaining the day's learning in their own words. Then project studio.</p>
+      </li>
+      <li class="day-step" data-fig="3">
+        <span class="day-step__fig mono">Fig. 3 · Close</span>
+        <h3 class="day-step__t" data-i18n="day.close.t">Daily closing</h3>
+        <p data-i18n="day.close.d">A traceable learning log for each delegate: three takeaways, one still-confusing question, and one next step.</p>
+      </li>
+      <li class="day-step day-step--weekend" data-fig="4">
+        <span class="day-step__fig mono">Fig. 4 · Weekend</span>
+        <h3 class="day-step__t" data-i18n="day.weekend.t">Weekends</h3>
+        <p data-i18n="day.weekend.d">Self-guided city and innovation exploration, rest, and personal reflection. No formal output — not make-up class time.</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ════════ FACULTY ════════ -->
+  <section class="faculty" id="faculty" aria-labelledby="faculty-title">
+    <div class="chapter-head">
+      <span class="chapter-head__band mono">Folio 05 · Contributors <span lang="zh-Hant">· 講者陣容</span></span>
+      <h2 class="chapter-head__title" id="faculty-title" data-i18n="faculty.title">The people who teach the sixty days.</h2>
+      <p class="chapter-head__note" data-i18n="faculty.note">Visiting faculty and speakers, grouped by the discipline they bring — affiliations and research areas as verified from the program's speaker roster.</p>
+    </div>
+
+    <div class="faculty__lead">
+      <article class="plate-figure plate-figure--lead" tabindex="0">
+        <span class="plate-figure__fig mono">Fig. L</span>
+        <span class="plate-figure__monogram" aria-hidden="true">王</span>
+        <div class="plate-figure__body">
+          <h3 class="plate-figure__name">Kang L. Wang <span lang="zh-Hant">王康隆</span></h3>
+          <p class="plate-figure__role mono">Lead Professor · UCLA Samueli (ECE / MSE) · Director, CQSE</p>
+          <p class="plate-figure__areas" data-i18n="fac.wang">Quantum materials and devices, spintronics, topological insulators. Academia Sinica Academician; honorary director, Asia University Quantum AI Research Center.</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="faculty__band">
+      <h4 class="faculty__band-title mono" data-i18n="band.quantum">Quantum Science &amp; Engineering</h4>
+      <div class="faculty__grid">
+        <article class="plate-figure" tabindex="0"><span class="plate-figure__monogram" aria-hidden="true">MJ</span><div class="plate-figure__body"><h3 class="plate-figure__name">Mona Jarrahi</h3><p class="plate-figure__role mono">UCLA · Electrical &amp; Computer Engineering</p><p class="plate-figure__areas">Terahertz &amp; mm-wave electronics, optoelectronics, imaging; faculty director, UCLA Semiconductor Hub.</p></div></article>
+        <article class="plate-figure" tabindex="0"><span class="plate-figure__monogram" aria-hidden="true">RR</span><div class="plate-figure__body"><h3 class="plate-figure__name">Richard Ross</h3><p class="plate-figure__role mono">UCLA · MQST &amp; CQSE</p><p class="plate-figure__areas">Quantum science education and workforce; electron-spin qubit devices.</p></div></article>
+        <article class="plate-figure" tabindex="0"><span class="plate-figure__monogram" aria-hidden="true">MS</span><div class="plate-figure__body"><h3 class="plate-figure__name">Marko Sokolich</h3><p class="plate-figure__role mono">UCLA ECE · HRL Laboratories</p><p class="plate-figure__areas">Compound semiconductors, high-speed transistor &amp; process engineering, RF/microwave devices.</p></div></article>
+        <article class="plate-figure" tabindex="0"><span class="plate-figure__monogram" aria-hidden="true">YY</span><div class="plate-figure__body"><h3 class="plate-figure__name">Yang Yang</h3><p class="plate-figure__role mono">UCLA · Materials Science &amp; Engineering (Chair)</p><p class="plate-figure__areas">Functional electronic devices, solar cells, hybrid perovskites, organic semiconductors.</p></div></article>
+        <article class="plate-figure" tabindex="0"><span class="plate-figure__monogram" aria-hidden="true">RH</span><div class="plate-figure__body"><h3 class="plate-figure__name">Hsin-Yuan (Robert) Huang</h3><p class="plate-figure__role mono">Caltech · Theoretical Physics</p><p class="plate-figure__areas">Quantum information &amp; learning theory, quantum machine learning, complexity.</p></div></article>
+        <article class="plate-figure" tabindex="0"><span class="plate-figure__monogram" aria-hidden="true">黃</span><div class="plate-figure__body"><h3 class="plate-figure__name">KS Huang <span lang="zh-Hant">黃光旭</span></h3><p class="plate-figure__role mono">Program Chair Lecturer · Quantum &amp; AI Foundations</p><p class="plate-figure__areas">Quantum optical computing, cellular image processing, computing &amp; sensing.</p></div></article>
+      </div>
+    </div>
+
+    <div class="faculty__band">
+      <h4 class="faculty__band-title mono" data-i18n="band.neuro">Neuroscience &amp; Brain</h4>
+      <div class="faculty__grid">
+        <article class="plate-figure" tabindex="0"><span class="plate-figure__monogram" aria-hidden="true">GP</span><div class="plate-figure__body"><h3 class="plate-figure__name">Gina Poe</h3><p class="plate-figure__role mono">UCLA · Director, Brain Research Institute</p><p class="plate-figure__areas">Sleep and memory consolidation; brain resilience; integrative biology &amp; physiology.</p></div></article>
+        <article class="plate-figure" tabindex="0"><span class="plate-figure__monogram" aria-hidden="true">DL</span><div class="plate-figure__body"><h3 class="plate-figure__name">C.Y. Daniel Lee</h3><p class="plate-figure__role mono">UCLA · Neurobehavioral Genetics / Psychiatry</p><p class="plate-figure__areas">Neurodegeneration, Alzheimer's and Huntington's disease, neuroinflammation.</p></div></article>
+      </div>
+    </div>
+
+    <div class="faculty__band">
+      <h4 class="faculty__band-title mono" data-i18n="band.pharma">Pharmacology, Biomarkers &amp; Bioscience</h4>
+      <div class="faculty__grid">
+        <article class="plate-figure" tabindex="0"><span class="plate-figure__monogram" aria-hidden="true">HT</span><div class="plate-figure__body"><h3 class="plate-figure__name">Hsian-Rong Tseng</h3><p class="plate-figure__role mono">UCLA · David Geffen School of Medicine</p><p class="plate-figure__areas">Liquid biopsy, NanoVelcro circulating-tumor-cell assays, nanotechnology diagnostics.</p></div></article>
+        <article class="plate-figure" tabindex="0"><span class="plate-figure__monogram" aria-hidden="true">LL</span><div class="plate-figure__body"><h3 class="plate-figure__name">Li-Fan Lu</h3><p class="plate-figure__role mono">UC San Diego · Molecular Biology</p><p class="plate-figure__areas">Immunology, regulatory T-cells, immune tolerance, microRNAs in immune regulation.</p></div></article>
+      </div>
+    </div>
+
+    <div class="faculty__band">
+      <h4 class="faculty__band-title mono" data-i18n="band.digital">Digital Health &amp; Data</h4>
+      <div class="faculty__grid">
+        <article class="plate-figure" tabindex="0"><span class="plate-figure__monogram" aria-hidden="true">BN</span><div class="plate-figure__body"><h3 class="plate-figure__name">Bijan Najafi</h3><p class="plate-figure__role mono">UCLA · David Geffen School of Medicine (Surgery / CASIT)</p><p class="plate-figure__areas">Digital health, wearables, remote patient monitoring, data-driven care.</p></div></article>
+        <article class="plate-figure" tabindex="0"><span class="plate-figure__monogram" aria-hidden="true">YT</span><div class="plate-figure__body"><h3 class="plate-figure__name">Yuan Tian</h3><p class="plate-figure__role mono">UCLA · ECE &amp; Computer Science</p><p class="plate-figure__areas">AI security, data privacy, machine-learning security, privacy-preserving systems.</p></div></article>
+        <article class="plate-figure" tabindex="0"><span class="plate-figure__monogram" aria-hidden="true">WY</span><div class="plate-figure__body"><h3 class="plate-figure__name">William Yu</h3><p class="plate-figure__role mono">UCLA · Anderson Forecast</p><p class="plate-figure__areas">Economic modeling &amp; forecasting, time-series econometrics, data analytics.</p></div></article>
+      </div>
+    </div>
+
+    <div class="faculty__band">
+      <h4 class="faculty__band-title mono" data-i18n="band.integrative">Integrative &amp; Chinese Medicine</h4>
+      <div class="faculty__grid">
+        <article class="plate-figure" tabindex="0"><span class="plate-figure__monogram" aria-hidden="true">KH</span><div class="plate-figure__body"><h3 class="plate-figure__name">Ka-Kit Hui</h3><p class="plate-figure__role mono">UCLA · Founder &amp; Director, Center for East-West Medicine</p><p class="plate-figure__areas">Integrative East-West medicine, TCM integration, clinical pharmacology.</p></div></article>
+        <article class="plate-figure" tabindex="0"><span class="plate-figure__monogram" aria-hidden="true">顏</span><div class="plate-figure__body"><h3 class="plate-figure__name">Hung-Rong Yen <span lang="zh-Hant">顏宏融</span></h3><p class="plate-figure__role mono">China Medical University · Dean, College of Chinese Medicine</p><p class="plate-figure__areas">Chinese &amp; integrative medicine, herbal medicine, acupuncture, evidence-based traditional medicine.</p></div></article>
+      </div>
+    </div>
+
+    <div class="faculty__band">
+      <h4 class="faculty__band-title mono" data-i18n="band.program">Program Leadership · Taiwan</h4>
+      <div class="faculty__grid">
+        <article class="plate-figure" tabindex="0"><span class="plate-figure__monogram" aria-hidden="true">黃</span><div class="plate-figure__body"><h3 class="plate-figure__name">Kuan-Tsae Huang <span lang="zh-Hant">黃光彩</span></h3><p class="plate-figure__role mono">Asia University · Chair Professor, Director, AI &amp; Quantum Research Center</p><p class="plate-figure__areas">MIT PhD; former IBM Global Vice President; knowledge management; quantum-safe technology.</p></div></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ DELEGATION ════════ -->
+  <section class="delegation" id="delegation" aria-labelledby="deleg-title">
+    <div class="chapter-head">
+      <span class="chapter-head__band mono">Folio 06 · The Delegation <span lang="zh-Hant">· 九位學員</span></span>
+      <h2 class="chapter-head__title" id="deleg-title" data-i18n="deleg.title">Nine delegates. Three project groups.</h2>
+      <p class="chapter-head__note" data-i18n="deleg.note">The crew of nine, with home institutions. Project groups A, B and C run across the nine weeks.</p>
+    </div>
+
+    <ol class="manifest">
+      <li class="delegate" data-group="A"><span class="delegate__no mono">01 · A</span><h3 class="delegate__name">Chi-Wei Lee <span lang="zh-Hant">李騏維</span></h3><p class="delegate__school mono">National Tsing Hua University — Physics (Astrophysics) &amp; EECS</p></li>
+      <li class="delegate" data-group="A"><span class="delegate__no mono">02 · A</span><h3 class="delegate__name">Bo-Shan Wang <span lang="zh-Hant">王泊善</span></h3><p class="delegate__school mono">NYCU — Institute of Smart Medical-Electronic Engineering</p></li>
+      <li class="delegate" data-group="A"><span class="delegate__no mono">03 · A</span><h3 class="delegate__name">Chia-Yu Liu <span lang="zh-Hant">劉家瑜</span></h3><p class="delegate__school mono">Asia University — Audiology &amp; Speech-Language Pathology</p></li>
+      <li class="delegate" data-group="B"><span class="delegate__no mono">04 · B</span><h3 class="delegate__name">Ryan Chen <span lang="zh-Hant">陳融</span></h3><p class="delegate__school mono">University of Chicago — Applied Data Science</p></li>
+      <li class="delegate" data-group="B"><span class="delegate__no mono">05 · B</span><h3 class="delegate__name">David Chan Hsieh <span lang="zh-Hant">解展維</span></h3><p class="delegate__school mono">MacKay Medical College — School of Medicine</p></li>
+      <li class="delegate" data-group="B"><span class="delegate__no mono">06 · B</span><h3 class="delegate__name">Yu-Hsuan Tung <span lang="zh-Hant">董育瑄</span></h3><p class="delegate__school mono" data-i18n="deleg.independent">Independent delegate</p></li>
+      <li class="delegate" data-group="C"><span class="delegate__no mono">07 · C</span><h3 class="delegate__name">Tiffany Jia-Yi Pan <span lang="zh-Hant">潘家怡</span></h3><p class="delegate__school mono">University of Toronto — Pharmacology (MSc)</p></li>
+      <li class="delegate" data-group="C"><span class="delegate__no mono">08 · C</span><h3 class="delegate__name">Cho-Ming Lee <span lang="zh-Hant">李卓明</span></h3><p class="delegate__school mono">National Taiwan University — College of Medicine, Physiology</p></li>
+      <li class="delegate" data-group="C"><span class="delegate__no mono">09 · C</span><h3 class="delegate__name">I-Han Cheng <span lang="zh-Hant">鄭伊涵</span></h3><p class="delegate__school mono">University of Oxford — PhD candidate</p></li>
+    </ol>
+
+    <div class="accompanying">
+      <p class="mono accompanying__label" data-i18n="deleg.staff">Accompanying faculty · 隨團教師</p>
+      <p class="accompanying__names">Dean Hung-Rong Yen <span lang="zh-Hant">顏宏融 院長</span> · Prof. Ka-Lok Ng <span lang="zh-Hant">吳家樂 老師</span></p>
+    </div>
+  </section>
+
+  <!-- ════════ IMPRINT / FOOTER ════════ -->
+  <footer class="imprint" id="imprint">
+    <div class="imprint__close">
+      <p class="imprint__state mono" id="imprint-state">state: measured · program defined</p>
+      <p class="imprint__dates mono">2026 / 07 / 06 — 2026 / 09 / 03 · 9 weeks · 60 days</p>
+    </div>
+    <div class="imprint__org">
+      <p class="imprint__overline mono">Taiwan Global Pathfinders Initiative · <span lang="zh-Hant">青年百億海外圓夢基金計畫</span></p>
+      <p class="imprint__line"><span class="mono" data-i18n="org.organized">Organized by · 承辦單位</span> Asia University 亞洲大學</p>
+      <p class="imprint__line"><span class="mono" data-i18n="org.partner">Partner · 合作單位</span> TAITA-East 美東台美產業科技協會</p>
+      <p class="imprint__line"><span class="mono" data-i18n="org.academic">Academic Partner · 學術合作單位</span> UCLA CQSE</p>
+      <p class="imprint__line"><span class="mono" data-i18n="org.co">Co-organized by · 學術合作單位</span> UCLA Samueli · David Geffen School of Medicine · UCLA Joe C. Wen School of Nursing</p>
+    </div>
+    <div class="imprint__logos" aria-label="Institution logos">
+      <img src="assets/img/moe.png" alt="Ministry of Education, Taiwan" loading="lazy" />
+      <img src="assets/img/asia-university.png" alt="Asia University" loading="lazy" />
+      <img src="assets/img/ucla-wordmark.svg" alt="UCLA" loading="lazy" />
+      <img src="assets/img/ucla-cqse.png" alt="UCLA Center for Quantum Science and Engineering" loading="lazy" />
+      <img src="assets/img/ucla-samueli.svg" alt="UCLA Samueli School of Engineering" loading="lazy" />
+      <img src="assets/img/ucla-geffen-medicine.svg" alt="David Geffen School of Medicine at UCLA" loading="lazy" />
+      <img src="assets/img/ucla-nursing.svg" alt="UCLA Joe C. Wen School of Nursing" loading="lazy" />
+    </div>
+    <div class="imprint__fine">
+      <p data-i18n="imprint.note">A student-built field journal for the I-9-11 delegation. Program details may be adjusted by the program team. Content reflects the 2026 syllabus and verified speaker roster.</p>
+      <p class="imprint__credit mono">Royce Hall photograph: Beyond My Ken, CC BY-SA 4.0, via Wikimedia Commons. Institution logos are the trademarks of their respective owners.</p>
+      <p class="imprint__sign mono">Vol. 2026 · The 60-Day Codex · UCLA × 亞洲大學</p>
+    </div>
+  </footer>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="assets/js/i18n.js" defer></script>
+<script src="assets/js/coherence-core.js" defer></script>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
