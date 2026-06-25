@@ -1,48 +1,41 @@
-/* ── Shared chrome ──
-   Injects nav (7 pages + lang + hamburger), the measurement rail, and the
-   footer into every page (buildless, no fetch). Runs before i18n.js so the
-   [data-i18n] nodes it creates get captured/translated.                        */
+/* ── Shared chrome: progress bar, nav (theme + lang + burger), footer ──
+   Buildless, injected per page. Runs before i18n.js so its [data-i18n] nodes
+   get captured/translated.                                                     */
 (function () {
   "use strict";
   var page = document.body.getAttribute("data-page") || "home";
-  var NAV = [
-    ["home", "index.html", "Home"], ["program", "program.html", "Program"],
-    ["curriculum", "curriculum.html", "Curriculum"], ["faculty", "faculty.html", "Faculty"],
-    ["delegation", "delegation.html", "Delegation"], ["journal", "journal.html", "Journal"]
-  ];
-  var links = NAV.map(function (n) {
-    return '<a class="nav__link" href="' + n[1] + '" data-i18n="nav.' + n[0] + '"' +
-      (n[0] === page ? ' aria-current="page"' : '') + '>' + n[2] + '</a>';
-  }).join("");
+  var NAV = [["home","index.html","Home"],["program","program.html","Program"],["curriculum","curriculum.html","Curriculum"],
+    ["faculty","faculty.html","Faculty"],["delegation","delegation.html","Delegation"],["journal","journal.html","Journal"]];
+  var links = NAV.map(function (n) { return '<a class="nav__link" href="' + n[1] + '" data-i18n="nav.' + n[0] + '"' + (n[0] === page ? ' aria-current="page"' : '') + '>' + n[2] + '</a>'; }).join("");
+
+  var sun = '<svg class="theme-day" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>';
+  var moon = '<svg class="theme-night" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>';
+
+  var prog = document.createElement("div"); prog.className = "progress"; prog.id = "progress"; prog.setAttribute("aria-hidden", "true");
 
   var nav = document.createElement("header");
   nav.className = "nav"; nav.id = "nav";
   nav.innerHTML =
-    '<a class="nav__brand" href="index.html" aria-label="I-9-11 醫工量子：UCLA 菁英計畫 — home"><b>I-9-11</b><span lang="zh-Hant">醫工量子</span></a>' +
+    '<a class="nav__brand" href="index.html" aria-label="I-9-11 醫工量子：UCLA 菁英計畫 · home"><b>I-9-11</b><span lang="zh-Hant">醫工量子</span></a>' +
     '<nav class="nav__links" aria-label="Primary">' + links + '</nav>' +
-    '<button class="nav__lang" id="lang-switch" type="button" aria-pressed="false" aria-label="Switch language to Traditional Chinese">' +
-      '<span class="o on" data-lang-opt="en">EN</span><span aria-hidden="true">/</span><span class="o" data-lang-opt="zh" lang="zh-Hant">中文</span></button>' +
-    '<button class="nav__burger" id="nav-burger" type="button" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>';
-
-  var rail = document.createElement("aside");
-  rail.className = "rail"; rail.id = "rail"; rail.setAttribute("aria-hidden", "true");
-  rail.innerHTML =
-    '<div class="rail__now"><b id="rail-now">D00</b><span>/ D60</span></div>' +
-    '<div class="rail__ruler" id="ruler"></div>' +
-    '<svg class="rail__signal" id="signal" viewBox="0 0 60 1000" preserveAspectRatio="none" focusable="false"><path id="signal-path" d=""/></svg>' +
-    '<span class="rail__week" id="rail-week">W—</span>';
+    '<div class="nav__tools">' +
+      '<button class="iconbtn" id="theme-switch" type="button" aria-label="Toggle day / night theme">' + sun + moon + '</button>' +
+      '<button class="nav__lang" id="lang-switch" type="button" aria-pressed="false" aria-label="Switch language to Traditional Chinese"><span class="o on" data-lang-opt="en">EN</span><span aria-hidden="true">/</span><span class="o" data-lang-opt="zh" lang="zh-Hant">中文</span></button>' +
+      '<button class="nav__burger" id="nav-burger" type="button" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>' +
+    '</div>';
 
   var foot = document.createElement("footer");
   foot.className = "foot";
   foot.innerHTML =
     '<div class="foot__grid">' +
-      '<p class="foot__state" id="foot-state">state: measured · program defined</p>' +
-      '<p class="foot__line mono" style="color:var(--paper-dim)">2026 / 07 / 06 — 2026 / 09 / 03 · 9 weeks · 60 days</p>' +
+      '<p class="foot__line mono" id="foot-state" style="color:var(--accent)">state: measured · program defined</p>' +
+      '<p class="foot__line mono">2026.07.06 – 09.03 · 9 weeks · 60 days · UCLA Westwood</p>' +
       '<div>' +
-        '<p class="foot__line"><span class="mono" data-i18n="org.organized">Organized by · 承辦單位</span> Asia University 亞洲大學</p>' +
-        '<p class="foot__line"><span class="mono" data-i18n="org.partner">Partner · 合作單位</span> TAITA-East 美東台美產業科技協會</p>' +
-        '<p class="foot__line"><span class="mono" data-i18n="org.academic">Academic Partner · 學術合作單位</span> UCLA CQSE</p>' +
-        '<p class="foot__line"><span class="mono" data-i18n="org.co">Co-organized by · 學術合作單位</span> UCLA Samueli · David Geffen School of Medicine · UCLA Joe C. Wen School of Nursing</p>' +
+        '<p class="foot__line" data-i18n="foot.org1"><span class="mono">Organized by</span> Asia University</p>' +
+        '<p class="foot__line" data-i18n="foot.org2"><span class="mono">Partner</span> TAITA-East</p>' +
+        '<p class="foot__line" data-i18n="foot.org3"><span class="mono">Academic partner</span> UCLA Center for Quantum Science &amp; Engineering (CQSE)</p>' +
+        '<p class="foot__line" data-i18n="foot.org4"><span class="mono">Co-organized by</span> UCLA Samueli · David Geffen School of Medicine · UCLA Joe C. Wen School of Nursing</p>' +
+        '<p class="foot__line" data-i18n="foot.initiative"><span class="mono">Under</span> Taiwan Global Pathfinders Initiative（青年百億海外圓夢基金計畫）</p>' +
       '</div>' +
       '<div class="logos" aria-label="Institution logos">' +
         '<img src="assets/img/moe.png" alt="Ministry of Education, Taiwan" loading="lazy">' +
@@ -58,21 +51,25 @@
         '<a href="curriculum.html" data-i18n="nav.curriculum">Curriculum</a><a href="faculty.html" data-i18n="nav.faculty">Faculty</a>' +
         '<a href="delegation.html" data-i18n="nav.delegation">Delegation</a><a href="journal.html" data-i18n="nav.journal">Journal</a>' +
       '</nav>' +
-      '<p class="foot__fine" data-i18n="imprint.note">A student-built field-journal site for the I-9-11 delegation. Program details may be adjusted by the program team. Content reflects the 2026 syllabus and verified speaker roster.</p>' +
-      '<p class="foot__fine">Royce Hall photograph: Beyond My Ken, CC BY-SA 4.0, via Wikimedia Commons. Institution logos are the trademarks of their respective owners. · Vol. 2026 · UCLA × 亞洲大學</p>' +
+      '<p class="foot__fine" data-i18n="imprint.note">Student-built site for the I-9-11 delegation. Program details may be adjusted by the program team. Content reflects the 2026 syllabus and verified speaker roster.</p>' +
+      '<p class="foot__fine">Photos: Royce Hall, Powell Library &amp; MRI by Beyond My Ken / Ptrump16 (CC BY-SA 4.0); UCLA aerial by Alfred Twu &amp; LA skyline (CC0); IBM Quantum System One by Onri Jay Benally (CC BY 4.0); headshots of K. Wang &amp; M. Jarrahi (Wikimedia Commons). Logos are trademarks of their owners. Via Wikimedia Commons.</p>' +
     '</div>';
 
   var pageEl = document.querySelector(".page");
-  if (pageEl) { document.body.insertBefore(nav, pageEl); document.body.insertBefore(rail, pageEl); }
-  else { document.body.insertBefore(rail, document.body.firstChild); document.body.insertBefore(nav, document.body.firstChild); }
+  document.body.insertBefore(prog, document.body.firstChild);
+  if (pageEl) { document.body.insertBefore(nav, pageEl); } else { document.body.insertBefore(nav, document.body.firstChild.nextSibling); }
   document.body.appendChild(foot);
 
+  // theme toggle
+  var tbtn = document.getElementById("theme-switch");
+  tbtn.addEventListener("click", function () {
+    var night = document.documentElement.getAttribute("data-theme") === "night";
+    if (night) { document.documentElement.removeAttribute("data-theme"); } else { document.documentElement.setAttribute("data-theme", "night"); }
+    try { localStorage.setItem("ucla-theme", night ? "day" : "night"); } catch (e) {}
+  });
+
+  // burger
   var burger = document.getElementById("nav-burger");
-  burger.addEventListener("click", function () {
-    var open = nav.classList.toggle("open");
-    burger.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  nav.querySelectorAll(".nav__link").forEach(function (a) {
-    a.addEventListener("click", function () { nav.classList.remove("open"); burger.setAttribute("aria-expanded", "false"); });
-  });
+  burger.addEventListener("click", function () { var o = nav.classList.toggle("open"); burger.setAttribute("aria-expanded", o ? "true" : "false"); });
+  nav.querySelectorAll(".nav__link").forEach(function (a) { a.addEventListener("click", function () { nav.classList.remove("open"); burger.setAttribute("aria-expanded", "false"); }); });
 })();

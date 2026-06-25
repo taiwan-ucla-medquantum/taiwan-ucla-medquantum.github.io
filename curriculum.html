@@ -3,144 +3,158 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Curriculum · 九週課程 — UCLA 醫工量子菁英計畫</title>
-<meta name="description" content="The nine-week curriculum (D01–D60) of the UCLA Biomedical Engineering × Quantum Science Elite Program: weekly themes, real speakers, and the morning-input / afternoon-output deliverables." />
-<meta name="theme-color" content="#050A1A" />
-<meta property="og:title" content="Curriculum · 九週課程 — UCLA 醫工量子菁英計畫" /><meta property="og:type" content="website" />
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23050A1A'/%3E%3Ccircle cx='16' cy='16' r='9' fill='none' stroke='%2338E1E6' stroke-width='1.4'/%3E%3Ccircle cx='16' cy='16' r='2.4' fill='%23FBB615'/%3E%3Cline x1='16' y1='16' x2='23' y2='10' stroke='%23FBB615' stroke-width='1.4'/%3E%3C/svg%3E" />
+<title>Curriculum · 九週課程 · UCLA 醫工量子菁英計畫</title>
+<meta name="description" content="The nine-week curriculum (D01–D60): weekly themes, real speakers, and the morning-input / afternoon-output deliverables, on a vertical timeline." />
+<meta name="theme-color" content="#FAFBFD" />
+<meta property="og:title" content="Curriculum · 九週課程" /><meta property="og:type" content="website" />
+<script>try{if(localStorage.getItem('ucla-theme')==='night')document.documentElement.setAttribute('data-theme','night')}catch(e){}</script>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230E1E4A'/%3E%3Ccircle cx='16' cy='16' r='9' fill='none' stroke='%2338E1E6' stroke-width='1.5'/%3E%3Ccircle cx='16' cy='16' r='2.6' fill='%23FBB615'/%3E%3Cline x1='16' y1='16' x2='23' y2='10' stroke='%23FBB615' stroke-width='1.5'/%3E%3C/svg%3E" />
 <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="preconnect" href="https://api.fontshare.com" crossorigin /><link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
 <link href="https://api.fontshare.com/v2/css?f%5B%5D=clash-display@400,500,600,700&display=swap" rel="stylesheet" />
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.3.24/dist/lenis.css" />
 <link rel="stylesheet" href="assets/css/main.css" />
 </head>
 <body data-lang="en" data-page="curriculum">
 <a class="skip-link" href="#main">Skip to content</a>
-<canvas id="lattice" aria-hidden="true"></canvas>
-
 <div class="page">
 <main id="main">
+
+  <section class="hero hero--page">
+    <div class="hero__media"><img src="assets/img/powell.jpg" alt="" loading="eager" /></div>
+    <div class="hero__inner">
+      <p class="hero__eyebrow"><span class="dot" aria-hidden="true"></span>D01 → D60 · 2026.07.06 – 09.03</p>
+      <h1 class="hero__title" data-i18n="page.curriculum">Nine Weeks</h1>
+    </div>
+  </section>
 
   <section class="section">
     <div class="wrap">
       <div class="section__head">
-        <span class="klabel"><span class="n">03</span> The Codex · 九週課程</span>
+        <span class="klabel"><span class="n">03</span> <span data-i18n="lbl.codex">Curriculum</span></span>
         <h2 class="section__title" data-i18n="curriculum.title">Sixty days, nine weeks. Morning is input; afternoon is output.</h2>
-        <p class="section__note" data-i18n="curriculum.note">The page splits the way the days do: morning input on the left, afternoon output on the right, divided by the noon rule. Horizontal on desktop, a vertical ladder on mobile.</p>
+        <p class="section__note" data-i18n="curriculum.note">One stop per week, down the timeline. Morning input on the left, afternoon output on the right.</p>
       </div>
-      <div class="tl-legend mono"><span><i class="in"></i>Morning · input</span><span><i class="out"></i>Afternoon · output</span></div>
-    </div>
-  </section>
 
-  <section class="section timeline" style="padding-top:0">
-    <div class="track">
+      <div class="vtimeline">
 
-      <article class="week-panel" data-key="quantum" data-signal="interference">
-        <span class="week-panel__band mono">W1 · 7/06–7/10 · D01–D05</span>
-        <h3 class="week-panel__title" data-i18n="w1.t">Quantum Science, AI &amp; Data Analytics</h3>
-        <div class="io">
-          <div class="io__in"><span class="io__label" data-i18n="io.input">Morning · Input</span><p data-i18n="w1.in">Arrival and orientation, then the move from everyday science into the quantum world — kissing photons, electrons, and the grammar shared by AI and biology. With KS Huang (黃光旭), Mark Gyure (UCLA CQSE), and William Yu (UCLA Anderson).</p></div>
-          <div class="io__rule" aria-hidden="true"><span class="noon mono">noon</span></div>
-          <div class="io__out"><span class="io__label" data-i18n="io.output">Afternoon · Output</span><p class="deliverable" data-i18n="w1.out">A shared-vocabulary concept map across electrons, photons, quantum science and AI — closing with a three-minute teach-back.</p></div>
+        <div class="vt-item" data-key="quantum">
+          <div class="vt-node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="2.2"/><ellipse cx="12" cy="12" rx="10" ry="4.3"/><ellipse cx="12" cy="12" rx="10" ry="4.3" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4.3" transform="rotate(120 12 12)"/></svg></div>
+          <div class="vt-card">
+            <span class="vt-band mono">W1 · 7/06–7/10 · D01–D05</span>
+            <h3 class="vt-title" data-i18n="w1.t">Quantum Science, AI &amp; Data Analytics</h3>
+            <div class="vt-io">
+              <div class="vt-io__col"><span class="lab"><b data-i18n="io.input">Morning · Input</b></span><p data-i18n="w1.in">Arrival and orientation, then everyday science into the quantum world: photons, electrons, and the language shared by AI and biology. With KS Huang (黃光旭), Mark Gyure (UCLA CQSE), William Yu (UCLA Anderson).</p></div>
+              <div class="vt-io__col"><span class="lab"><b data-i18n="io.output">Afternoon · Output</b></span><p data-i18n="w1.out">A shared-vocabulary concept map across electrons, photons, quantum and AI, closing with a three-minute teach-back.</p></div>
+            </div>
+          </div>
         </div>
-      </article>
 
-      <article class="week-panel" data-key="medicine" data-signal="sequencing">
-        <span class="week-panel__band mono">W2 · 7/13–7/17 · D06–D10</span>
-        <h3 class="week-panel__title" data-i18n="w2.t">Biology, Bioscience &amp; Health Data</h3>
-        <div class="io">
-          <div class="io__in"><span class="io__label" data-i18n="io.input">Morning · Input</span><p data-i18n="w2.in">Quantum science and technology for sensing, imaging, computing, communication, AI and biomedical applications — including terahertz electronics and photonics with Mona Jarrahi (UCLA).</p></div>
-          <div class="io__rule" aria-hidden="true"><span class="noon mono">noon</span></div>
-          <div class="io__out"><span class="io__label" data-i18n="io.output">Afternoon · Output</span><p class="deliverable" data-i18n="w2.out">A future computer-system design that integrates electronics, photonics, quantum science and AI architecture.</p></div>
+        <div class="vt-item" data-key="medicine">
+          <div class="vt-node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 15V9M8 17V7M12 19V5M16 16V8M20 13v-2"/></svg></div>
+          <div class="vt-card">
+            <span class="vt-band mono">W2 · 7/13–7/17 · D06–D10</span>
+            <h3 class="vt-title" data-i18n="w2.t">Biology, Bioscience &amp; Health Data</h3>
+            <div class="vt-io">
+              <div class="vt-io__col"><span class="lab"><b data-i18n="io.input">Morning · Input</b></span><p data-i18n="w2.in">Quantum science and technology for sensing, imaging, computing, communication, AI and biomedical applications, with terahertz electronics and photonics (Mona Jarrahi, UCLA).</p></div>
+              <div class="vt-io__col"><span class="lab"><b data-i18n="io.output">Afternoon · Output</b></span><p data-i18n="w2.out">A future computer-system design integrating electronics, photonics, quantum and AI architecture.</p></div>
+            </div>
+          </div>
         </div>
-      </article>
 
-      <article class="week-panel" data-key="medicine" data-signal="spindle">
-        <span class="week-panel__band mono">W3 · 7/20–7/24 · D11–D15</span>
-        <h3 class="week-panel__title" data-i18n="w3.t">Neuroscience &amp; Brain Research</h3>
-        <div class="io">
-          <div class="io__in"><span class="io__label" data-i18n="io.input">Morning · Input</span><p data-i18n="w3.in">Neuroscience and engineering; neurobehavioral genetics and neurodegenerative disease with C.Y. Daniel Lee; future health technology with photons, electrons, quantum and AI; brain research and lab tours with Gina Poe (UCLA Brain Research Institute).</p></div>
-          <div class="io__rule" aria-hidden="true"><span class="noon mono">noon</span></div>
-          <div class="io__out"><span class="io__label" data-i18n="io.output">Afternoon · Output</span><p class="deliverable" data-i18n="w3.out">A healthcare-sensing case: select one disease or societal problem and design a sensing or AI solution for it.</p></div>
+        <div class="vt-item" data-key="medicine">
+          <div class="vt-node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h3l2 5 3.5-11 2.5 8 1.5-3h5.5"/></svg></div>
+          <div class="vt-card">
+            <span class="vt-band mono">W3 · 7/20–7/24 · D11–D15</span>
+            <h3 class="vt-title" data-i18n="w3.t">Neuroscience &amp; Brain Research</h3>
+            <div class="vt-io">
+              <div class="vt-io__col"><span class="lab"><b data-i18n="io.input">Morning · Input</b></span><p data-i18n="w3.in">Neuroscience and engineering; neurobehavioral genetics and neurodegenerative disease (C.Y. Daniel Lee); brain research and lab tours (Gina Poe, UCLA Brain Research Institute).</p></div>
+              <div class="vt-io__col"><span class="lab"><b data-i18n="io.output">Afternoon · Output</b></span><p data-i18n="w3.out">A healthcare-sensing case: select one disease or societal problem and design a sensing or AI solution.</p></div>
+            </div>
+          </div>
         </div>
-      </article>
 
-      <article class="week-panel" data-key="gold" data-signal="diffraction">
-        <span class="week-panel__band mono">W4 · 7/27–7/31 · D16–D22</span>
-        <h3 class="week-panel__title" data-i18n="w4.t">Quantum Science, Semiconductors &amp; Materials</h3>
-        <div class="io">
-          <div class="io__in"><span class="io__label" data-i18n="io.input">Morning · Input</span><p data-i18n="w4.in">Quantum science and engineering with lab tours (Richard Ross); semiconductor technologies (Marko Sokolich); solar energy and materials science (Yang Yang); continued brain research with Gina Poe.</p></div>
-          <div class="io__rule" aria-hidden="true"><span class="noon mono">noon</span></div>
-          <div class="io__out"><span class="io__label" data-i18n="io.output">Afternoon · Output</span><p class="deliverable" data-i18n="w4.out">A laboratory or technology case study on applications in quantum science, semiconductors, materials, or neuroscience.</p></div>
+        <div class="vt-item" data-key="gold">
+          <div class="vt-node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="7" width="10" height="10" rx="1.2"/><path d="M10 4v3M14 4v3M10 17v3M14 17v3M4 10h3M4 14h3M17 10h3M17 14h3"/></svg></div>
+          <div class="vt-card">
+            <span class="vt-band mono">W4 · 7/27–7/31 · D16–D22</span>
+            <h3 class="vt-title" data-i18n="w4.t">Quantum Science, Semiconductors &amp; Materials</h3>
+            <div class="vt-io">
+              <div class="vt-io__col"><span class="lab"><b data-i18n="io.input">Morning · Input</b></span><p data-i18n="w4.in">Quantum science and engineering with lab tours (Richard Ross); semiconductor technologies (Marko Sokolich); solar energy and materials science (Yang Yang).</p></div>
+              <div class="vt-io__col"><span class="lab"><b data-i18n="io.output">Afternoon · Output</b></span><p data-i18n="w4.out">A lab or technology case study on applications in quantum, semiconductors, materials, or neuroscience.</p></div>
+            </div>
+          </div>
         </div>
-      </article>
 
-      <article class="week-panel" data-key="medicine" data-signal="mass">
-        <span class="week-panel__band mono">W5 · 8/03–8/07 · D23–D29</span>
-        <h3 class="week-panel__title" data-i18n="w5.t">Medical Pharmacology, Nanotech &amp; Biomarkers</h3>
-        <div class="io">
-          <div class="io__in"><span class="io__label" data-i18n="io.input">Morning · Input</span><p data-i18n="w5.in">A bridge workshop and vocabulary bootcamp, then nanotech, liquid biopsy, biomarkers and digital twins with Hsian-Rong Tseng (UCLA / David Geffen School of Medicine); data science for health and security with Yuan Tian; convergent bioscience and biomedical engineering.</p></div>
-          <div class="io__rule" aria-hidden="true"><span class="noon mono">noon</span></div>
-          <div class="io__out"><span class="io__label" data-i18n="io.output">Afternoon · Output</span><p class="deliverable" data-i18n="w5.out">A biomarker or digital-twin mini-proposal — the problem, the data, the method, and the risks.</p></div>
+        <div class="vt-item" data-key="medicine">
+          <div class="vt-node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6M10 3v5L5 17a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-9V3"/><path d="M7.5 13h9"/></svg></div>
+          <div class="vt-card">
+            <span class="vt-band mono">W5 · 8/03–8/07 · D23–D29</span>
+            <h3 class="vt-title" data-i18n="w5.t">Medical Pharmacology, Nanotech &amp; Biomarkers</h3>
+            <div class="vt-io">
+              <div class="vt-io__col"><span class="lab"><b data-i18n="io.input">Morning · Input</b></span><p data-i18n="w5.in">A bridge workshop and vocabulary bootcamp; nanotech, liquid biopsy, biomarkers and digital twins (Hsian-Rong Tseng, UCLA / David Geffen School of Medicine); data science for health and security (Yuan Tian).</p></div>
+              <div class="vt-io__col"><span class="lab"><b data-i18n="io.output">Afternoon · Output</b></span><p data-i18n="w5.out">A biomarker or digital-twin mini-proposal: the problem, the data, the method, the risks.</p></div>
+            </div>
+          </div>
         </div>
-      </article>
 
-      <article class="week-panel" data-key="gold" data-signal="packet">
-        <span class="week-panel__band mono">W6 · 8/10–8/14 · D30–D36</span>
-        <h3 class="week-panel__title" data-i18n="w6.t">Digital Health &amp; Innovation</h3>
-        <div class="io">
-          <div class="io__in"><span class="io__label" data-i18n="io.input">Morning · Input</span><p data-i18n="w6.in">Digital health and innovation with Bijan Najafi (UCLA / David Geffen School of Medicine); a data-visualization and storytelling skill lab; quantum systems to date with Kang Wang; superconducting quantum computing with Alan Ho (QoLab); immunology and regulatory T-cells with Li-Fan Lu (UC San Diego).</p></div>
-          <div class="io__rule" aria-hidden="true"><span class="noon mono">noon</span></div>
-          <div class="io__out"><span class="io__label" data-i18n="io.output">Afternoon · Output</span><p class="deliverable" data-i18n="w6.out">A digital-health prototype — user journey, data flow, and ethics / privacy considerations.</p></div>
+        <div class="vt-item" data-key="gold">
+          <div class="vt-node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 13h4l2 4 3-9 2 6h7"/><path d="M5 20h14"/></svg></div>
+          <div class="vt-card">
+            <span class="vt-band mono">W6 · 8/10–8/14 · D30–D36</span>
+            <h3 class="vt-title" data-i18n="w6.t">Digital Health &amp; Innovation</h3>
+            <div class="vt-io">
+              <div class="vt-io__col"><span class="lab"><b data-i18n="io.input">Morning · Input</b></span><p data-i18n="w6.in">Digital health and innovation (Bijan Najafi, UCLA / David Geffen School of Medicine); a data-visualization lab; quantum systems to date (Kang Wang); superconducting quantum computing (Alan Ho, QoLab); immunology and regulatory T-cells (Li-Fan Lu, UC San Diego).</p></div>
+              <div class="vt-io__col"><span class="lab"><b data-i18n="io.output">Afternoon · Output</b></span><p data-i18n="w6.out">A digital-health prototype: user journey, data flow, and ethics and privacy considerations.</p></div>
+            </div>
+          </div>
         </div>
-      </article>
 
-      <article class="week-panel" data-key="medicine" data-signal="pulse">
-        <span class="week-panel__band mono">W7 · 8/17–8/21 · D37–D43</span>
-        <h3 class="week-panel__title" data-i18n="w7.t">Integrative &amp; Traditional Chinese Medicine</h3>
-        <div class="io">
-          <div class="io__in"><span class="io__label" data-i18n="io.input">Morning · Input</span><p data-i18n="w7.in">Chinese medicine, integrative medicine, herbal medicine and acupuncture with Hung-Rong Yen (顏宏融, China Medical University); integrative East-West medicine with Ka-Kit Hui (UCLA Center for East-West Medicine); semiconductor and diamond technologies.</p></div>
-          <div class="io__rule" aria-hidden="true"><span class="noon mono">noon</span></div>
-          <div class="io__out"><span class="io__label" data-i18n="io.output">Afternoon · Output</span><p class="deliverable" data-i18n="w7.out">An integrative-medicine evidence map — how traditional and modern medicine can inform and validate one another.</p></div>
+        <div class="vt-item" data-key="medicine">
+          <div class="vt-node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M11 21c-5 0-8-3-8-8 0-6 5-10 18-10 0 11-5 18-10 18z"/><path d="M5 19c4-7 9-10 14-11"/></svg></div>
+          <div class="vt-card">
+            <span class="vt-band mono">W7 · 8/17–8/21 · D37–D43</span>
+            <h3 class="vt-title" data-i18n="w7.t">Integrative &amp; Traditional Chinese Medicine</h3>
+            <div class="vt-io">
+              <div class="vt-io__col"><span class="lab"><b data-i18n="io.input">Morning · Input</b></span><p data-i18n="w7.in">Chinese medicine, integrative medicine, herbal medicine and acupuncture (Hung-Rong Yen 顏宏融, China Medical University); integrative East-West medicine (Ka-Kit Hui, UCLA Center for East-West Medicine).</p></div>
+              <div class="vt-io__col"><span class="lab"><b data-i18n="io.output">Afternoon · Output</b></span><p data-i18n="w7.out">An integrative-medicine evidence map: how traditional and modern medicine can inform and validate one another.</p></div>
+            </div>
+          </div>
         </div>
-      </article>
 
-      <article class="week-panel" data-key="gold" data-signal="collapse">
-        <span class="week-panel__band mono">W8 · 8/24–8/28 · D44–D50</span>
-        <h3 class="week-panel__title" data-i18n="w8.t">Quantum Science / Applied Quantum</h3>
-        <div class="io">
-          <div class="io__in"><span class="io__label" data-i18n="io.input">Morning · Input</span><p data-i18n="w8.in">Theoretical quantum neuromorphics with Robert Huang (Caltech); quantum platforms from hardware to algorithms; quantum information and applied quantum science.</p></div>
-          <div class="io__rule" aria-hidden="true"><span class="noon mono">noon</span></div>
-          <div class="io__out"><span class="io__label" data-i18n="io.output">Afternoon · Output</span><p class="deliverable" data-i18n="w8.out">A final-project draft — research question, technical pathway, expected impact, and limitations.</p></div>
+        <div class="vt-item" data-key="gold">
+          <div class="vt-node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="2.6"/><ellipse cx="12" cy="12" rx="10" ry="4.5" transform="rotate(30 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4.5" transform="rotate(-30 12 12)"/></svg></div>
+          <div class="vt-card">
+            <span class="vt-band mono">W8 · 8/24–8/28 · D44–D50</span>
+            <h3 class="vt-title" data-i18n="w8.t">Quantum Science / Applied Quantum</h3>
+            <div class="vt-io">
+              <div class="vt-io__col"><span class="lab"><b data-i18n="io.input">Morning · Input</b></span><p data-i18n="w8.in">Theoretical quantum neuromorphics (Robert Huang, Caltech); quantum platforms from hardware to algorithms; quantum information and applied quantum science.</p></div>
+              <div class="vt-io__col"><span class="lab"><b data-i18n="io.output">Afternoon · Output</b></span><p data-i18n="w8.out">A final-project draft: research question, technical pathway, expected impact, and limitations.</p></div>
+            </div>
+          </div>
         </div>
-      </article>
 
-      <article class="week-panel" data-key="ink" data-signal="decay">
-        <span class="week-panel__band mono">W9 · 8/31–9/03 · D51–D60</span>
-        <h3 class="week-panel__title" data-i18n="w9.t">Final Integration, Report &amp; Return</h3>
-        <div class="io">
-          <div class="io__in"><span class="io__label" data-i18n="io.input">Morning · Input</span><p data-i18n="w9.in">Final-project rehearsals and peer review — rubric-based scoring, time management, and slide-story revision.</p></div>
-          <div class="io__rule" aria-hidden="true"><span class="noon mono">noon</span></div>
-          <div class="io__out"><span class="io__label" data-i18n="io.output">Afternoon · Output</span><p class="deliverable" data-i18n="w9.out">The final symposium — full project presentation, individual reflection, final portfolio, and thank-you notes. Then the return to Taiwan.</p></div>
+        <div class="vt-item" data-key="ink">
+          <div class="vt-node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 21V4M5 4h12l-2 4 2 4H5"/></svg></div>
+          <div class="vt-card">
+            <span class="vt-band mono">W9 · 8/31–9/03 · D51–D60</span>
+            <h3 class="vt-title" data-i18n="w9.t">Final Integration, Report &amp; Return</h3>
+            <div class="vt-io">
+              <div class="vt-io__col"><span class="lab"><b data-i18n="io.input">Morning · Input</b></span><p data-i18n="w9.in">Final-project rehearsals and peer review: rubric scoring, time management, slide revision.</p></div>
+              <div class="vt-io__col"><span class="lab"><b data-i18n="io.output">Afternoon · Output</b></span><p data-i18n="w9.out">The final symposium: full presentation, individual reflection, portfolio, and thank-you notes. Then the return to Taiwan.</p></div>
+            </div>
+          </div>
         </div>
-      </article>
 
-    </div>
-  </section>
-
-  <section class="section" style="padding-top:0">
-    <div class="wrap">
-      <div class="cta-row" style="display:flex;flex-wrap:wrap;gap:.8rem">
-        <a class="btn btn--gold" href="faculty.html"><span data-i18n="cta.faculty">Meet the faculty</span> <span class="arr" aria-hidden="true">→</span></a>
-        <a class="btn btn--ghost" href="delegation.html"><span data-i18n="cta.delegation">The delegation</span></a>
       </div>
+
+      <div class="cta-row" style="margin-top:2rem"><a class="btn btn--gold" href="faculty.html"><span data-i18n="cta.faculty">Meet the faculty</span> <span class="arr" aria-hidden="true">→</span></a></div>
     </div>
   </section>
 
 </main>
 </div>
-
 <script src="assets/js/chrome.js" defer></script>
 <script src="assets/js/i18n.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>

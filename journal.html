@@ -3,33 +3,53 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Journal · 影像日誌 — UCLA 醫工量子菁英計畫</title>
-<meta name="description" content="Field log of the UCLA Biomedical Engineering × Quantum Science Elite Program — a media-team photo journal of the 60 days, to be filled during summer 2026." />
-<meta name="theme-color" content="#050A1A" />
-<meta property="og:title" content="Journal · 影像日誌 — UCLA 醫工量子菁英計畫" /><meta property="og:type" content="website" />
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23050A1A'/%3E%3Ccircle cx='16' cy='16' r='9' fill='none' stroke='%2338E1E6' stroke-width='1.4'/%3E%3Ccircle cx='16' cy='16' r='2.4' fill='%23FBB615'/%3E%3Cline x1='16' y1='16' x2='23' y2='10' stroke='%23FBB615' stroke-width='1.4'/%3E%3C/svg%3E" />
+<title>Journal · 影像日誌 · UCLA 醫工量子菁英計畫</title>
+<meta name="description" content="A media-team photo journal of the 60 days, with the program's UCLA venues. To be filled during summer 2026." />
+<meta name="theme-color" content="#FAFBFD" />
+<meta property="og:title" content="Journal · 影像日誌" /><meta property="og:type" content="website" />
+<script>try{if(localStorage.getItem('ucla-theme')==='night')document.documentElement.setAttribute('data-theme','night')}catch(e){}</script>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230E1E4A'/%3E%3Ccircle cx='16' cy='16' r='9' fill='none' stroke='%2338E1E6' stroke-width='1.5'/%3E%3Ccircle cx='16' cy='16' r='2.6' fill='%23FBB615'/%3E%3Cline x1='16' y1='16' x2='23' y2='10' stroke='%23FBB615' stroke-width='1.5'/%3E%3C/svg%3E" />
 <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="preconnect" href="https://api.fontshare.com" crossorigin /><link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
 <link href="https://api.fontshare.com/v2/css?f%5B%5D=clash-display@400,500,600,700&display=swap" rel="stylesheet" />
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.3.24/dist/lenis.css" />
 <link rel="stylesheet" href="assets/css/main.css" />
 </head>
 <body data-lang="en" data-page="journal">
 <a class="skip-link" href="#main">Skip to content</a>
-<canvas id="lattice" aria-hidden="true"></canvas>
-
 <div class="page">
 <main id="main">
+
+  <section class="hero hero--page">
+    <div class="hero__media"><img src="assets/img/quantum.jpg" alt="" loading="eager" /></div>
+    <div class="hero__inner">
+      <p class="hero__eyebrow"><span class="dot" aria-hidden="true"></span>media team · D01–D60</p>
+      <h1 class="hero__title" data-i18n="page.journal">Field Log</h1>
+    </div>
+  </section>
+
   <section class="section">
     <div class="wrap">
       <div class="section__head">
-        <span class="klabel"><span class="n">07</span> Field Log · 影像日誌</span>
+        <span class="klabel"><span class="n">07</span> <span data-i18n="lbl.fieldlog">Field Log</span></span>
         <h2 class="section__title" data-i18n="journal.title">Field log.</h2>
-        <p class="section__note" data-i18n="journal.note">The media team will document the sixty days in photographs and short clips. This page holds the layout — real images drop in once the program begins.</p>
-        <p class="mono" style="margin-top:1rem;color:var(--cyan-400)" data-i18n="journal.state">state: pending capture · D01–D60</p>
+        <p class="section__note" data-i18n="journal.note">The media team will document the sixty days in photographs and short clips. This page holds the layout; real images drop in once the program begins.</p>
+        <p class="mono" style="margin-top:.9rem;color:var(--accent)" data-i18n="journal.state">state: pending capture · D01–D60</p>
       </div>
-      <!-- Media slots: drop assets/img/gen/journal-NN.webp here post-program (aspect-ratio locked → 0 CLS). -->
+
+      <h3 class="fac-band__title" style="margin-bottom:1rem">Venues &amp; context</h3>
+      <div class="journal-grid" style="margin-bottom:2.4rem">
+        <div class="journal-cell"><img src="assets/img/royce-hall.jpg" alt="UCLA Royce Hall" loading="lazy"></div>
+        <div class="journal-cell"><img src="assets/img/powell.jpg" alt="UCLA Powell Library" loading="lazy"></div>
+        <div class="journal-cell"><img src="assets/img/ucla-aerial.jpg" alt="UCLA campus aerial" loading="lazy"></div>
+        <div class="journal-cell"><img src="assets/img/quantum.jpg" alt="A quantum computer" loading="lazy"></div>
+        <div class="journal-cell"><img src="assets/img/mri.jpg" alt="An MRI scanner" loading="lazy"></div>
+        <div class="journal-cell"><img src="assets/img/la-dusk.jpg" alt="Los Angeles skyline at dusk" loading="lazy"></div>
+      </div>
+
+      <h3 class="fac-band__title" style="margin-bottom:1rem">Weeks · pending capture</h3>
+      <!-- Drop assets/img/gen/journal-NN.webp into these cells post-program (aspect-ratio locked → 0 CLS). -->
       <div class="journal-grid">
         <div class="journal-cell">W1 · D01–D05</div>
         <div class="journal-cell">W2 · D06–D10</div>
@@ -43,9 +63,9 @@
       </div>
     </div>
   </section>
+
 </main>
 </div>
-
 <script src="assets/js/chrome.js" defer></script>
 <script src="assets/js/i18n.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>

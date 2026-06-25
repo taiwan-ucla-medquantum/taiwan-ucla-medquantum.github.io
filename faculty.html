@@ -3,101 +3,119 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Faculty · 講者陣容 — UCLA 醫工量子菁英計畫</title>
-<meta name="description" content="Visiting faculty and speakers of the UCLA Biomedical Engineering × Quantum Science Elite Program, grouped by discipline — affiliations and research areas from the verified speaker roster." />
-<meta name="theme-color" content="#050A1A" />
-<meta property="og:title" content="Faculty · 講者陣容 — UCLA 醫工量子菁英計畫" /><meta property="og:type" content="website" />
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23050A1A'/%3E%3Ccircle cx='16' cy='16' r='9' fill='none' stroke='%2338E1E6' stroke-width='1.4'/%3E%3Ccircle cx='16' cy='16' r='2.4' fill='%23FBB615'/%3E%3Cline x1='16' y1='16' x2='23' y2='10' stroke='%23FBB615' stroke-width='1.4'/%3E%3C/svg%3E" />
+<title>Faculty · 講者陣容 · UCLA 醫工量子菁英計畫</title>
+<meta name="description" content="Visiting faculty and speakers grouped by discipline, with affiliations, research areas, and profile links." />
+<meta name="theme-color" content="#FAFBFD" />
+<meta property="og:title" content="Faculty · 講者陣容" /><meta property="og:type" content="website" />
+<script>try{if(localStorage.getItem('ucla-theme')==='night')document.documentElement.setAttribute('data-theme','night')}catch(e){}</script>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230E1E4A'/%3E%3Ccircle cx='16' cy='16' r='9' fill='none' stroke='%2338E1E6' stroke-width='1.5'/%3E%3Ccircle cx='16' cy='16' r='2.6' fill='%23FBB615'/%3E%3Cline x1='16' y1='16' x2='23' y2='10' stroke='%23FBB615' stroke-width='1.5'/%3E%3C/svg%3E" />
 <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="preconnect" href="https://api.fontshare.com" crossorigin /><link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
 <link href="https://api.fontshare.com/v2/css?f%5B%5D=clash-display@400,500,600,700&display=swap" rel="stylesheet" />
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.3.24/dist/lenis.css" />
 <link rel="stylesheet" href="assets/css/main.css" />
 </head>
 <body data-lang="en" data-page="faculty">
 <a class="skip-link" href="#main">Skip to content</a>
-<canvas id="lattice" aria-hidden="true"></canvas>
-
 <div class="page">
 <main id="main">
+
+  <section class="hero hero--page">
+    <div class="hero__media"><img src="assets/img/royce-hall.jpg" alt="" loading="eager" /></div>
+    <div class="hero__inner">
+      <p class="hero__eyebrow"><span class="dot" aria-hidden="true"></span>UCLA · Caltech · UCSD · Asia University · China Medical University</p>
+      <h1 class="hero__title" data-i18n="page.faculty">Faculty &amp; Speakers</h1>
+    </div>
+  </section>
+
   <section class="section">
     <div class="wrap">
       <div class="section__head">
-        <span class="klabel"><span class="n">05</span> Contributors · 講者陣容</span>
+        <span class="klabel"><span class="n">05</span> <span data-i18n="lbl.contributors">Contributors</span></span>
         <h2 class="section__title" data-i18n="faculty.title">The people who teach the sixty days.</h2>
-        <p class="section__note" data-i18n="faculty.note">Visiting faculty and speakers, grouped by the discipline they bring — affiliations and research areas as verified from the program's speaker roster.</p>
+        <p class="section__note" data-i18n="faculty.note">Visiting faculty and speakers, grouped by the discipline they bring. Affiliations and research areas verified from the program's speaker roster.</p>
       </div>
 
-      <article class="fac-card fac-card--lead" tabindex="0">
-        <span class="fac-mono" aria-hidden="true">王</span>
-        <div>
-          <h3 class="fac-name">Kang L. Wang <span class="tc" lang="zh-Hant">王康隆</span></h3>
-          <p class="fac-role mono">Lead Professor · UCLA Samueli (ECE / MSE) · Director, CQSE</p>
-          <p class="fac-areas" data-i18n="fac.wang">Quantum materials and devices, spintronics, topological insulators. Academia Sinica Academician; honorary director, Asia University Quantum AI Research Center.</p>
-        </div>
-      </article>
-
-      <div class="fac-band">
-        <h4 class="fac-band__title mono" data-i18n="band.quantum">Quantum Science &amp; Engineering</h4>
-        <div class="fac-grid">
-          <article class="fac-card" tabindex="0"><span class="fac-mono" aria-hidden="true">MJ</span><div><h3 class="fac-name">Mona Jarrahi</h3><p class="fac-role mono">UCLA · Electrical &amp; Computer Engineering</p><p class="fac-areas">Terahertz &amp; mm-wave electronics, optoelectronics, imaging; faculty director, UCLA Semiconductor Hub.</p></div></article>
-          <article class="fac-card" tabindex="0"><span class="fac-mono" aria-hidden="true">RR</span><div><h3 class="fac-name">Richard Ross</h3><p class="fac-role mono">UCLA · MQST &amp; CQSE</p><p class="fac-areas">Quantum science education and workforce; electron-spin qubit devices.</p></div></article>
-          <article class="fac-card" tabindex="0"><span class="fac-mono" aria-hidden="true">MS</span><div><h3 class="fac-name">Marko Sokolich</h3><p class="fac-role mono">UCLA ECE · HRL Laboratories</p><p class="fac-areas">Compound semiconductors, high-speed transistor &amp; process engineering, RF/microwave devices.</p></div></article>
-          <article class="fac-card" tabindex="0"><span class="fac-mono" aria-hidden="true">YY</span><div><h3 class="fac-name">Yang Yang</h3><p class="fac-role mono">UCLA · Materials Science &amp; Engineering (Chair)</p><p class="fac-areas">Functional electronic devices, solar cells, hybrid perovskites, organic semiconductors.</p></div></article>
-          <article class="fac-card" tabindex="0"><span class="fac-mono" aria-hidden="true">RH</span><div><h3 class="fac-name">Hsin-Yuan (Robert) Huang</h3><p class="fac-role mono">Caltech · Theoretical Physics</p><p class="fac-areas">Quantum information &amp; learning theory, quantum machine learning, complexity.</p></div></article>
-          <article class="fac-card" tabindex="0"><span class="fac-mono" aria-hidden="true">黃</span><div><h3 class="fac-name">KS Huang <span class="tc" lang="zh-Hant">黃光旭</span></h3><p class="fac-role mono">Program Chair Lecturer · Quantum &amp; AI Foundations</p><p class="fac-areas">Quantum optical computing, cellular image processing, computing &amp; sensing.</p></div></article>
-        </div>
+      <div class="fac-lead">
+        <article class="fac-card fac-card--lead" tabindex="0">
+          <span class="fac-shot"><img src="assets/img/face/wang.jpg" alt="Kang L. Wang" loading="lazy" /></span>
+          <div>
+            <h3 class="fac-name">Kang L. Wang <span class="tc" lang="zh-Hant">王康隆</span></h3>
+            <p class="fac-role">Lead Professor · UCLA Samueli (ECE / MSE) · Director, CQSE</p>
+            <p class="fac-areas" data-i18n="fac.wang">Quantum materials and devices, spintronics, topological insulators. Academia Sinica Academician; honorary director, Asia University Quantum AI Research Center.</p>
+            <div class="fac-links"><a href="https://samueli.ucla.edu/people/kang-wang/" data-ic="profile" target="_blank" rel="noopener" aria-label="UCLA profile"></a><a href="https://scholar.google.com/citations?user=5AUqCHcAAAAJ" data-ic="scholar" target="_blank" rel="noopener" aria-label="Google Scholar"></a></div>
+          </div>
+        </article>
       </div>
 
       <div class="fac-band">
-        <h4 class="fac-band__title mono" data-i18n="band.neuro">Neuroscience &amp; Brain</h4>
+        <h4 class="fac-band__title" data-i18n="band.quantum">Quantum Science &amp; Engineering</h4>
         <div class="fac-grid">
-          <article class="fac-card" tabindex="0"><span class="fac-mono" aria-hidden="true">GP</span><div><h3 class="fac-name">Gina Poe</h3><p class="fac-role mono">UCLA · Director, Brain Research Institute</p><p class="fac-areas">Sleep and memory consolidation; brain resilience; integrative biology &amp; physiology.</p></div></article>
-          <article class="fac-card" tabindex="0"><span class="fac-mono" aria-hidden="true">DL</span><div><h3 class="fac-name">C.Y. Daniel Lee</h3><p class="fac-role mono">UCLA · Neurobehavioral Genetics / Psychiatry</p><p class="fac-areas">Neurodegeneration, Alzheimer's and Huntington's disease, neuroinflammation.</p></div></article>
+          <article class="fac-card" tabindex="0"><span class="fac-shot"><img src="assets/img/face/jarrahi.jpg" alt="Mona Jarrahi" loading="lazy"></span><div><h3 class="fac-name">Mona Jarrahi</h3><p class="fac-role">UCLA · Electrical &amp; Computer Engineering</p><p class="fac-areas">Terahertz and mm-wave electronics, optoelectronics, imaging; faculty director, UCLA Semiconductor Hub.</p><div class="fac-links"><a href="https://samueli.ucla.edu/people/mona-jarrahi/" data-ic="profile" target="_blank" rel="noopener" aria-label="UCLA profile"></a><a href="https://www.seas.ucla.edu/~mjarrahi/" data-ic="personal" target="_blank" rel="noopener" aria-label="Lab site"></a><a href="https://scholar.google.com/citations?user=Lnv0rocAAAAJ" data-ic="scholar" target="_blank" rel="noopener" aria-label="Google Scholar"></a></div></div></article>
+          <article class="fac-card" tabindex="0"><span class="fac-shot"><span class="mono-ph" aria-hidden="true">RR</span></span><div><h3 class="fac-name">Richard Ross</h3><p class="fac-role">UCLA · MQST &amp; CQSE</p><p class="fac-areas">Quantum science education and workforce; electron-spin qubit devices.</p><div class="fac-links"><a href="https://qst.ucla.edu/faculty.html" data-ic="profile" target="_blank" rel="noopener" aria-label="UCLA MQST profile"></a></div></div></article>
+          <article class="fac-card" tabindex="0"><span class="fac-shot"><span class="mono-ph" aria-hidden="true">MS</span></span><div><h3 class="fac-name">Marko Sokolich</h3><p class="fac-role">UCLA ECE · HRL Laboratories</p><p class="fac-areas">Compound semiconductors, high-speed transistor and process engineering, RF/microwave devices.</p><div class="fac-links"><a href="https://scholar.google.com/citations?user=JAoTDH8AAAAJ" data-ic="scholar" target="_blank" rel="noopener" aria-label="Google Scholar"></a></div></div></article>
+          <article class="fac-card" tabindex="0"><span class="fac-shot"><span class="mono-ph" aria-hidden="true">YY</span></span><div><h3 class="fac-name">Yang Yang</h3><p class="fac-role">UCLA · Materials Science &amp; Engineering (Chair)</p><p class="fac-areas">Functional electronic devices, solar cells, hybrid perovskites, organic semiconductors.</p><div class="fac-links"><a href="https://samueli.ucla.edu/people/yang-yang/" data-ic="profile" target="_blank" rel="noopener" aria-label="UCLA profile"></a><a href="https://scholar.google.com/citations?user=Ym5IYJAAAAAJ" data-ic="scholar" target="_blank" rel="noopener" aria-label="Google Scholar"></a></div></div></article>
+          <article class="fac-card" tabindex="0"><span class="fac-shot"><span class="mono-ph" aria-hidden="true">RH</span></span><div><h3 class="fac-name">Hsin-Yuan (Robert) Huang</h3><p class="fac-role">Caltech · Theoretical Physics</p><p class="fac-areas">Quantum information and learning theory, quantum machine learning, complexity.</p><div class="fac-links"><a href="https://www.pma.caltech.edu/people/robert-huang" data-ic="profile" target="_blank" rel="noopener" aria-label="Caltech profile"></a><a href="https://hsinyuan-huang.github.io/" data-ic="personal" target="_blank" rel="noopener" aria-label="Personal site"></a></div></div></article>
+          <article class="fac-card" tabindex="0"><span class="fac-shot"><span class="mono-ph" aria-hidden="true">黃</span></span><div><h3 class="fac-name">KS Huang <span class="tc" lang="zh-Hant">黃光旭</span></h3><p class="fac-role">Program Chair Lecturer · Quantum &amp; AI Foundations</p><p class="fac-areas">Quantum optical computing, cellular image processing, computing and sensing.</p><div class="fac-links"><a data-ic="profile" aria-disabled="true" title="Link coming soon" aria-label="Link coming soon"></a></div></div></article>
         </div>
       </div>
 
       <div class="fac-band">
-        <h4 class="fac-band__title mono" data-i18n="band.pharma">Pharmacology, Biomarkers &amp; Bioscience</h4>
+        <h4 class="fac-band__title" data-i18n="band.neuro">Neuroscience &amp; Brain</h4>
         <div class="fac-grid">
-          <article class="fac-card" tabindex="0"><span class="fac-mono" aria-hidden="true">HT</span><div><h3 class="fac-name">Hsian-Rong Tseng</h3><p class="fac-role mono">UCLA · David Geffen School of Medicine</p><p class="fac-areas">Liquid biopsy, NanoVelcro circulating-tumor-cell assays, nanotechnology diagnostics.</p></div></article>
-          <article class="fac-card" tabindex="0"><span class="fac-mono" aria-hidden="true">LL</span><div><h3 class="fac-name">Li-Fan Lu</h3><p class="fac-role mono">UC San Diego · Molecular Biology</p><p class="fac-areas">Immunology, regulatory T-cells, immune tolerance, microRNAs in immune regulation.</p></div></article>
+          <article class="fac-card" tabindex="0"><span class="fac-shot"><span class="mono-ph" aria-hidden="true">GP</span></span><div><h3 class="fac-name">Gina Poe</h3><p class="fac-role">UCLA · Director, Brain Research Institute</p><p class="fac-areas">Sleep and memory consolidation; brain resilience; integrative biology and physiology.</p><div class="fac-links"><a href="https://medschool.ucla.edu/people/gina-poe-phd" data-ic="profile" target="_blank" rel="noopener" aria-label="UCLA profile"></a><a href="https://scholar.google.com/citations?user=pMx_MtQAAAAJ" data-ic="scholar" target="_blank" rel="noopener" aria-label="Google Scholar"></a></div></div></article>
+          <article class="fac-card" tabindex="0"><span class="fac-shot"><span class="mono-ph" aria-hidden="true">DL</span></span><div><h3 class="fac-name">C.Y. Daniel Lee</h3><p class="fac-role">UCLA · Neurobehavioral Genetics / Psychiatry</p><p class="fac-areas">Neurodegeneration, Alzheimer's and Huntington's disease, neuroinflammation.</p><div class="fac-links"><a href="https://neurogen.semel.ucla.edu/c-y-daniel-lee-phd/" data-ic="profile" target="_blank" rel="noopener" aria-label="UCLA profile"></a><a href="https://www.linkedin.com/in/c-y-daniel-lee-56502616/" data-ic="linkedin" target="_blank" rel="noopener" aria-label="LinkedIn"></a></div></div></article>
         </div>
       </div>
 
       <div class="fac-band">
-        <h4 class="fac-band__title mono" data-i18n="band.digital">Digital Health &amp; Data</h4>
+        <h4 class="fac-band__title" data-i18n="band.pharma">Pharmacology, Biomarkers &amp; Bioscience</h4>
         <div class="fac-grid">
-          <article class="fac-card" tabindex="0"><span class="fac-mono" aria-hidden="true">BN</span><div><h3 class="fac-name">Bijan Najafi</h3><p class="fac-role mono">UCLA · David Geffen School of Medicine (CASIT)</p><p class="fac-areas">Digital health, wearables, remote patient monitoring, data-driven care.</p></div></article>
-          <article class="fac-card" tabindex="0"><span class="fac-mono" aria-hidden="true">YT</span><div><h3 class="fac-name">Yuan Tian</h3><p class="fac-role mono">UCLA · ECE &amp; Computer Science</p><p class="fac-areas">AI security, data privacy, machine-learning security, privacy-preserving systems.</p></div></article>
-          <article class="fac-card" tabindex="0"><span class="fac-mono" aria-hidden="true">WY</span><div><h3 class="fac-name">William Yu</h3><p class="fac-role mono">UCLA · Anderson Forecast</p><p class="fac-areas">Economic modeling &amp; forecasting, time-series econometrics, data analytics.</p></div></article>
+          <article class="fac-card" tabindex="0"><span class="fac-shot"><span class="mono-ph" aria-hidden="true">HT</span></span><div><h3 class="fac-name">Hsian-Rong Tseng</h3><p class="fac-role">UCLA · David Geffen School of Medicine</p><p class="fac-areas">Liquid biopsy, NanoVelcro circulating-tumor-cell assays, nanotechnology diagnostics.</p><div class="fac-links"><a href="https://pharmacology.ucla.edu/people/hsian-rong-tseng" data-ic="profile" target="_blank" rel="noopener" aria-label="UCLA profile"></a><a href="https://uclaliquidbiopsy.org/members" data-ic="personal" target="_blank" rel="noopener" aria-label="Lab site"></a></div></div></article>
+          <article class="fac-card" tabindex="0"><span class="fac-shot"><span class="mono-ph" aria-hidden="true">LL</span></span><div><h3 class="fac-name">Li-Fan Lu</h3><p class="fac-role">UC San Diego · Molecular Biology</p><p class="fac-areas">Immunology, regulatory T-cells, immune tolerance, microRNAs in immune regulation.</p><div class="fac-links"><a href="https://profiles.ucsd.edu/li-fan.lu" data-ic="profile" target="_blank" rel="noopener" aria-label="UCSD profile"></a><a href="https://www.linkedin.com/in/li-fan-lu-059a138/" data-ic="linkedin" target="_blank" rel="noopener" aria-label="LinkedIn"></a></div></div></article>
         </div>
       </div>
 
       <div class="fac-band">
-        <h4 class="fac-band__title mono" data-i18n="band.integrative">Integrative &amp; Chinese Medicine</h4>
+        <h4 class="fac-band__title" data-i18n="band.digital">Digital Health &amp; Data</h4>
         <div class="fac-grid">
-          <article class="fac-card" tabindex="0"><span class="fac-mono" aria-hidden="true">KH</span><div><h3 class="fac-name">Ka-Kit Hui</h3><p class="fac-role mono">UCLA · Founder &amp; Director, Center for East-West Medicine</p><p class="fac-areas">Integrative East-West medicine, TCM integration, clinical pharmacology.</p></div></article>
-          <article class="fac-card" tabindex="0"><span class="fac-mono" aria-hidden="true">顏</span><div><h3 class="fac-name">Hung-Rong Yen <span class="tc" lang="zh-Hant">顏宏融</span></h3><p class="fac-role mono">China Medical University · Dean, College of Chinese Medicine</p><p class="fac-areas">Chinese &amp; integrative medicine, herbal medicine, acupuncture, evidence-based traditional medicine.</p></div></article>
+          <article class="fac-card" tabindex="0"><span class="fac-shot"><span class="mono-ph" aria-hidden="true">BN</span></span><div><h3 class="fac-name">Bijan Najafi</h3><p class="fac-role">UCLA · David Geffen School of Medicine (CASIT)</p><p class="fac-areas">Digital health, wearables, remote patient monitoring, data-driven care.</p><div class="fac-links"><a href="https://profiles.ucla.edu/bijan.najafi" data-ic="profile" target="_blank" rel="noopener" aria-label="UCLA profile"></a></div></div></article>
+          <article class="fac-card" tabindex="0"><span class="fac-shot"><span class="mono-ph" aria-hidden="true">YT</span></span><div><h3 class="fac-name">Yuan Tian</h3><p class="fac-role">UCLA · ECE &amp; Computer Science</p><p class="fac-areas">AI security, data privacy, machine-learning security, privacy-preserving systems.</p><div class="fac-links"><a href="https://samueli.ucla.edu/people/yuan-tian/" data-ic="profile" target="_blank" rel="noopener" aria-label="UCLA profile"></a><a href="https://www.ytian.info/" data-ic="personal" target="_blank" rel="noopener" aria-label="Personal site"></a></div></div></article>
+          <article class="fac-card" tabindex="0"><span class="fac-shot"><span class="mono-ph" aria-hidden="true">WY</span></span><div><h3 class="fac-name">William Yu</h3><p class="fac-role">UCLA · Anderson Forecast</p><p class="fac-areas">Economic modeling and forecasting, time-series econometrics, data analytics.</p><div class="fac-links"><a href="https://www.anderson.ucla.edu/about/centers/ucla-anderson-forecast/about-us/william-yu" data-ic="profile" target="_blank" rel="noopener" aria-label="UCLA Anderson profile"></a><a href="https://www.linkedin.com/in/william-yu-53ab54135/" data-ic="linkedin" target="_blank" rel="noopener" aria-label="LinkedIn"></a></div></div></article>
         </div>
       </div>
 
       <div class="fac-band">
-        <h4 class="fac-band__title mono" data-i18n="band.program">Program Leadership · Taiwan</h4>
+        <h4 class="fac-band__title" data-i18n="band.integrative">Integrative &amp; Chinese Medicine</h4>
         <div class="fac-grid">
-          <article class="fac-card" tabindex="0"><span class="fac-mono" aria-hidden="true">黃</span><div><h3 class="fac-name">Kuan-Tsae Huang <span class="tc" lang="zh-Hant">黃光彩</span></h3><p class="fac-role mono">Asia University · Chair Professor, Director, AI &amp; Quantum Research Center</p><p class="fac-areas">MIT PhD; former IBM Global Vice President; knowledge management; quantum-safe technology.</p></div></article>
+          <article class="fac-card" tabindex="0"><span class="fac-shot"><span class="mono-ph" aria-hidden="true">KH</span></span><div><h3 class="fac-name">Ka-Kit Hui</h3><p class="fac-role">UCLA · Founder &amp; Director, Center for East-West Medicine</p><p class="fac-areas">Integrative East-West medicine, TCM integration, clinical pharmacology.</p><div class="fac-links"><a href="https://cewm.med.ucla.edu/team/ka-kit-hui/" data-ic="profile" target="_blank" rel="noopener" aria-label="UCLA profile"></a></div></div></article>
+          <article class="fac-card" tabindex="0"><span class="fac-shot"><span class="mono-ph" aria-hidden="true">顏</span></span><div><h3 class="fac-name">Hung-Rong Yen <span class="tc" lang="zh-Hant">顏宏融</span></h3><p class="fac-role">China Medical University · Dean, College of Chinese Medicine</p><p class="fac-areas">Chinese and integrative medicine, herbal medicine, acupuncture, evidence-based traditional medicine.</p><div class="fac-links"><a href="https://webap.cmu.edu.tw/TchEportfolio/index_1/hungrongyen" data-ic="profile" target="_blank" rel="noopener" aria-label="CMU profile"></a><a href="https://scholar.google.com/citations?user=T63L4kEAAAAJ" data-ic="scholar" target="_blank" rel="noopener" aria-label="Google Scholar"></a></div></div></article>
         </div>
       </div>
 
-      <div class="cta-row" style="display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2.4rem">
-        <a class="btn btn--gold" href="delegation.html"><span data-i18n="cta.delegation">The delegation</span> <span class="arr" aria-hidden="true">→</span></a>
+      <div class="fac-band">
+        <h4 class="fac-band__title" data-i18n="band.program">Program Leadership · Taiwan</h4>
+        <div class="fac-grid">
+          <article class="fac-card" tabindex="0"><span class="fac-shot"><span class="mono-ph" aria-hidden="true">黃</span></span><div><h3 class="fac-name">Kuan-Tsae Huang <span class="tc" lang="zh-Hant">黃光彩</span></h3><p class="fac-role">Asia University · Chair Professor, Director, AI &amp; Quantum Research Center</p><p class="fac-areas">MIT PhD; former IBM Global Vice President; knowledge management; quantum-safe technology.</p><div class="fac-links"><a href="https://csie.asia.edu.tw/en/associate_professors_2/Kuan-Tsae-Huang-%E9%BB%83%E5%85%89%E5%BD%A9-3925271" data-ic="profile" target="_blank" rel="noopener" aria-label="Asia University profile"></a><a href="https://www.linkedin.com/in/kuan-tsae-huang-0a77788/" data-ic="linkedin" target="_blank" rel="noopener" aria-label="LinkedIn"></a></div></div></article>
+        </div>
       </div>
+
+      <div class="cta-row" style="margin-top:2.2rem"><a class="btn btn--gold" href="delegation.html"><span data-i18n="cta.delegation">The delegation</span> <span class="arr" aria-hidden="true">→</span></a></div>
     </div>
   </section>
+
 </main>
 </div>
 
+<script>
+(function(){var I={
+profile:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.5 2.6 2.5 15.4 0 18M12 3c-2.5 2.6-2.5 15.4 0 18"/></svg>',
+linkedin:'<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.94 8.5v9.06H4V8.5zM5.47 7.2a1.7 1.7 0 1 1 0-3.4 1.7 1.7 0 0 1 0 3.4zM9 8.5h2.82v1.24h.04c.39-.7 1.35-1.44 2.78-1.44 2.97 0 3.52 1.86 3.52 4.28v4.98h-2.94v-4.42c0-1.05-.02-2.4-1.52-2.4-1.52 0-1.76 1.14-1.76 2.32v4.5H9z"/></svg>',
+scholar:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 4 2 9l10 5 10-5z"/><path d="M6 11.2V16c0 1.4 2.7 2.7 6 2.7s6-1.3 6-2.7v-4.8"/></svg>',
+personal:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M9.5 13.5a4 4 0 0 0 6 0L18 11a4 4 0 0 0-5.7-5.7L11 6.6"/><path d="M14.5 10.5a4 4 0 0 0-6 0L6 13a4 4 0 0 0 5.7 5.7L13 17.4"/></svg>'};
+document.querySelectorAll('.fac-links a[data-ic]').forEach(function(a){a.innerHTML=I[a.getAttribute('data-ic')]||I.profile;});})();
+</script>
 <script src="assets/js/chrome.js" defer></script>
 <script src="assets/js/i18n.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
