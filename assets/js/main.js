@@ -151,6 +151,7 @@
   if (timeline && track) {
     var panels = qsa(".week-panel", track);
     mm.add("(min-width: 901px) and (prefers-reduced-motion: no-preference)", function () {
+      track.classList.add("track--h");
       var tween = gsap.to(track, {
         x: function () { return -(track.scrollWidth - timeline.clientWidth + 40); },
         ease: "none",
@@ -161,7 +162,7 @@
         var rule = qs(".io__rule", p);
         if (rule) gsap.from(rule, { scaleY: 0, transformOrigin: "top center", ease: "expo.out", duration: .7, scrollTrigger: { trigger: p, containerAnimation: tween, start: "left 75%" } });
       });
-      return function () {};
+      return function () { track.classList.remove("track--h"); };
     });
     mm.add("(max-width: 900px), (prefers-reduced-motion: reduce)", function () {
       panels.forEach(function (p) { ScrollTrigger.create({ trigger: p, start: "top 60%", end: "bottom 40%", onEnter: setWk(p), onEnterBack: setWk(p) }); });

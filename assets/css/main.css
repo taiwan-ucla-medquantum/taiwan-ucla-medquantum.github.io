@@ -190,8 +190,10 @@ a{color:inherit;text-decoration:none}
 .tl-legend{display:flex;gap:1.4rem;font-family:var(--f-mono);font-size:.76rem;color:var(--paper-dim);margin-bottom:1.6rem}
 .tl-legend i{width:8px;height:8px;border-radius:50%;display:inline-block;margin-right:.4rem;vertical-align:middle}
 .tl-legend .in{background:var(--cyan-400)}.tl-legend .out{background:var(--gold-500)}
-.track{display:flex;gap:clamp(1rem,2vw,1.8rem)}
-.week-panel{flex:0 0 min(86vw,640px);border:1px solid var(--line);background:var(--surface);padding:clamp(1.4rem,2.6vw,2.2rem);position:relative}
+.track{display:flex;flex-direction:column;gap:clamp(1rem,2vw,1.8rem)}
+.week-panel{flex:1 1 auto;border:1px solid var(--line);background:var(--surface);padding:clamp(1.4rem,2.6vw,2.2rem);position:relative}
+.track--h{flex-direction:row}
+.track--h .week-panel{flex:0 0 min(86vw,640px)}
 .week-panel__band{font-family:var(--f-mono);font-size:.78rem;color:var(--cyan-400);display:block;margin-bottom:.5rem}
 .week-panel[data-key="gold"] .week-panel__band{color:var(--gold-400)}
 .week-panel[data-key="medicine"] .week-panel__band{color:var(--rose-400)}
@@ -308,8 +310,6 @@ a{color:inherit;text-decoration:none}
   .io{grid-template-columns:1fr;gap:1.3rem}
   .io__rule{width:auto;height:1px}
   .io__rule .noon{writing-mode:horizontal-tb;top:50%;left:0;transform:translate(-.2rem,-50%);padding:0 .4rem}
-  .track{flex-direction:column}
-  .week-panel{flex:1 1 auto}
 }
 @media (max-width:480px){
   .stats{grid-template-columns:1fr 1fr}
