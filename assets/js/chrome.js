@@ -12,7 +12,7 @@
   var moon = '<svg class="theme-night" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>';
 
   var rail = document.createElement("div"); rail.className = "railbar"; rail.id = "railbar"; rail.setAttribute("aria-hidden", "true");
-  rail.innerHTML = '<div class="railbar__fill" id="rail-fill"></div><span class="railbar__now" id="rail-now">D00</span><div class="railbar__ticks" id="ruler"></div><span class="railbar__week" id="rail-week">W—</span>';
+  rail.innerHTML = '<div class="railbar__fill" id="rail-fill"></div><span class="railbar__now" id="rail-now">D00</span><div class="railbar__ticks" id="ruler"></div><span class="railbar__week" id="rail-week">W·</span>';
 
   var nav = document.createElement("header");
   nav.className = "nav"; nav.id = "nav";

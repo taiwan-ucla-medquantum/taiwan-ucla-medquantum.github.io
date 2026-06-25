@@ -24,7 +24,7 @@
     if (nowEl) nowEl.textContent = "D" + pad(day);
     for (var i = 0; i < rticks.length; i++) { var rd = +rticks[i].getAttribute("data-day"); rticks[i].classList.toggle("now", rd === day); rticks[i].classList.toggle("past", rd < day); }
     var wk = null; for (var w = 0; w < WEEKS.length; w++) if (day >= WEEKS[w].s && day <= WEEKS[w].e) wk = WEEKS[w];
-    if (weekEl) weekEl.textContent = wk ? "W" + wk.n : "W—";
+    if (weekEl) weekEl.textContent = wk ? "W" + wk.n : "W·";
   } });
 
   /* four-signal mini-waves (decorative SVG) */
