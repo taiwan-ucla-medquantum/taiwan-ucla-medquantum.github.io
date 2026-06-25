@@ -82,7 +82,10 @@ strong{color:var(--heading);font-weight:600}
 .railbar__line{position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);border-top:1.5px dashed var(--line)}
 .railbar__trail{position:absolute;left:0;top:50%;transform:translateY(-50%);height:2px;width:0;background:linear-gradient(90deg,color-mix(in oklab,var(--gold-bright) 25%,transparent),var(--gold-bright));border-radius:2px}
 .railbar__plane{position:absolute;top:50%;left:0;transform:translate(-50%,-50%);color:var(--gold-bright);line-height:0;will-change:left}
-.railbar__plane svg{width:15px;height:15px;filter:drop-shadow(0 0 5px color-mix(in oklab,var(--gold-bright) 55%,transparent))}
+.railbar__plane svg{width:15px;height:15px;filter:drop-shadow(0 0 5px color-mix(in oklab,var(--gold-bright) 55%,transparent));transition:transform .35s var(--ease)}
+.railbar.arrived .railbar__plane svg{transform:scale(1.14)}
+.railbar.arrived .railbar__dot--to{background:var(--gold-bright);animation:landed 1.5s var(--ease) infinite}
+@keyframes landed{0%{box-shadow:0 0 0 0 rgba(251,182,21,.5)}70%,100%{box-shadow:0 0 0 7px rgba(251,182,21,0)}}
 
 /* ---- Nav ---- */
 .nav{position:fixed;inset:0 0 auto 0;height:var(--nav-h);z-index:var(--z-nav);display:flex;align-items:center;gap:1rem;
@@ -243,6 +246,7 @@ body[data-lang="zh"] .hero__title-en{display:none}
 .delegate{padding:1.2rem;border:1px solid var(--line);border-radius:14px;background:var(--bg-2);box-shadow:var(--card-shadow);transition:transform .25s var(--ease),border-color .3s}
 .delegate:hover{transform:translateY(-2px)}
 .delegate[data-g="A"]{--accent:var(--cyan)}.delegate[data-g="B"]{--accent:var(--gold)}.delegate[data-g="C"]{--accent:var(--rose)}
+.delegate[data-g="D"]{--accent:var(--violet)}.delegate[data-g="E"]{--accent:var(--brand-2)}
 .delegate:hover{border-color:var(--accent)}
 .delegate__no{font-family:var(--f-mono);font-size:.74rem;color:var(--accent)}
 .delegate__name{font-size:1.2rem;margin:.3rem 0;line-height:1.12}
@@ -307,4 +311,5 @@ body[data-lang="zh"] .hero__title-en{display:none}
 @media (prefers-reduced-motion:reduce){
   *{scroll-behavior:auto!important;transition:none!important}
   .js-anim .reveal{opacity:1!important;transform:none!important}
+  .railbar.arrived .railbar__dot--to{animation:none!important}
 }

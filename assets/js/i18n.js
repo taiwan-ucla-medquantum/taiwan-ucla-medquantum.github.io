@@ -95,6 +95,7 @@
     "deleg.title":"九位學員，三個專題分組。",
     "deleg.note":"九人團隊與就讀單位。專題 A、B、C 組貫穿九週。",
     "deleg.independent":"獨立學員","deleg.staff":"隨團教師",
+    "lbl.volunteers":"義工團","vol.title":"義工團隊。","vol.note":"於計畫期間協助代表團的學員，分為 D、E 兩組。","vol.role":"義工",
 
     /* journal */
     "journal.title":"影像日誌。","journal.note":"媒體組將以照片與短片紀錄這六十天。本頁先保留版位，活動開始後填入實拍影像。",

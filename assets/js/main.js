@@ -11,11 +11,12 @@
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   /* top rail: plane flies Taiwan → LA with scroll progress */
-  var trail = qs("#rail-trail"), plane = qs("#rail-plane");
+  var trail = qs("#rail-trail"), plane = qs("#rail-plane"), railbar = qs("#railbar");
   ScrollTrigger.create({ start: 0, end: "max", onUpdate: function (s) {
     var pct = (s.progress * 100).toFixed(2);
     if (trail) trail.style.width = pct + "%";
     if (plane) plane.style.left = pct + "%";
+    if (railbar) railbar.classList.toggle("arrived", s.progress > 0.992);
   } });
 
   /* four-signal mini-waves (decorative SVG) */
