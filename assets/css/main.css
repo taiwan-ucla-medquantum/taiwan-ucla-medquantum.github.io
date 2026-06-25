@@ -291,6 +291,11 @@ body[data-lang="zh"] .hero__title-en{display:none}
 @media (max-width:600px){.scene-band{aspect-ratio:16/8}}
 .signal-card__scene{border-radius:10px;overflow:hidden;margin-bottom:1rem;aspect-ratio:16/7;background:#070C1E;border:1px solid var(--line)}
 .signal-card__scene img{width:100%;height:100%;object-fit:cover}
+/* reserved AI-image placeholder (shows filename + size until the photo is generated) */
+.genph{position:relative}
+.genph::before{content:attr(data-ph);position:absolute;inset:0;z-index:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:.7rem;font-family:var(--f-mono);font-size:.64rem;line-height:1.6;color:rgba(231,239,255,.42);background:repeating-linear-gradient(135deg,rgba(116,194,222,.06) 0 9px,transparent 9px 18px)}
+.genph > img{position:relative;z-index:1}
+.scene-plate figcaption,.scene-band figcaption{z-index:2}
 
 /* ---- Journal ---- */
 .journal-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,240px),1fr));gap:clamp(.8rem,1.6vw,1.1rem)}

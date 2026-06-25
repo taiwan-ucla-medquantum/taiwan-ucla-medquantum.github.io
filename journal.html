@@ -22,7 +22,9 @@
 <main id="main">
 
   <section class="hero hero--page">
-    <div class="hero__media"><img src="assets/img/quantum.jpg" alt="" loading="eager" /></div>
+    <!-- AI-IMAGE file: assets/img/gen/journal-hero.jpg  size: 2400x1080 (20:9)
+         prompt: "A real quantum computer glowing with golden wiring in a dark laboratory; cinematic; wide. Photorealistic, cinematic, premium editorial science-brand aesthetic. Deep navy / midnight-blue tones with warm UCLA-gold accent light and subtle steel-blue. No text, no logos, no watermark." -->
+    <div class="hero__media"><img src="assets/img/gen/journal-hero.jpg" data-fallback="assets/img/quantum.jpg" alt="" loading="eager" /></div>
     <div class="hero__inner">
       <p class="hero__eyebrow"><span class="dot" aria-hidden="true"></span>media team · D01–D60</p>
       <h1 class="hero__title" data-i18n="page.journal">Field Log</h1>
@@ -39,22 +41,20 @@
       </div>
 
       <h3 class="fac-band__title" style="margin-bottom:1rem">Venues &amp; context</h3>
+      <!-- Each cell reserves a 800x600 (4:3) photoreal image in assets/img/gen/; until generated it shows the real CC photo fallback. -->
       <div class="journal-grid" style="margin-bottom:2.4rem">
-        <div class="journal-cell"><img src="assets/img/royce-hall.jpg" alt="UCLA Royce Hall" loading="lazy"></div>
-        <div class="journal-cell"><img src="assets/img/powell.jpg" alt="UCLA Powell Library" loading="lazy"></div>
-        <div class="journal-cell"><img src="assets/img/ucla-aerial.jpg" alt="UCLA campus aerial" loading="lazy"></div>
-        <div class="journal-cell"><img src="assets/img/quantum.jpg" alt="A quantum computer" loading="lazy"></div>
-        <div class="journal-cell"><img src="assets/img/mri.jpg" alt="An MRI scanner" loading="lazy"></div>
-        <div class="journal-cell"><img src="assets/img/la-dusk.jpg" alt="Los Angeles skyline at dusk" loading="lazy"></div>
-      </div>
-
-      <h3 class="fac-band__title" style="margin-bottom:1rem">Concept scenes</h3>
-      <div class="scene-row" style="margin-bottom:2.4rem">
-        <figure class="scene-plate"><img src="assets/img/scenes/quantum-field.svg" alt="Qubit-lattice illustration" loading="lazy"><figcaption>quantum field</figcaption></figure>
-        <figure class="scene-plate"><img src="assets/img/scenes/neural-brain.svg" alt="Neural-network illustration" loading="lazy"><figcaption>neuroscience</figcaption></figure>
-        <figure class="scene-plate"><img src="assets/img/scenes/molecule.svg" alt="Molecular-structure illustration" loading="lazy"><figcaption>drug discovery</figcaption></figure>
-        <figure class="scene-plate"><img src="assets/img/scenes/circuit.svg" alt="Circuit illustration" loading="lazy"><figcaption>semiconductors</figcaption></figure>
-        <figure class="scene-plate"><img src="assets/img/scenes/waveform.svg" alt="Signal-horizon illustration" loading="lazy"><figcaption>signals</figcaption></figure>
+        <!-- AI-IMAGE file: assets/img/gen/journal-venue-royce.jpg  size: 800x600 (4:3)  prompt: "UCLA Royce Hall exterior, daytime, clear sky. Photorealistic, premium editorial science-brand aesthetic. No text, no logos, no watermark." -->
+        <div class="journal-cell"><img src="assets/img/gen/journal-venue-royce.jpg" data-fallback="assets/img/royce-hall.jpg" alt="UCLA Royce Hall" loading="lazy"></div>
+        <!-- AI-IMAGE file: assets/img/gen/journal-venue-powell.jpg  size: 800x600 (4:3)  prompt: "UCLA Powell Library exterior, daytime. Photorealistic, premium editorial science-brand aesthetic. No text, no logos, no watermark." -->
+        <div class="journal-cell"><img src="assets/img/gen/journal-venue-powell.jpg" data-fallback="assets/img/powell.jpg" alt="UCLA Powell Library" loading="lazy"></div>
+        <!-- AI-IMAGE file: assets/img/gen/journal-venue-campus.jpg  size: 800x600 (4:3)  prompt: "UCLA campus quad with students, daytime. Photorealistic, premium editorial science-brand aesthetic. No text, no logos, no watermark." -->
+        <div class="journal-cell"><img src="assets/img/gen/journal-venue-campus.jpg" data-fallback="assets/img/ucla-aerial.jpg" alt="UCLA campus" loading="lazy"></div>
+        <!-- AI-IMAGE file: assets/img/gen/journal-venue-quantum.jpg  size: 800x600 (4:3)  prompt: "A quantum computer in a research lab, golden wiring. Photorealistic, premium editorial science-brand aesthetic. Deep navy tones, warm gold accent light. No text, no logos, no watermark." -->
+        <div class="journal-cell"><img src="assets/img/gen/journal-venue-quantum.jpg" data-fallback="assets/img/quantum.jpg" alt="A quantum computer" loading="lazy"></div>
+        <!-- AI-IMAGE file: assets/img/gen/journal-venue-mri.jpg  size: 800x600 (4:3)  prompt: "A modern MRI scanner in a hospital imaging suite. Photorealistic, premium editorial science-brand aesthetic. Cool clean tones with a subtle gold accent. No text, no logos, no watermark." -->
+        <div class="journal-cell"><img src="assets/img/gen/journal-venue-mri.jpg" data-fallback="assets/img/mri.jpg" alt="An MRI scanner" loading="lazy"></div>
+        <!-- AI-IMAGE file: assets/img/gen/journal-venue-la.jpg  size: 800x600 (4:3)  prompt: "Los Angeles / Westwood skyline at dusk. Photorealistic, cinematic, premium editorial science-brand aesthetic. Deep navy / midnight tones, warm gold accent light. No text, no logos, no watermark." -->
+        <div class="journal-cell"><img src="assets/img/gen/journal-venue-la.jpg" data-fallback="assets/img/la-dusk.jpg" alt="Los Angeles skyline at dusk" loading="lazy"></div>
       </div>
 
       <h3 class="fac-band__title" style="margin-bottom:1rem">Weeks · pending capture</h3>

@@ -49,6 +49,16 @@
     ScrollTrigger.create({ trigger: el, start: "top 92%", once: true, onEnter: function () { gsap.to(o, { v: target, duration: 1.3, ease: "expo.out", onUpdate: function () { out.textContent = Math.round(o.v); } }); } });
   });
 
+  /* AI-image slots: if the generated file is missing, fall back to a real photo or reveal the placeholder */
+  qsa("img[data-fallback]").forEach(function (im) {
+    im.addEventListener("error", function () {
+      var fb = im.getAttribute("data-fallback");
+      if (fb && im.getAttribute("src").indexOf(fb) < 0) im.setAttribute("src", fb);
+      else im.style.opacity = 0;
+    });
+  });
+  qsa(".genph > img").forEach(function (im) { im.addEventListener("error", function () { im.style.opacity = 0; }); });
+
   /* faculty band accent variety (harmonious gold/steel tones, all AA-readable) */
   var BAND_ACC = ["--steel", "--steel-deep", "--gold-deep", "--steel", "--gold", "--steel-deep", "--gold"];
   qsa(".fac-band").forEach(function (b, i) { b.style.setProperty("--accent", "var(" + BAND_ACC[i % BAND_ACC.length] + ")"); });
