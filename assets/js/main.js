@@ -10,21 +10,12 @@
   var qsa = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  /* top horizontal measurement rail (D01→D60) */
-  var WEEKS = [{ n: 1, s: 1, e: 5 }, { n: 2, s: 6, e: 10 }, { n: 3, s: 11, e: 15 }, { n: 4, s: 16, e: 22 }, { n: 5, s: 23, e: 29 }, { n: 6, s: 30, e: 36 }, { n: 7, s: 37, e: 43 }, { n: 8, s: 44, e: 50 }, { n: 9, s: 51, e: 60 }];
-  var WEEK_STARTS = [1, 6, 11, 16, 23, 30, 37, 44, 51];
-  var ruler = qs("#ruler"), fill = qs("#rail-fill"), nowEl = qs("#rail-now"), weekEl = qs("#rail-week"), rticks = [];
-  function pad(n) { return (n < 10 ? "0" : "") + n; }
-  if (ruler) { var fr = document.createDocumentFragment(); for (var dd = 1; dd <= 60; dd++) { var sp = document.createElement("span"); sp.className = "rtick" + (WEEK_STARTS.indexOf(dd) > -1 ? " rtick--week" : ""); sp.setAttribute("data-day", dd); fr.appendChild(sp); } ruler.appendChild(fr); rticks = qsa(".rtick", ruler); }
-  var lastDay = -1;
+  /* top rail: plane flies Taiwan → LA with scroll progress */
+  var trail = qs("#rail-trail"), plane = qs("#rail-plane");
   ScrollTrigger.create({ start: 0, end: "max", onUpdate: function (s) {
-    if (fill) fill.style.transform = "scaleX(" + s.progress.toFixed(4) + ")";
-    var day = Math.max(0, Math.min(60, Math.round(s.progress * 60)));
-    if (day === lastDay) return; lastDay = day;
-    if (nowEl) nowEl.textContent = "D" + pad(day);
-    for (var i = 0; i < rticks.length; i++) { var rd = +rticks[i].getAttribute("data-day"); rticks[i].classList.toggle("now", rd === day); rticks[i].classList.toggle("past", rd < day); }
-    var wk = null; for (var w = 0; w < WEEKS.length; w++) if (day >= WEEKS[w].s && day <= WEEKS[w].e) wk = WEEKS[w];
-    if (weekEl) weekEl.textContent = wk ? "W" + wk.n : "W·";
+    var pct = (s.progress * 100).toFixed(2);
+    if (trail) trail.style.width = pct + "%";
+    if (plane) plane.style.left = pct + "%";
   } });
 
   /* four-signal mini-waves (decorative SVG) */

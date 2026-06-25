@@ -31,7 +31,7 @@
   --t-h3:clamp(1.15rem,1.7vw,1.4rem);
   --t-body:clamp(1rem,.4vw+.92rem,1.12rem);
 
-  --nav-h:62px; --rail-h:30px; --pad:clamp(1.15rem,4vw,2.5rem); --maxw:1120px; --measure:64ch;
+  --nav-h:62px; --rail-h:24px; --pad:clamp(1.15rem,4vw,2.5rem); --maxw:1120px; --measure:64ch;
   --ease:cubic-bezier(.16,1,.3,1);
   --z-prog:55; --z-nav:50; --z-skip:60;
 }
@@ -75,15 +75,14 @@ strong{color:var(--heading);font-weight:600}
 
 /* top horizontal measurement rail (D01→D60) */
 .railbar{position:fixed;top:var(--nav-h);left:0;right:0;height:var(--rail-h);z-index:var(--z-prog);display:flex;align-items:center;gap:.8rem;padding:0 var(--pad);background:color-mix(in oklab,var(--bg) 90%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);overflow:hidden}
-.railbar > *{position:relative;z-index:1}
-.railbar__fill{position:absolute;inset:0;z-index:0;transform:scaleX(0);transform-origin:left;background:linear-gradient(90deg,color-mix(in oklab,var(--gold-bright) 26%,transparent),color-mix(in oklab,var(--cyan) 14%,transparent) 70%,transparent);will-change:transform}
-.railbar__now{font-family:var(--f-mono);font-size:.72rem;font-weight:700;color:var(--gold);flex:0 0 auto;min-width:3.1em}
-.railbar__ticks{flex:1 1 auto;height:100%;display:flex;align-items:center;justify-content:space-between}
-.rtick{width:1px;height:7px;background:var(--line);transition:height .2s var(--ease),background .2s}
-.rtick--week{height:12px;background:var(--ink-2)}
-.rtick.past{background:var(--cyan)}
-.rtick.now{height:17px;width:2px;background:var(--gold-bright);box-shadow:0 0 8px var(--gold-bright)}
-.railbar__week{font-family:var(--f-mono);font-size:.72rem;color:var(--ink-2);flex:0 0 auto;min-width:2.4em;text-align:right}
+.railbar__end{display:inline-flex;align-items:center;gap:.4rem;font-family:var(--f-mono);font-size:.7rem;color:var(--ink-2);flex:0 0 auto;white-space:nowrap}
+.railbar__dot{width:6px;height:6px;border-radius:50%;background:var(--gold);box-shadow:0 0 6px color-mix(in oklab,var(--gold-bright) 60%,transparent)}
+.railbar__dot--to{background:var(--cyan);box-shadow:0 0 6px color-mix(in oklab,var(--cyan) 60%,transparent)}
+.railbar__path{position:relative;flex:1 1 auto;height:100%}
+.railbar__line{position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);border-top:1.5px dashed var(--line)}
+.railbar__trail{position:absolute;left:0;top:50%;transform:translateY(-50%);height:2px;width:0;background:linear-gradient(90deg,color-mix(in oklab,var(--gold-bright) 25%,transparent),var(--gold-bright));border-radius:2px}
+.railbar__plane{position:absolute;top:50%;left:0;transform:translate(-50%,-50%);color:var(--gold-bright);line-height:0;will-change:left}
+.railbar__plane svg{width:15px;height:15px;filter:drop-shadow(0 0 5px color-mix(in oklab,var(--gold-bright) 55%,transparent))}
 
 /* ---- Nav ---- */
 .nav{position:fixed;inset:0 0 auto 0;height:var(--nav-h);z-index:var(--z-nav);display:flex;align-items:center;gap:1rem;

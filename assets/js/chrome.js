@@ -12,7 +12,11 @@
   var moon = '<svg class="theme-night" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>';
 
   var rail = document.createElement("div"); rail.className = "railbar"; rail.id = "railbar"; rail.setAttribute("aria-hidden", "true");
-  rail.innerHTML = '<div class="railbar__fill" id="rail-fill"></div><span class="railbar__now" id="rail-now">D00</span><div class="railbar__ticks" id="ruler"></div><span class="railbar__week" id="rail-week">W·</span>';
+  rail.innerHTML =
+    '<span class="railbar__end"><span class="railbar__dot"></span><span data-i18n="rail.from">Taiwan</span></span>' +
+    '<span class="railbar__path"><span class="railbar__line"></span><span class="railbar__trail" id="rail-trail"></span>' +
+      '<span class="railbar__plane" id="rail-plane"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><g transform="rotate(90 12 12)"><path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></g></svg></span></span>' +
+    '<span class="railbar__end"><span>LA</span><span class="railbar__dot railbar__dot--to"></span></span>';
 
   var nav = document.createElement("header");
   nav.className = "nav"; nav.id = "nav";
@@ -41,6 +45,7 @@
       '<div class="logos" aria-label="Institution logos">' +
         '<img src="assets/img/moe.png" alt="Ministry of Education, Taiwan" loading="lazy">' +
         '<img src="assets/img/asia-university.png" alt="Asia University" loading="lazy">' +
+        '<img src="assets/img/taita-east.png" alt="TAITA-East · Taiwanese American Industrial Technology Association" loading="lazy">' +
         '<img src="assets/img/ucla-wordmark.svg" alt="UCLA" loading="lazy">' +
         '<img src="assets/img/ucla-cqse.png" alt="UCLA CQSE" loading="lazy">' +
         '<img src="assets/img/ucla-samueli.svg" alt="UCLA Samueli School of Engineering" loading="lazy">' +
