@@ -10,7 +10,7 @@
   var host = cv.parentElement, ctx = cv.getContext("2d");
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var W = 0, H = 0, DPR = 1, nodes = [], raf = 0, visible = true, px = 0, py = 0, tx = 0, ty = 0;
-  var CYAN = [120, 224, 235], VIOLET = [150, 130, 255], GOLD = [251, 200, 90];
+  var CYAN = [128, 196, 224], VIOLET = [128, 196, 224], GOLD = [251, 200, 90];
   var seed = 70626; function rand() { seed = (seed * 1103515245 + 12345) & 0x7fffffff; return seed / 0x7fffffff; }
 
   function build() {

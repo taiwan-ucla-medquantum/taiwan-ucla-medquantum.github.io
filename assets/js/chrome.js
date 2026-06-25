@@ -14,7 +14,7 @@
   var rail = document.createElement("div"); rail.className = "railbar"; rail.id = "railbar"; rail.setAttribute("aria-hidden", "true");
   rail.innerHTML =
     '<span class="railbar__end"><span class="railbar__dot"></span><span data-i18n="rail.from">Taiwan</span></span>' +
-    '<span class="railbar__path"><span class="railbar__line"></span><span class="railbar__trail" id="rail-trail"></span>' +
+    '<span class="railbar__path"><span class="railbar__line"></span><span class="railbar__ticks" id="ruler"></span><span class="railbar__trail" id="rail-trail"></span>' +
       '<span class="railbar__plane" id="rail-plane"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><g transform="rotate(90 12 12)"><path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></g></svg></span></span>' +
     '<span class="railbar__end"><span>LA</span><span class="railbar__dot railbar__dot--to"></span></span>';
 

@@ -10,13 +10,18 @@
   var qsa = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  /* top rail: plane flies Taiwan → LA with scroll progress */
-  var trail = qs("#rail-trail"), plane = qs("#rail-plane"), railbar = qs("#railbar");
+  /* top rail: plane flies Taiwan → LA; ruler ticks light up as it passes */
+  var WEEK_STARTS = [1, 6, 11, 16, 23, 30, 37, 44, 51];
+  var trail = qs("#rail-trail"), plane = qs("#rail-plane"), railbar = qs("#railbar"), ruler = qs("#ruler"), rticks = [];
+  if (ruler) { var fr = document.createDocumentFragment(); for (var dd = 1; dd <= 60; dd++) { var sp = document.createElement("span"); sp.className = "rtick" + (WEEK_STARTS.indexOf(dd) > -1 ? " rtick--week" : ""); sp.setAttribute("data-day", dd); fr.appendChild(sp); } ruler.appendChild(fr); rticks = qsa(".rtick", ruler); }
+  var lastDay = -1;
   ScrollTrigger.create({ start: 0, end: "max", onUpdate: function (s) {
     var pct = (s.progress * 100).toFixed(2);
     if (trail) trail.style.width = pct + "%";
     if (plane) plane.style.left = pct + "%";
     if (railbar) railbar.classList.toggle("arrived", s.progress > 0.992);
+    var day = Math.round(s.progress * 60);
+    if (day !== lastDay) { lastDay = day; for (var i = 0; i < rticks.length; i++) rticks[i].classList.toggle("past", +rticks[i].getAttribute("data-day") <= day); }
   } });
 
   /* four-signal mini-waves (decorative SVG) */

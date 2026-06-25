@@ -12,8 +12,8 @@
   --brand:#0E1E4A; --brand-2:#14306B;
   --gold:#9C6B06;            /* gold for small text/links (AA on light) */
   --gold-bright:#FBB615;     /* decorative / large only */
-  --cyan:#0B6B74; --violet:#5A3CD8; --rose:#B83456;
-  --accent:var(--cyan);
+  --steel:#2A6A86; --cyan:var(--steel); --violet:var(--steel); --rose:var(--gold);
+  --accent:var(--steel);
   --card-shadow:0 1px 2px rgba(12,20,38,.04),0 12px 32px rgba(12,20,38,.06);
   --field-1:#9FB4D9; --field-2:#C7A24B;   /* hero particle tints (always over dark) */
 
@@ -42,8 +42,8 @@
   --line:rgba(160,180,220,.16); --line-2:rgba(160,180,220,.09);
   --brand:#EAF1FF; --brand-2:#CBD9F5;
   --gold:#FBB615; --gold-bright:#FFD25A;
-  --cyan:#38E1E6; --violet:#9A8BFF; --rose:#FF7A97;
-  --accent:var(--cyan);
+  --steel:#74C2DE; --cyan:var(--steel); --violet:var(--steel); --rose:var(--gold);
+  --accent:var(--steel);
   --card-shadow:0 1px 0 rgba(160,180,220,.06);
 }
 
@@ -79,7 +79,12 @@ strong{color:var(--heading);font-weight:600}
 .railbar__dot{width:6px;height:6px;border-radius:50%;background:var(--gold);box-shadow:0 0 6px color-mix(in oklab,var(--gold-bright) 60%,transparent)}
 .railbar__dot--to{background:var(--cyan);box-shadow:0 0 6px color-mix(in oklab,var(--cyan) 60%,transparent)}
 .railbar__path{position:relative;flex:1 1 auto;height:100%}
-.railbar__line{position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);border-top:1.5px dashed var(--line)}
+.railbar__line{position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);border-top:1px dashed color-mix(in oklab,var(--line) 70%,transparent)}
+.railbar__ticks{position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);height:10px;display:flex;align-items:center;justify-content:space-between;pointer-events:none}
+.rtick{width:1px;height:5px;background:var(--line);transition:height .2s var(--ease),background .2s}
+.rtick--week{height:10px;background:color-mix(in oklab,var(--ink-2) 55%,transparent)}
+.rtick.past{background:var(--steel)}
+.rtick--week.past{background:var(--gold)}
 .railbar__trail{position:absolute;left:0;top:50%;transform:translateY(-50%);height:2px;width:0;background:linear-gradient(90deg,color-mix(in oklab,var(--gold-bright) 25%,transparent),var(--gold-bright));border-radius:2px}
 .railbar__plane{position:absolute;top:50%;left:0;transform:translate(-50%,-50%);color:var(--gold-bright);line-height:0;will-change:left}
 .railbar__plane svg{width:15px;height:15px;filter:drop-shadow(0 0 5px color-mix(in oklab,var(--gold-bright) 55%,transparent));transition:transform .35s var(--ease)}
