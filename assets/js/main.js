@@ -99,15 +99,22 @@
     ScrollTrigger.create({ trigger: el, start: "top 92%", once: true, onEnter: function () { gsap.to(o, { v: target, duration: 1.3, ease: "expo.out", onUpdate: function () { out.textContent = Math.round(o.v); } }); } });
   });
 
-  /* AI-image slots: if the generated file is missing, fall back to a real photo or reveal the placeholder */
+  /* AI-image slots: if the generated file is missing, fall back to a real photo or reveal the placeholder.
+     Also handle images that already errored before this deferred script attached its listener. */
   qsa("img[data-fallback]").forEach(function (im) {
-    im.addEventListener("error", function () {
+    var fallback = function () {
       var fb = im.getAttribute("data-fallback");
       if (fb && im.getAttribute("src").indexOf(fb) < 0) im.setAttribute("src", fb);
       else im.style.opacity = 0;
-    });
+    };
+    im.addEventListener("error", fallback);
+    if (im.complete && im.naturalWidth === 0) fallback();
   });
-  qsa(".genph > img:not([data-fallback])").forEach(function (im) { im.addEventListener("error", function () { im.style.opacity = 0; }); });
+  qsa(".genph > img:not([data-fallback])").forEach(function (im) {
+    var hide = function () { im.style.opacity = 0; };
+    im.addEventListener("error", hide);
+    if (im.complete && im.naturalWidth === 0) hide();
+  });
 
   /* faculty band accent variety (harmonious gold/steel tones, all AA-readable) */
   var BAND_ACC = ["--steel", "--steel-deep", "--gold-deep", "--steel", "--gold", "--steel-deep", "--gold"];
