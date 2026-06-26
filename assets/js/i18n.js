@@ -5,7 +5,7 @@
   "use strict";
   var ZH = {
     "nav.home":"首頁","nav.program":"計畫綱要","nav.curriculum":"九週課程","nav.faculty":"講者陣容","nav.delegation":"代表團","nav.journal":"影像日誌",
-    "rail.from":"台灣","field.med":"醫學","field.q":"量子",
+    "rail.from":"臺灣","field.med":"醫學","field.q":"量子",
 
     "foot.org1":"<span class=\"mono\">承辦單位</span> 亞洲大學",
     "foot.org2":"<span class=\"mono\">合作單位</span> 美東台美產業科技協會 TAITA-East",
@@ -26,13 +26,13 @@
     "home.signalsTitle":"四個領域，誠實以對。",
     "home.signalsNote":"兩個屬於醫學，兩個屬於量子。",
     "theme.brain.t":"AI <span class=\"cross\">×</span> 腦與神經科學",
-    "theme.brain.d":"臨床上最成熟的一線。深度學習已能判讀 MRI／PET，2025 年美國也核准首個阿茲海默症血液檢測。AI 仍定位為輔助判讀，而非自主診斷。",
+    "theme.brain.d":"臨床上最成熟的一線。深度學習已能判讀 MRI／PET，2025 年首個阿茲海默症血液檢測也獲核准。AI 仍定位為輔助判讀，而非自主診斷。",
     "theme.drug.t":"AI <span class=\"cross\">×</span> 新藥與中醫",
-    "theme.drug.d":"AI 正加速臨床前研究，並延伸到中醫的網路藥理學。截至 2025 年仍無 AI 發現的藥物上市。",
-    "theme.qc.t":"量子計算 <span class=\"cross\">×</span> 分子與藥物預測",
+    "theme.drug.d":"AI 正加速臨床前研究，並延伸到中醫領域。截至 2025 年仍無 AI 發現的藥物上市。",
+    "theme.qc.t":"量子計算 <span class=\"cross\">×</span> 分子預測",
     "theme.qc.d":"最不成熟、討論最多。現有含噪量子裝置尚無法模擬真實藥物分子，實質價值多被放在 2030 年代。",
     "theme.conv.t":"生醫工程 <span class=\"cross\">×</span> 量子匯流",
-    "theme.conv.d":"這股匯流正在頂尖大學成形：量子感測、生物磁造影、儀器與材料。前瞻而早期。",
+    "theme.conv.d":"這股匯流正在頂尖大學成形：量子感測、生物磁造影、儀器與材料。仍屬早期，也是本代表團的前沿。",
     "home.briefTitle":"在醫學與量子交界的田野研究。",
     "home.briefLede":"九位臺灣學員於 2026 年 7 月 6 日至 9 月 3 日在 UCLA 度過六十天，閱讀生醫工程與量子科學交會的前沿。",
     "cta.program":"閱讀計畫綱要","cta.curriculum":"看九週課程","cta.faculty":"認識講者","cta.delegation":"代表團",
@@ -68,7 +68,7 @@
     "w4.t":"量子科學、半導體與材料",
     "w4.in":"量子科學與工程及實驗室參訪（Richard Ross）；半導體技術（Marko Sokolich）；太陽能與材料科學（Yang Yang）。",
     "w4.out":"關於量子、半導體、材料或神經科學應用的實驗室或技術案例研究。",
-    "w5.t":"醫藥藥理、奈米科技與生物標記",
+    "w5.t":"醫學藥理、奈米科技與生物標記",
     "w5.in":"銜接工作坊與詞彙特訓；Hsian-Rong Tseng（UCLA／David Geffen 醫學院）的奈米科技、液態切片、生物標記與數位分身；Yuan Tian 的健康與資安資料科學。",
     "w5.out":"生物標記或數位分身的迷你提案：問題、資料、方法與風險。",
     "w6.t":"數位健康與創新",
@@ -89,11 +89,11 @@
     "faculty.title":"教導這六十天的人。",
     "faculty.note":"客座師資與講者，依其帶來的領域分組。職稱與研究領域依計畫講者名單查證。",
     "band.quantum":"量子科學與工程","band.neuro":"神經科學與腦","band.pharma":"藥理、生物標記與生命科學",
-    "band.digital":"數位健康與資料","band.integrative":"整合與中醫","band.program":"計畫領導 · 臺灣",
+    "band.digital":"數位健康與資料","band.integrative":"整合醫學與中醫","band.program":"計畫領導 · 臺灣",
     "fac.wang":"量子材料與元件、自旋電子學、拓樸絕緣體。中央研究院院士，亞洲大學量子 AI 研究中心榮譽主任。",
     "band.industry":"業界與公部門",
     "fac.wang.r":"領銜教授 · UCLA Samueli（電機／材料）· CQSE 主任",
-    "fac.jarrahi.r":"UCLA · 電機與電腦工程","fac.jarrahi.a":"兆赫與毫米波電子、光電與影像；UCLA 半導體中心 faculty director。",
+    "fac.jarrahi.r":"UCLA · 電機與電腦工程","fac.jarrahi.a":"兆赫與毫米波電子、光電與影像；UCLA 半導體中心學術主任。",
     "fac.ross.r":"UCLA · 量子科技碩士學程與 CQSE","fac.ross.a":"量子科學教育與人才培育；電子自旋量子位元元件。",
     "fac.sokolich.r":"UCLA 電機 · HRL 實驗室","fac.sokolich.a":"化合物半導體、高速電晶體與製程工程、射頻／微波元件。",
     "fac.yang.r":"UCLA · 材料科學與工程系（系主任）","fac.yang.a":"功能性電子元件、太陽能電池、混成鈣鈦礦、有機半導體。",
@@ -115,7 +115,7 @@
     "fac.luo.r":"Anyon Technologies · 共同創辦人暨執行長","fac.luo.a":"超導量子計算、量子處理器與系統、混合量子-古典與模組化架構。",
     "fac.bedi.r":"史丹佛醫學院（耳鼻喉頭頸外科）· 哈佛 · 臨床研究協調員暨應用機器學習研究者","fac.bedi.a":"臨床研究、應用機器學習、多模態 AI、腫瘤學與數位健康。",
     "fac.lin.r":"PredictionProbe 公司 · 創辦人暨技術長","fac.lin.a":"不確定性量化、機率技術、可靠度最佳化、預測建模。",
-    "fac.chou.r":"駐洛杉磯台北經文處 · 科技組組長（國科會）","fac.chou.a":"科技外交、台美學術合作、海外科技計畫協調。",
+    "fac.chou.r":"駐洛杉磯台北經文處 · 科技組組長（國科會）","fac.chou.a":"科技外交、臺美學術合作、海外科技計畫協調。",
 
     /* delegation */
     "deleg.title":"九位學員，三個專題分組。",
@@ -123,12 +123,12 @@
     "deleg.independent":"獨立學員","deleg.staff":"隨團教師",
     "lbl.volunteers":"義工團","vol.title":"義工團隊。","vol.note":"於計畫期間協助代表團的學員，分為 D、E 兩組。","vol.role":"義工",
     "del.introbtn":"自我介紹","del.introph":"這位學員的自我介紹將在此補上。",
-    "deleg.staffNames":"顏宏融 院長 · 吳家樂 老師",
+    "deleg.staffNames":"顏宏融 院長 · 吳家樂 教授",
     "del.lee.s":"國立清華大學 · 物理（天文物理）與電機資訊","del.wang.s":"陽明交通大學 · 智慧醫療電子工程研究所","del.liu.s":"亞洲大學 · 聽力暨語言治療學系","del.chen.s":"芝加哥大學 · 應用資料科學","del.hsieh.s":"馬偕醫學院 · 醫學系","del.pan.s":"多倫多大學 · 藥理學（碩士）","del.clee.s":"國立臺灣大學 · 醫學院生理學","del.cheng.s":"牛津大學 · 博士候選人",
 
     /* journal */
     "journal.title":"影像日誌。","journal.note":"媒體組將以照片與短片紀錄這六十天。本頁先保留版位，活動開始後填入實拍影像。",
-    "journal.state":"state: pending capture · D01–D60",
+    "journal.state":"狀態：等待拍攝 · D01–D60",
 
     /* 404 */
     "nf.title":"這條路徑尚未被量測。","nf.state":"state: |ψ⟩ unresolved · no measurement at this path",
