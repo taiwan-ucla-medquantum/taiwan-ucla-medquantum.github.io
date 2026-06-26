@@ -31,19 +31,27 @@
     var vtHead = document.createElement("div"); vtHead.className = "vt-head";
     // insert BEFORE the items so the (opaque) node boxes always paint over the line — it runs behind each box and "skips" it
     vtl.insertBefore(vtHead, vtl.firstChild); vtl.insertBefore(vtProg, vtl.firstChild);
-    var vtNodes = qsa(".vt-node", vtl), VT_TOP = 8, vtCenters = [];
-    // node centre measured relative to .vtimeline (nodes are absolute, so offsetParent is their .vt-item — walk up)
-    var vtMeasure = function () { vtCenters = vtNodes.map(function (n) { var y = 0, el = n; while (el && el !== vtl) { y += el.offsetTop; el = el.offsetParent; } return y + n.offsetHeight / 2; }); };
+    var vtNodes = qsa(".vt-node", vtl), vtCenters = [], vtY0 = 0, vtY1 = 0;
+    // node centre relative to .vtimeline (nodes are absolute, so offsetParent is their .vt-item — walk up);
+    // anchor the line a few px INSIDE the first & last node so it never pokes above/below them on any browser
+    var vtMeasure = function () {
+      vtCenters = vtNodes.map(function (n) { var y = 0, el = n; while (el && el !== vtl) { y += el.offsetTop; el = el.offsetParent; } return y + n.offsetHeight / 2; });
+      if (!vtCenters.length) return;
+      var half = vtNodes[0].offsetHeight / 2;
+      vtY0 = vtCenters[0] - half + 3;
+      vtY1 = vtCenters[vtCenters.length - 1] + half - 3;
+      vtl.style.setProperty("--vt-y0", vtY0 + "px");
+      vtl.style.setProperty("--vt-y1", (vtl.offsetHeight - vtY1) + "px");
+    };
     vtMeasure();
     ScrollTrigger.create({
       trigger: vtl, start: "top center", end: "bottom center",
       onRefresh: vtMeasure,
       onUpdate: function (s) {
-        var span = vtl.offsetHeight - VT_TOP * 2;
-        var fill = Math.max(0, Math.min(1, s.progress)) * span;
-        vtProg.style.height = fill + "px";
-        vtHead.style.top = (VT_TOP + fill) + "px";
-        var head = VT_TOP + fill;
+        if (!vtCenters.length) return;
+        var head = vtY0 + Math.max(0, Math.min(1, s.progress)) * (vtY1 - vtY0);
+        vtProg.style.height = (head - vtY0) + "px";
+        vtHead.style.top = head + "px";
         for (var i = 0; i < vtNodes.length; i++) vtNodes[i].classList.toggle("is-lit", vtCenters[i] <= head);
       }
     });

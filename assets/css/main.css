@@ -197,9 +197,9 @@ body[data-lang="zh"] .hero__title-en{display:none}
 
 /* ---- Vertical timeline (curriculum) ---- */
 .vtimeline{position:relative;max-width:920px;margin:0 auto;padding-left:clamp(2.4rem,5vw,3.4rem);--vt-line-left:clamp(15px,2.2vw,22px)}
-.vtimeline::before{content:"";position:absolute;left:var(--vt-line-left);top:8px;bottom:8px;width:2px;background:linear-gradient(var(--accent),var(--line) 92%)}
+.vtimeline::before{content:"";position:absolute;left:var(--vt-line-left);top:var(--vt-y0,8px);bottom:var(--vt-y1,8px);width:2px;background:linear-gradient(var(--accent),var(--line) 92%)}
 /* scroll-driven: a glowing star travels down the line, the trail lights up, nodes ignite like lamps */
-.vt-progress{position:absolute;left:var(--vt-line-left);top:8px;width:2px;height:0;border-radius:2px;z-index:0;pointer-events:none;
+.vt-progress{position:absolute;left:var(--vt-line-left);top:var(--vt-y0,8px);width:2px;height:0;border-radius:2px;z-index:0;pointer-events:none;
   background:linear-gradient(180deg,var(--steel-deep),var(--gold-deep) 55%,var(--gold-bright));
   box-shadow:0 0 9px 1px color-mix(in srgb,var(--gold-deep) 65%,transparent)}
 /* soft travelling light head — sits BEHIND the nodes (z-index 0) so it never covers an icon */
