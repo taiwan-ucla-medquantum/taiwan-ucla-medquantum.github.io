@@ -110,6 +110,10 @@
     "fac.yen.r":"中國醫藥大學 · 中醫學院院長","fac.yen.a":"中醫與整合醫學、草藥、針灸、實證傳統醫學。",
     "fac.kthuang.r":"亞洲大學 · 講座教授，AI 與量子研究中心主任","fac.kthuang.a":"MIT 博士；前 IBM 全球副總；知識管理；量子安全技術。",
     "fac.iris.r":"計畫 · 學術顧問暨課程協調","fac.iris.a":"代表團的學術諮詢與日常協調。",
+    "fac.gyure.r":"UCLA CQSE · 執行主任；電機工程兼任教授","fac.gyure.a":"固態量子資訊處理、半導體量子點、量子元件架構與模擬。",
+    "fac.yan.r":"UPSUNS Diamond · CYAN Consulting（前卡內基研究院）· 創辦人／負責人","fac.yan.a":"單晶 CVD/MPCVD 鑽石生長、鑽石基板與熱學／半導體材料。",
+    "fac.luo.r":"Anyon Technologies · 共同創辦人暨執行長","fac.luo.a":"超導量子計算、量子處理器與系統、混合量子-古典與模組化架構。",
+    "fac.bedi.r":"史丹佛醫學院（耳鼻喉頭頸外科）· 哈佛 · 臨床研究協調員暨應用機器學習研究者","fac.bedi.a":"臨床研究、應用機器學習、多模態 AI、腫瘤學與數位健康。",
     "fac.lin.r":"PredictionProbe 公司 · 創辦人暨技術長","fac.lin.a":"不確定性量化、機率技術、可靠度最佳化、預測建模。",
     "fac.chou.r":"駐洛杉磯台北經文處 · 科技組組長（國科會）","fac.chou.a":"科技外交、台美學術合作、海外科技計畫協調。",
 
