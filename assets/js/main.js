@@ -32,7 +32,8 @@
     // insert BEFORE the items so the (opaque) node boxes always paint over the line — it runs behind each box and "skips" it
     vtl.insertBefore(vtHead, vtl.firstChild); vtl.insertBefore(vtProg, vtl.firstChild);
     var vtNodes = qsa(".vt-node", vtl), VT_TOP = 8, vtCenters = [];
-    var vtMeasure = function () { vtCenters = vtNodes.map(function (n) { return n.offsetTop + n.offsetHeight / 2; }); };
+    // node centre measured relative to .vtimeline (nodes are absolute, so offsetParent is their .vt-item — walk up)
+    var vtMeasure = function () { vtCenters = vtNodes.map(function (n) { var y = 0, el = n; while (el && el !== vtl) { y += el.offsetTop; el = el.offsetParent; } return y + n.offsetHeight / 2; }); };
     vtMeasure();
     ScrollTrigger.create({
       trigger: vtl, start: "top center", end: "bottom center",
@@ -42,8 +43,8 @@
         var fill = Math.max(0, Math.min(1, s.progress)) * span;
         vtProg.style.height = fill + "px";
         vtHead.style.top = (VT_TOP + fill) + "px";
-        var lit = VT_TOP + fill + 3;
-        for (var i = 0; i < vtNodes.length; i++) vtNodes[i].classList.toggle("is-lit", vtCenters[i] <= lit);
+        var head = VT_TOP + fill;
+        for (var i = 0; i < vtNodes.length; i++) vtNodes[i].classList.toggle("is-lit", vtCenters[i] <= head);
       }
     });
     vtl.classList.add("vt-live");
