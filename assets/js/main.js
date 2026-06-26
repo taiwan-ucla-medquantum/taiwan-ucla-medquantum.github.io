@@ -24,13 +24,12 @@
     if (day !== lastDay) { lastDay = day; for (var i = 0; i < rticks.length; i++) rticks[i].classList.toggle("past", +rticks[i].getAttribute("data-day") <= day); }
   } });
 
-  /* vertical timeline: a glowing star follows the scroll down the line, lighting each node like a lamp */
+  /* vertical timeline: a glowing light follows the scroll down the line (behind the nodes); each node ignites like a lamp as it passes */
   var vtl = qs(".vtimeline");
   if (vtl) {
     var vtProg = document.createElement("div"); vtProg.className = "vt-progress";
-    var vtStar = document.createElement("div"); vtStar.className = "vt-star";
-    vtStar.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C12.6 8 16 11.4 22 12 16 12.6 12.6 16 12 22 11.4 16 8 12.6 2 12 8 11.4 11.4 8 12 2Z"/></svg>';
-    vtl.appendChild(vtProg); vtl.appendChild(vtStar);
+    var vtHead = document.createElement("div"); vtHead.className = "vt-head";
+    vtl.appendChild(vtProg); vtl.appendChild(vtHead);
     var vtNodes = qsa(".vt-node", vtl), VT_TOP = 8, vtCenters = [];
     var vtMeasure = function () { vtCenters = vtNodes.map(function (n) { return n.offsetTop + n.offsetHeight / 2; }); };
     vtMeasure();
@@ -41,7 +40,7 @@
         var span = vtl.offsetHeight - VT_TOP * 2;
         var fill = Math.max(0, Math.min(1, s.progress)) * span;
         vtProg.style.height = fill + "px";
-        vtStar.style.top = (VT_TOP + fill) + "px";
+        vtHead.style.top = (VT_TOP + fill) + "px";
         var lit = VT_TOP + fill + 3;
         for (var i = 0; i < vtNodes.length; i++) vtNodes[i].classList.toggle("is-lit", vtCenters[i] <= lit);
       }
