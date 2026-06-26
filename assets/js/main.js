@@ -56,6 +56,8 @@
       }
     });
     vtl.classList.add("vt-live");
+    // a week's live-log dropdown changes card height → re-measure node positions
+    qsa("details.vt-log", vtl).forEach(function (d) { d.addEventListener("toggle", function () { ScrollTrigger.refresh(); }); });
   }
 
   /* four-signal mini-waves (decorative SVG) */
@@ -91,7 +93,7 @@
       else im.style.opacity = 0;
     });
   });
-  qsa(".genph > img").forEach(function (im) { im.addEventListener("error", function () { im.style.opacity = 0; }); });
+  qsa(".genph > img:not([data-fallback])").forEach(function (im) { im.addEventListener("error", function () { im.style.opacity = 0; }); });
 
   /* faculty band accent variety (harmonious gold/steel tones, all AA-readable) */
   var BAND_ACC = ["--steel", "--steel-deep", "--gold-deep", "--steel", "--gold", "--steel-deep", "--gold"];
