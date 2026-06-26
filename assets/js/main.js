@@ -29,7 +29,8 @@
   if (vtl) {
     var vtProg = document.createElement("div"); vtProg.className = "vt-progress";
     var vtHead = document.createElement("div"); vtHead.className = "vt-head";
-    vtl.appendChild(vtProg); vtl.appendChild(vtHead);
+    // insert BEFORE the items so the (opaque) node boxes always paint over the line — it runs behind each box and "skips" it
+    vtl.insertBefore(vtHead, vtl.firstChild); vtl.insertBefore(vtProg, vtl.firstChild);
     var vtNodes = qsa(".vt-node", vtl), VT_TOP = 8, vtCenters = [];
     var vtMeasure = function () { vtCenters = vtNodes.map(function (n) { return n.offsetTop + n.offsetHeight / 2; }); };
     vtMeasure();
