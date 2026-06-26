@@ -122,6 +122,7 @@
     "deleg.note":"九人團隊與就讀單位。專題 A、B、C 組貫穿九週。",
     "deleg.independent":"獨立學員","deleg.staff":"隨團教師",
     "lbl.volunteers":"義工團","vol.title":"義工團隊。","vol.note":"於計畫期間協助代表團的學員，分為 D、E 兩組。","vol.role":"義工",
+    "del.introbtn":"自我介紹","del.introph":"這位學員的自我介紹將在此補上。",
     "deleg.staffNames":"顏宏融 院長 · 吳家樂 老師",
     "del.lee.s":"國立清華大學 · 物理（天文物理）與電機資訊","del.wang.s":"陽明交通大學 · 智慧醫療電子工程研究所","del.liu.s":"亞洲大學 · 聽力暨語言治療學系","del.chen.s":"芝加哥大學 · 應用資料科學","del.hsieh.s":"馬偕醫學院 · 醫學系","del.pan.s":"多倫多大學 · 藥理學（碩士）","del.clee.s":"國立臺灣大學 · 醫學院生理學","del.cheng.s":"牛津大學 · 博士候選人",
 

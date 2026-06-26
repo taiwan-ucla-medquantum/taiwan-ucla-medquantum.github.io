@@ -1,5 +1,19 @@
 /* ── Engine: progress bar, Lenis smooth scroll, reveals, count-up, mini-waves ──
    Content is fully present without JS; motion is prefers-reduced-motion gated.  */
+
+/* link icons (shared across pages; independent of gsap so it always runs) */
+(function () {
+  var I = {
+    profile: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.5 2.6 2.5 15.4 0 18M12 3c-2.5 2.6-2.5 15.4 0 18"/></svg>',
+    linkedin: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.94 8.5v9.06H4V8.5zM5.47 7.2a1.7 1.7 0 1 1 0-3.4 1.7 1.7 0 0 1 0 3.4zM9 8.5h2.82v1.24h.04c.39-.7 1.35-1.44 2.78-1.44 2.97 0 3.52 1.86 3.52 4.28v4.98h-2.94v-4.42c0-1.05-.02-2.4-1.52-2.4-1.52 0-1.76 1.14-1.76 2.32v4.5H9z"/></svg>',
+    scholar: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 4 2 9l10 5 10-5z"/><path d="M6 11.2V16c0 1.4 2.7 2.7 6 2.7s6-1.3 6-2.7v-4.8"/></svg>',
+    personal: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M9.5 13.5a4 4 0 0 0 6 0L18 11a4 4 0 0 0-5.7-5.7L11 6.6"/><path d="M14.5 10.5a4 4 0 0 0-6 0L6 13a4 4 0 0 0 5.7 5.7L13 17.4"/></svg>',
+    link: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M14 4h6v6"/><path d="M20 4 10 14"/><path d="M19 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6"/></svg>'
+  };
+  var as = document.querySelectorAll("a[data-ic]");
+  for (var i = 0; i < as.length; i++) { if (!as[i].innerHTML.trim()) as[i].innerHTML = I[as[i].getAttribute("data-ic")] || I.profile; }
+})();
+
 (function () {
   "use strict";
   if (typeof window.gsap === "undefined" || typeof window.ScrollTrigger === "undefined") return;

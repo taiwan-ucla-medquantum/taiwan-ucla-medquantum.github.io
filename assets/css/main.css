@@ -288,6 +288,18 @@ body[data-lang="zh"] .hero__title-en{display:none}
 .accompanying .label{font-family:var(--f-mono);font-size:.74rem;color:var(--ink-2);margin-bottom:.4rem}
 .accompanying .names{font-family:var(--f-display);font-size:1.05rem;color:var(--heading)}
 .accompanying .names .tc{font-family:var(--f-tc);color:var(--ink-2)}
+/* student cards: reserved headshot + link slots, and an expandable self-intro */
+.delegate__head{display:flex;gap:.85rem;align-items:flex-start}
+.delegate__meta{min-width:0}
+.delegate__intro{margin-top:.9rem;border-top:1px solid var(--line)}
+.delegate__introbtn{display:flex;align-items:center;gap:.5rem;padding:.7rem .1rem .15rem;cursor:pointer;list-style:none;font-family:var(--f-mono);font-size:.74rem;color:var(--accent);-webkit-tap-highlight-color:transparent}
+.delegate__introbtn::-webkit-details-marker{display:none}
+.delegate__introbtn:hover{color:var(--gold)}
+.delegate__chev{width:8px;height:8px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg);margin-left:auto;transition:transform .25s var(--ease)}
+.delegate__intro[open] .delegate__chev{transform:rotate(-135deg)}
+.delegate__bio{font-size:.86rem;color:var(--ink-2);padding:.35rem 0 .15rem;font-style:italic;text-wrap:pretty}
+.delegate__intro[open] .delegate__bio{animation:introIn .32s var(--ease)}
+@keyframes introIn{from{opacity:0;transform:translateY(-5px)}to{opacity:1;transform:none}}
 
 /* ---- Media band (image strip) ---- */
 .mediaband{position:relative;height:clamp(220px,40vh,420px);overflow:hidden;border-radius:0}
