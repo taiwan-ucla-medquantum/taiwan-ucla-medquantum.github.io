@@ -45,7 +45,7 @@
       '<div class="logos" aria-label="Institution logos">' +
         '<img src="assets/img/moe.png" alt="Ministry of Education, Taiwan" loading="lazy">' +
         '<img src="assets/img/asia-university.png" alt="Asia University" loading="lazy">' +
-        '<img src="assets/img/taita-east.png" alt="TAITA-East · Taiwanese American Industrial Technology Association" loading="lazy">' +
+        '<img class="logo-taita" src="assets/img/TAITA.png" alt="TAITA-East · Taiwanese American Industrial Technology Association" loading="lazy">' +
         '<img src="assets/img/ucla-wordmark.svg" alt="UCLA" loading="lazy">' +
         '<img src="assets/img/ucla-cqse.png" alt="UCLA CQSE" loading="lazy">' +
         '<img src="assets/img/ucla-samueli.svg" alt="UCLA Samueli School of Engineering" loading="lazy">' +
