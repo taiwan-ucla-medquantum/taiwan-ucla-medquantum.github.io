@@ -92,7 +92,7 @@
     "band.quantum":"量子科學與工程","band.neuro":"神經科學與腦","band.pharma":"藥理、生物標記與生命科學",
     "band.digital":"數位健康與資料","band.integrative":"整合醫學與中醫","band.program":"計畫領導 · 臺灣",
     "fac.wang":"量子材料與元件、自旋電子學、拓樸絕緣體。中央研究院院士，亞洲大學量子 AI 研究中心榮譽主任。",
-    "band.industry":"業界與公部門",
+    "band.industry":"業界與公部門","band.coord":"計畫協調",
     "fac.wang.r":"領銜教授 · UCLA Samueli（電機／材料）· CQSE 主任",
     "fac.jarrahi.r":"UCLA · 電機與電腦工程","fac.jarrahi.a":"兆赫與毫米波電子、光電與影像；UCLA 半導體中心學術主任。",
     "fac.ross.r":"UCLA · 量子科技碩士學程與 CQSE","fac.ross.a":"量子科學教育與人才培育；電子自旋量子位元元件。",
