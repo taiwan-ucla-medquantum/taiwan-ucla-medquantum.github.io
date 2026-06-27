@@ -272,6 +272,18 @@ body[data-lang="zh"] .hero__title-en{display:none}
 .fac-links a:hover{color:var(--gold);border-color:var(--gold);transform:translateY(-2px)}
 .fac-links a[aria-disabled="true"]{opacity:.4;pointer-events:none}
 .fac-links svg{width:15px;height:15px}
+/* faculty bio expand/collapse (for longer self-introductions) */
+.fac-more{margin-top:.5rem}
+.fac-more__sum{display:inline-flex;align-items:center;gap:.4rem;cursor:pointer;list-style:none;font-family:var(--f-mono);font-size:.72rem;color:var(--accent);-webkit-tap-highlight-color:transparent}
+.fac-more__sum::-webkit-details-marker{display:none}
+.fac-more__sum:hover{color:var(--gold)}
+.fac-more__sum::after{content:"";width:7px;height:7px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg);transition:transform .25s var(--ease)}
+.fac-more[open] .fac-more__sum::after{transform:rotate(-135deg)}
+.fac-more__less{display:none}
+.fac-more[open] .fac-more__more{display:none}
+.fac-more[open] .fac-more__less{display:inline}
+.fac-more__body{margin-top:.45rem}
+.fac-more[open] .fac-more__body{animation:introIn .3s var(--ease)}
 
 /* ---- Delegation ---- */
 .manifest{list-style:none;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,18rem),1fr));gap:clamp(1rem,2vw,1.4rem)}
