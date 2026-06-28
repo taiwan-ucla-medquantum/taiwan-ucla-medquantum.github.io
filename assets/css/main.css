@@ -98,7 +98,9 @@ strong{color:var(--heading);font-weight:600}
 /* ---- Nav ---- */
 .nav{position:fixed;inset:0 0 auto 0;height:var(--nav-h);z-index:var(--z-nav);display:flex;align-items:center;gap:1rem;
   padding:0 var(--pad);background:color-mix(in oklab,var(--bg) 82%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-.nav__brand{display:flex;align-items:baseline;gap:.5rem;flex:0 0 auto}
+.nav__brand{display:flex;align-items:center;gap:.5rem;flex:0 0 auto}
+.nav__mark{height:1.25em;aspect-ratio:638/1126;width:auto;flex:none;overflow:visible;fill:color-mix(in oklab,var(--gold-bright) 10%,transparent);stroke:var(--gold-bright);stroke-width:1.15;filter:drop-shadow(0 0 3px color-mix(in oklab,var(--gold-bright) 65%,transparent)) drop-shadow(0 0 7px color-mix(in oklab,var(--gold) 30%,transparent));transition:filter .3s var(--ease)}
+.nav__brand:hover .nav__mark{filter:drop-shadow(0 0 5px color-mix(in oklab,var(--gold-bright) 78%,transparent)) drop-shadow(0 0 9px color-mix(in oklab,var(--gold) 40%,transparent))}
 .nav__brand b{font-family:var(--f-mono);font-weight:700;letter-spacing:.03em;font-size:.9rem;color:var(--gold)}
 .nav__brand span{font-family:var(--f-tc);font-weight:700;font-size:.92rem;color:var(--heading)}
 .nav__links{display:flex;gap:clamp(.5rem,1.4vw,1.2rem);margin-left:auto}
@@ -181,13 +183,9 @@ body[data-lang="zh"] .hero__title-en{display:none}
 .endorse__label{font-family:var(--f-mono);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--on-dark-dim)}
 .endorse__tick{display:inline-block;width:14px;height:1px;background:var(--gold);opacity:.55}
 .endorse__orgs{display:flex;align-items:center;flex-wrap:wrap;gap:.7rem;list-style:none;margin:0;padding:0}
-.cred-chip{display:inline-flex;align-items:center;background:rgba(244,248,255,.06);border:1px solid var(--line-2);border-radius:8px;padding:5px 10px;box-shadow:0 1px 0 rgba(255,255,255,.06) inset,0 6px 18px rgba(2,6,18,.30);transition:background .3s var(--ease)}
-.cred-chip:hover{background:rgba(244,248,255,.1)}
+.cred-chip{display:inline-flex;align-items:center;background:rgba(247,249,252,.93);border:1px solid rgba(255,255,255,.5);border-radius:8px;padding:5px 11px;box-shadow:0 1px 0 rgba(255,255,255,.5) inset,0 6px 18px rgba(2,6,18,.42);backdrop-filter:blur(3px);transition:background .3s var(--ease),transform .3s var(--ease)}
+.cred-chip:hover{background:#fff;transform:translateY(-1px)}
 .cred-chip img{display:block;width:auto}
-.cred-chip img[src*="moe"],.cred-chip img[src*="asia-university"]{filter:grayscale(.45) brightness(1.12) contrast(.94) opacity(.9)}
-.cred-chip--taita img{filter:brightness(1.08) contrast(1.04) opacity(.92)}
-.cred-chip--wordmark{background:transparent;border:0;box-shadow:none;padding:5px 4px}
-.cred-chip--wordmark img{filter:brightness(0) invert(1) opacity(.92)}
 @media (max-width:720px){.hero__endorse{gap:.5rem}.endorse__label{flex-basis:100%}.endorse__tick{display:none}.endorse__orgs{gap:.5rem}.cred-chip{box-shadow:none;padding:4px 8px}.cred-chip img{height:17px!important}.cred-chip--taita img{height:22px!important}}
 
 /* view counter docked on the flight rail */
