@@ -14,6 +14,23 @@
   for (var i = 0; i < as.length; i++) { if (!as[i].innerHTML.trim()) as[i].innerHTML = I[as[i].getAttribute("data-ic")] || I.profile; }
 })();
 
+/* view counter — abacus hit counter docked on the flight rail; styled by us, degrades gracefully */
+(function () {
+  var el = document.getElementById("viewCount");
+  if (!el) return;
+  var wrap = el.closest ? el.closest(".railbar__count") : null;
+  var done = function (n) {
+    var fmt = function (x) { try { return new Intl.NumberFormat().format(Math.round(x)); } catch (e) { return Math.round(x); } };
+    if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) { el.textContent = fmt(n); return; }
+    var start = Math.max(0, Math.floor(n * 0.94)), t0 = null;
+    requestAnimationFrame(function step(ts) { if (!t0) t0 = ts; var p = Math.min(1, (ts - t0) / 900); el.textContent = fmt(start + (n - start) * (1 - Math.pow(1 - p, 3))); if (p < 1) requestAnimationFrame(step); });
+  };
+  fetch("https://abacus.jasoncameron.dev/hit/taiwan-ucla-medquantum/views")
+    .then(function (r) { return r.json(); })
+    .then(function (d) { var n = d && (d.value != null ? d.value : d.count); if (n == null || isNaN(+n)) throw 0; done(+n); })
+    .catch(function () { if (wrap) wrap.style.display = "none"; });
+})();
+
 (function () {
   "use strict";
   if (typeof window.gsap === "undefined" || typeof window.ScrollTrigger === "undefined") return;
