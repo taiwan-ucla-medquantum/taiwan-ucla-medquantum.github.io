@@ -445,28 +445,35 @@ body[data-lang="zh"] .hero__title-en{display:none}
 
 /* ── Site-architect badge (delegate #01) ── */
 .delegate--architect{
-  border-color:rgba(251,182,21,.36);
-  box-shadow:0 0 0 1px rgba(251,182,21,.10), 0 16px 46px -18px rgba(251,182,21,.34), var(--card-shadow);
+  border-color:rgba(251,182,21,.4);
+  box-shadow:0 0 0 1px rgba(251,182,21,.12), 0 16px 46px -18px rgba(251,182,21,.38), var(--card-shadow);
 }
-.delegate--architect .fac-shot{border-color:rgba(251,182,21,.55);box-shadow:0 0 0 3px rgba(251,182,21,.12)}
+.delegate--architect .fac-shot{border-color:rgba(251,182,21,.6);box-shadow:0 0 0 3px rgba(251,182,21,.14)}
 .arch-badge{
   display:inline-flex;align-items:center;gap:.5em;
-  margin-top:.6rem;padding:.34em .74em;
-  font-family:var(--f-mono);font-size:.62rem;font-weight:700;
-  letter-spacing:.09em;text-transform:uppercase;line-height:1;white-space:nowrap;
+  margin-top:.6rem;padding:.38em .82em;
+  font-family:var(--f-mono);font-size:.63rem;font-weight:700;
+  letter-spacing:.1em;text-transform:uppercase;line-height:1;white-space:nowrap;
   color:var(--gold-bright);
-  border:1px solid rgba(251,182,21,.42);border-radius:999px;
-  background:linear-gradient(100deg,rgba(251,182,21,.13),rgba(251,182,21,.02));
+  border:1px solid rgba(251,182,21,.55);border-radius:999px;
+  background:linear-gradient(100deg,rgba(251,182,21,.18),rgba(251,182,21,.05));
   text-decoration:none;position:relative;overflow:hidden;
-  transition:transform .2s var(--ease),border-color .2s,box-shadow .2s;
+  animation:archGlow 2.6s ease-in-out infinite;
+  transition:transform .2s var(--ease);
 }
-.arch-badge:hover{transform:translateY(-1px);border-color:var(--gold-bright);box-shadow:0 8px 20px -8px rgba(251,182,21,.5)}
-.arch-badge__glyph{font-weight:700;opacity:.95;letter-spacing:0;font-size:.92em}
+.arch-badge:hover{transform:translateY(-1px)}
+.arch-badge>*{position:relative;z-index:1}
+.arch-badge__glyph{font-weight:700;letter-spacing:0;font-size:.95em;color:#FFE9A8}
+/* bright diagonal shine sweep, repeats every 2.6s */
 .arch-badge::after{
-  content:"";position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;
-  background:linear-gradient(115deg,transparent 32%,rgba(255,255,255,.5) 50%,transparent 68%);
-  transform:translateX(-130%);
-  animation:archShimmer 5s ease-in-out infinite;
+  content:"";position:absolute;top:-40%;left:0;width:60%;height:180%;pointer-events:none;z-index:2;
+  background:linear-gradient(105deg,transparent 0%,rgba(255,255,255,.15) 35%,rgba(255,255,255,.9) 50%,rgba(255,255,255,.15) 65%,transparent 100%);
+  transform:translateX(-220%) skewX(-18deg);
+  animation:archSweep 2.6s ease-in-out infinite;
 }
-@keyframes archShimmer{0%,58%{transform:translateX(-130%)}100%{transform:translateX(130%)}}
-@media (prefers-reduced-motion:reduce){.arch-badge::after{display:none}}
+@keyframes archSweep{0%,45%{transform:translateX(-220%) skewX(-18deg)}80%,100%{transform:translateX(320%) skewX(-18deg)}}
+@keyframes archGlow{
+  0%,100%{box-shadow:0 0 0 0 rgba(251,182,21,0), 0 2px 10px -4px rgba(251,182,21,.3)}
+  50%{box-shadow:0 0 16px 1px rgba(251,182,21,.4), 0 2px 14px -3px rgba(251,182,21,.55)}
+}
+@media (prefers-reduced-motion:reduce){.arch-badge,.arch-badge::after{animation:none}.arch-badge::after{display:none}}
