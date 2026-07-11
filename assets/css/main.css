@@ -99,8 +99,8 @@ strong{color:var(--heading);font-weight:600}
 .nav{position:fixed;inset:0 0 auto 0;height:var(--nav-h);z-index:var(--z-nav);display:flex;align-items:center;gap:1rem;
   padding:0 var(--pad);background:color-mix(in oklab,var(--bg) 82%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
 .nav__brand{display:flex;align-items:center;gap:.5rem;flex:0 0 auto}
-.nav__mark{height:1.25em;aspect-ratio:638/1126;width:auto;flex:none;overflow:visible;fill:color-mix(in oklab,var(--gold-bright) 10%,transparent);stroke:var(--gold-bright);stroke-width:1.15;filter:drop-shadow(0 0 3px color-mix(in oklab,var(--gold-bright) 65%,transparent)) drop-shadow(0 0 7px color-mix(in oklab,var(--gold) 30%,transparent));transition:filter .3s var(--ease)}
-.nav__brand:hover .nav__mark{filter:drop-shadow(0 0 5px color-mix(in oklab,var(--gold-bright) 78%,transparent)) drop-shadow(0 0 9px color-mix(in oklab,var(--gold) 40%,transparent))}
+.nav__mark{height:1.95em;width:1.95em;aspect-ratio:1;flex:none;border-radius:50%;object-fit:cover;box-shadow:0 0 0 1px rgba(251,182,21,.42),0 0 9px rgba(251,182,21,.28);transition:box-shadow .3s var(--ease),transform .3s var(--ease)}
+.nav__brand:hover .nav__mark{box-shadow:0 0 0 1px rgba(251,182,21,.72),0 0 14px rgba(251,182,21,.5);transform:scale(1.06)}
 .nav__brand b{font-family:var(--f-mono);font-weight:700;letter-spacing:.03em;font-size:.9rem;color:var(--gold)}
 .nav__brand span{font-family:var(--f-tc);font-weight:700;font-size:.92rem;color:var(--heading)}
 .nav__links{display:flex;gap:clamp(.5rem,1.4vw,1.2rem);margin-left:auto}
@@ -389,6 +389,8 @@ body[data-lang="zh"] .hero__title-en{display:none}
 .vt-log__body{padding:.5rem 0 .4rem}
 .vt-log__shots{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem;margin-bottom:.7rem}
 .vt-log__ph{aspect-ratio:4/3;border-radius:8px;border:1px dashed var(--line);background:repeating-linear-gradient(135deg,rgba(116,194,222,.05) 0 8px,transparent 8px 16px)}
+.vt-log__shot{aspect-ratio:4/3;width:100%;height:auto;display:block;border-radius:8px;border:1px solid var(--line);object-fit:cover;background:#070C1E;transition:transform .25s var(--ease)}
+.vt-log__shot:hover{transform:scale(1.03)}
 .vt-log__note{font-size:.84rem;color:var(--ink-2);font-style:italic}
 
 /* ---- Journal ---- */
