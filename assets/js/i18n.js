@@ -115,6 +115,7 @@
     "fac.gyure.r":"UCLA CQSE · 執行主任；電機工程兼任教授","fac.gyure.a":"固態量子資訊處理、半導體量子點、量子元件架構與模擬。",
     "fac.yan.r":"UPSUNS Diamond · CYAN Consulting（前卡內基研究院）· 創辦人／負責人","fac.yan.a":"單晶 CVD/MPCVD 鑽石生長、鑽石基板與熱學／半導體材料。",
     "fac.luo.r":"Anyon Technologies · 共同創辦人暨執行長","fac.luo.a":"超導量子計算、量子處理器與系統、混合量子-古典與模組化架構。",
+    "fac.holsinger.r":"史丹佛醫學院（耳鼻喉頭頸外科）· 教授暨頭頸外科主任","fac.holsinger.a":"頭頸部外科腫瘤學；經口機器人手術（TORS）與微創手術；外科創新與 AI。",
     "fac.bedi.r":"史丹佛醫學院（耳鼻喉頭頸外科）· 哈佛 · 臨床研究協調員暨應用機器學習研究者","fac.bedi.a":"臨床研究、應用機器學習、多模態 AI、腫瘤學與數位健康。",
     "fac.lin.r":"PredictionProbe 公司 · 創辦人暨技術長","fac.lin.a":"不確定性量化、機率技術、可靠度最佳化、預測建模。",
     "fac.chou.r":"駐洛杉磯台北經文處 · 科技組組長（國科會）","fac.chou.a":"科技外交、臺美學術合作、海外科技計畫協調。",
