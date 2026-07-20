@@ -504,3 +504,8 @@ body[data-lang="zh"] .hero__title-en{display:none}
 .team-card__name{font-family:var(--f-mono);font-weight:700;color:var(--gold-bright);letter-spacing:.05em;font-size:1.02rem;margin-bottom:.55rem}
 .team-card p{font-size:.93rem;line-height:1.78;color:var(--ink-2);margin:0}
 @media(max-width:680px){.press__hero img{aspect-ratio:4/3}}
+
+/* Journal · weekly photo galleries */
+.jweek__hd{margin-bottom:.7rem;line-height:1.4}
+.jweek__tag{font-family:var(--f-mono);font-size:.74rem;color:var(--gold-bright);letter-spacing:.05em}
+.jweek__theme{color:var(--ink-2);font-size:.85rem;margin-left:.55rem}
