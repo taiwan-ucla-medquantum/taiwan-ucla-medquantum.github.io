@@ -12,8 +12,8 @@
     "foot.org3":"<span class=\"mono\">學術合作單位</span> UCLA 量子科學與工程中心（CQSE）",
     "foot.org4":"<span class=\"mono\">共同主辦</span> UCLA Samueli 工學院 · David Geffen 醫學院 · UCLA Joe C. Wen 護理學院",
     "foot.initiative":"<span class=\"mono\">所屬計畫</span> 教育部青年百億海外圓夢基金計畫 · 海外翱翔組",
-    "imprint.note":"本站由 I-9-11 代表團學員建置。計畫細節得由計畫團隊調整。內容依 2026 課程大綱與查證後的講者名單。",
-    "foot.follow":"追蹤計畫","foot.authorby":"網站設計與開發",
+    "imprint.note":"本站由 I-9-11 代表團學員建置，內容依 2026 課程大綱與查證後的講者名單。",
+    "foot.follow":"追蹤計畫","foot.credits":"圖片來源","foot.authorby":"網站設計與開發",
 
     /* page headers */
     "page.program":"計畫綱要","page.curriculum":"九週課程","page.faculty":"講者陣容","page.delegation":"代表團","page.journal":"影像日誌",
