@@ -555,7 +555,7 @@ body[data-lang="zh"] .pullquote p{font-family:var(--f-tc);font-weight:700}
 .foot__author a:hover::after{right:0}
 
 /* footer social · Threads optical-size fix */
-.social--th svg{width:27px;height:27px}
+.social--th svg{width:19px;height:19px}
 
 
 /* ── Left-edge social "signal rail" — a vertical sibling of .railbar / .vtimeline ── */
@@ -565,13 +565,13 @@ body[data-lang="zh"] .pullquote p{font-family:var(--f-tc);font-weight:700}
 .srail--in .srail__line{transform:translateX(-50%) scaleY(1)}
 .srail__spark{position:absolute;left:50%;top:30px;width:6px;height:6px;border-radius:50%;transform:translate(-50%,0);opacity:0;z-index:0;pointer-events:none;background:radial-gradient(circle,var(--gold-bright) 0%,color-mix(in oklab,var(--gold) 70%,transparent) 45%,transparent 72%)}
 .srail__cap{writing-mode:vertical-rl;transform:rotate(180deg);font-family:var(--f-mono);font-size:.6rem;letter-spacing:.28em;text-transform:uppercase;color:var(--ink-2);opacity:.8;line-height:1}
-.srail__node{position:relative;width:40px;height:40px;border-radius:11px;display:grid;place-items:center;z-index:1;pointer-events:auto;color:var(--ink-2);background:color-mix(in oklab,var(--bg-2) 86%,transparent);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border:1px solid var(--line);box-shadow:var(--card-shadow);transition:transform .3s var(--ease),color .3s var(--ease),border-color .3s var(--ease),background .3s var(--ease),box-shadow .3s var(--ease)}
+.srail__node{position:relative;width:40px;height:40px;border-radius:11px;display:grid;place-items:center;z-index:1;pointer-events:auto;color:color-mix(in oklab,var(--brand-c,var(--ink-2)) 66%,var(--ink-2));background:color-mix(in oklab,var(--brand-c,var(--ink-2)) 13%,var(--bg-2));-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border:1px solid color-mix(in oklab,var(--brand-c,var(--ink-2)) 42%,var(--line));box-shadow:var(--card-shadow);transition:transform .3s var(--ease),color .3s var(--ease),border-color .3s var(--ease),background .3s var(--ease),box-shadow .3s var(--ease)}
 .srail__node svg{width:19px;height:19px}
-.srail__node--th svg{width:23px;height:23px}
+.srail__node--th svg{width:16px;height:16px}
 .srail__node--fb{--brand-c:#1877F2}
 .srail__node--ig{--brand-c:#D6249F}
 .srail__node--th{--brand-c:var(--heading)}
-.srail__node:hover,.srail__node:focus-visible{transform:translateX(3px) scale(1.06);color:var(--brand-c);border-color:var(--brand-c);background:color-mix(in oklab,var(--brand-c) 12%,var(--bg-2));box-shadow:0 0 0 1px var(--brand-c),0 0 18px 1px color-mix(in srgb,var(--brand-c) 55%,transparent),var(--card-shadow)}
+.srail__node:hover,.srail__node:focus-visible{transform:translateX(3px) scale(1.06);color:var(--brand-c);border-color:var(--brand-c);background:color-mix(in oklab,var(--brand-c) 22%,var(--bg-2));box-shadow:0 0 0 1px var(--brand-c),0 0 18px 1px color-mix(in srgb,var(--brand-c) 55%,transparent),var(--card-shadow)}
 .srail__dot{width:7px;height:7px;border-radius:50%;z-index:1;background:var(--gold);box-shadow:0 0 8px color-mix(in oklab,var(--gold-bright) 65%,transparent)}
 .srail--in .srail__dot{animation:srailLanded 2s var(--ease) 1s infinite}
 .srail__tip{position:absolute;left:calc(100% + 12px);top:50%;transform:translateY(-50%) translateX(-6px);white-space:nowrap;font-family:var(--f-mono);font-size:.66rem;letter-spacing:.06em;color:var(--ink);background:color-mix(in oklab,var(--bg-2) 92%,transparent);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border:1px solid var(--line);border-left:2px solid var(--brand-c);border-radius:8px;padding:.32em .6em;box-shadow:0 8px 20px -10px rgba(6,11,27,.5);opacity:0;pointer-events:none;transition:opacity .2s var(--ease),transform .2s var(--ease)}
