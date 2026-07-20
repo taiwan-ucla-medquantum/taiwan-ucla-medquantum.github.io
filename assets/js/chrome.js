@@ -5,7 +5,7 @@
   "use strict";
   var page = document.body.getAttribute("data-page") || "home";
   var NAV = [["home","index.html","Home"],["program","program.html","Program"],["curriculum","curriculum.html","Curriculum"],
-    ["faculty","faculty.html","Faculty"],["delegation","delegation.html","Delegation"],["journal","journal.html","Journal"]];
+    ["faculty","faculty.html","Faculty"],["delegation","delegation.html","Delegation"],["news","news.html","News"],["journal","journal.html","Journal"]];
   var links = NAV.map(function (n) { return '<a class="nav__link" href="' + n[1] + '" data-i18n="nav.' + n[0] + '"' + (n[0] === page ? ' aria-current="page"' : '') + '>' + n[2] + '</a>'; }).join("");
 
   var sun = '<svg class="theme-day" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>';

@@ -479,3 +479,28 @@ body[data-lang="zh"] .hero__title-en{display:none}
   50%{box-shadow:0 0 16px 1px rgba(251,182,21,.4), 0 2px 14px -3px rgba(251,182,21,.55)}
 }
 @media (prefers-reduced-motion:reduce){.arch-badge,.arch-badge::after{animation:none}.arch-badge::after{display:none}}
+
+/* ── News / press-release article ── */
+.press{max-width:1080px;margin:0 auto;padding:0 clamp(1.1rem,4vw,2rem) 4rem}
+.press__head{max-width:56rem;margin:0 auto;text-align:center;padding:clamp(2.4rem,8vh,5rem) 0 1.2rem}
+.press__eyebrow{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-bright);margin-bottom:1.1rem}
+.press__title{font-family:var(--f-display);font-weight:700;font-size:clamp(2rem,5vw,3.4rem);line-height:1.1;letter-spacing:-.01em;color:var(--heading)}
+.press__sub{font-size:clamp(1.05rem,2.1vw,1.35rem);color:var(--ink);margin-top:1.05rem;font-weight:500;line-height:1.5}
+.press__byline{font-family:var(--f-mono);font-size:.74rem;color:var(--ink-2);margin-top:1.3rem;letter-spacing:.04em}
+.press__hero{margin:2.1rem auto;border-radius:16px;overflow:hidden;border:1px solid var(--line)}
+.press__hero img{width:100%;display:block;aspect-ratio:16/9;object-fit:cover}
+.press__body{max-width:43rem;margin:0 auto}
+.press__lede{font-size:1.16rem;line-height:1.85;color:var(--ink);font-weight:500;border-left:3px solid var(--gold);padding:.15rem 0 .15rem 1.2rem;margin:2.3rem 0}
+.press__sec{margin:2.8rem 0}
+.press__sec h2{font-family:var(--f-display);font-weight:600;font-size:clamp(1.28rem,2.6vw,1.66rem);color:var(--heading);line-height:1.22;margin-bottom:1rem}
+.press__sec h2::before{content:"";display:block;width:40px;height:3px;border-radius:2px;background:var(--gold);margin-bottom:.85rem}
+.press__sec p{font-size:1.02rem;line-height:1.9;color:var(--ink-2);margin:1rem 0}
+.press__fig{margin:1.7rem 0;border-radius:12px;overflow:hidden;border:1px solid var(--line);background:var(--bg-2)}
+.press__fig img{width:100%;display:block}
+.press__fig figcaption{font-family:var(--f-mono);font-size:.72rem;color:var(--ink-2);padding:.65rem .9rem;text-align:center;letter-spacing:.02em;line-height:1.55}
+.press__teams{display:grid;gap:1.1rem;margin:1.8rem 0}
+@media(min-width:720px){.press__teams{grid-template-columns:1fr 1fr}}
+.team-card{border:1px solid var(--line);border-radius:14px;padding:1.3rem 1.4rem;background:var(--bg-2);box-shadow:var(--card-shadow)}
+.team-card__name{font-family:var(--f-mono);font-weight:700;color:var(--gold-bright);letter-spacing:.05em;font-size:1.02rem;margin-bottom:.55rem}
+.team-card p{font-size:.93rem;line-height:1.78;color:var(--ink-2);margin:0}
+@media(max-width:680px){.press__hero img{aspect-ratio:4/3}}
