@@ -70,6 +70,17 @@
   if (pageEl) { document.body.insertBefore(nav, pageEl); } else { document.body.insertBefore(nav, document.body.firstChild.nextSibling); }
   document.body.appendChild(foot);
 
+  // left-edge social half-wheel dock (all pages)
+  var dock = document.createElement("aside");
+  dock.className = "sdock"; dock.setAttribute("aria-label", "Follow the program");
+  dock.innerHTML =
+    '<span class="sdock__disc" aria-hidden="true"></span>' +
+    '<a class="sdock__item sdock__item--fb" style="--a:-37deg;--r:48px" href="https://www.facebook.com/people/UCLA-Biomedical-Engineering-Quantum-Science-Elite-Program/61591846618744/" target="_blank" rel="noopener" aria-label="Facebook"><span class="sdock__btn"><svg viewBox=\"0 0 24 24\" fill=\"#fff\" aria-hidden=\"true\"><path d=\"M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z\"/></svg></span><span class="sdock__tip">Facebook</span></a>' +
+    '<a class="sdock__item sdock__item--ig" style="--a:0deg;--r:48px" href="https://www.instagram.com/tw.ucla_medquantum" target="_blank" rel="noopener" aria-label="Instagram"><span class="sdock__btn"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#fff\" stroke-width=\"2\" aria-hidden=\"true\"><rect x=\"2\" y=\"2\" width=\"20\" height=\"20\" rx=\"5.2\"/><circle cx=\"12\" cy=\"12\" r=\"4.3\"/><circle cx=\"17.5\" cy=\"6.5\" r=\"1.4\" fill=\"#fff\" stroke=\"none\"/></svg></span><span class="sdock__tip">Instagram</span></a>' +
+    '<a class="sdock__item sdock__item--th" style="--a:37deg;--r:48px" href="https://www.threads.com/@tw.ucla_medquantum" target="_blank" rel="noopener" aria-label="Threads"><span class="sdock__btn"><svg viewBox=\"0 0 24 24\" fill=\"#fff\" aria-hidden=\"true\"><path d=\"M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.781 3.631 2.695 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.09-4.798-.31-.71-.873-1.3-1.634-1.75-.192 1.352-.622 2.446-1.284 3.272-.886 1.102-2.14 1.704-3.73 1.79-1.202.065-2.361-.218-3.259-.801-1.063-.689-1.685-1.74-1.752-2.964-.065-1.19.408-2.285 1.33-3.082.88-.76 2.119-1.207 3.583-1.291a13.853 13.853 0 0 1 3.02.142c-.126-.742-.375-1.332-.75-1.757-.513-.586-1.308-.883-2.359-.89h-.029c-.844 0-1.992.232-2.721 1.32L7.734 7.847c.98-1.454 2.568-2.256 4.478-2.256h.044c3.194.02 5.097 1.975 5.287 5.388.108.046.216.094.324.145 1.517.717 2.688 1.83 3.343 3.286.913 2.031.997 5.343-1.664 8.062-1.878 1.918-4.14 2.786-6.72 2.826Zm-1.442-9.895c-1.204-.05-2.29.27-2.868.756-.535.45-.79 1.02-.756 1.694.048.877.914 1.573 2.05 1.507.99-.054 1.71-.45 2.15-.998.416-.516.7-1.235.85-2.147-.475-.257-1.005-.482-1.426-.812Z\"/></svg></span><span class="sdock__tip">Threads</span></a>';
+  document.body.appendChild(dock);
+  requestAnimationFrame(function(){ requestAnimationFrame(function(){ dock.classList.add("sdock--in"); }); });
+
   // theme toggle
   var tbtn = document.getElementById("theme-switch");
   tbtn.addEventListener("click", function () {
