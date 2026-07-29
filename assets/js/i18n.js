@@ -105,6 +105,8 @@
     "fac.rhuang.r":"加州理工學院 · 理論物理","fac.rhuang.a":"量子資訊與學習理論、量子機器學習、複雜度理論。",
     "fac.kshuang.r":"計畫講座 · 量子與 AI 基礎","fac.kshuang.a":"量子光學運算、細胞影像處理、運算與感測。",
     "fac.poe.r":"UCLA · 腦研究所所長","fac.poe.a":"睡眠與記憶固化、大腦韌性；整合生物學與生理學。",
+    "fac.chiu.r":"加州理工學院 · 神經生物學（Prober 實驗室）","fac.chiu.a":"系統神經科學，聚焦睡眠與清醒：研究神經胜肽與神經迴路如何協調行為，並以光片顯微鏡（light-sheet）觀察。",
+    "fac.wu.r":"加州理工學院 · 化學（Hsieh-Wilson 實驗室）","fac.wu.a":"化學醣生物學：發展單細胞方法的生物正交標記化學，以及肝素硫酸（heparan sulfate）的合成。",
     "fac.dlee.r":"UCLA · 神經行為遺傳學／精神醫學","fac.dlee.a":"神經退化、阿茲海默症與亨丁頓舞蹈症、神經發炎。",
     "fac.tseng.r":"UCLA · David Geffen 醫學院","fac.tseng.a":"液態切片、NanoVelcro 循環腫瘤細胞檢測、奈米診斷技術。",
     "fac.lu.r":"加州大學聖地牙哥分校 · 分子生物學","fac.lu.a":"免疫學、調節型 T 細胞、免疫耐受、免疫調控 microRNA。",
