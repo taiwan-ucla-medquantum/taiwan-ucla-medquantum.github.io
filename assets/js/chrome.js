@@ -38,7 +38,7 @@
       '<p class="foot__line mono">2026.07.06 – 09.03 · 9 weeks · 60 days · UCLA Westwood</p>' +
       '<div>' +
         '<p class="foot__line" data-i18n="foot.org1"><span class="mono">Organized by</span> Asia University</p>' +
-        '<p class="foot__line" data-i18n="foot.org2"><span class="mono">Partner</span> TAITA-East</p>' +
+        '<p class="foot__line" data-i18n="foot.org2"><span class="mono">Partner</span> TAITA SoCal</p>' +
         '<p class="foot__line" data-i18n="foot.org3"><span class="mono">Academic partner</span> UCLA Center for Quantum Science &amp; Engineering (CQSE)</p>' +
         '<p class="foot__line" data-i18n="foot.org4"><span class="mono">Co-organized by</span> UCLA Samueli · David Geffen School of Medicine · UCLA Joe C. Wen School of Nursing</p>' +
         '<p class="foot__line" data-i18n="foot.initiative"><span class="mono">Under</span> Taiwan Global Pathfinders Initiative（青年百億海外圓夢基金計畫）</p>' +
@@ -46,7 +46,7 @@
       '<div class="logos" aria-label="Institution logos">' +
         '<img src="assets/img/moe.png" alt="Ministry of Education, Taiwan" loading="lazy">' +
         '<img src="assets/img/asia-university.png" alt="Asia University" loading="lazy">' +
-        '<img class="logo-taita" src="assets/img/TAITA.png" alt="TAITA-East · Taiwanese American Industrial Technology Association" loading="lazy">' +
+        '<img class="logo-taita" src="assets/img/TAITA.png" alt="TAITA SoCal · Taiwanese American Industrial Technology Association" loading="lazy">' +
         '<img src="assets/img/ucla-wordmark.svg" alt="UCLA" loading="lazy">' +
         '<img src="assets/img/ucla-cqse.png" alt="UCLA CQSE" loading="lazy">' +
         '<img src="assets/img/ucla-samueli.svg" alt="UCLA Samueli School of Engineering" loading="lazy">' +

@@ -8,7 +8,7 @@
     "rail.from":"臺灣","field.med":"醫學","field.q":"量子","counter.label":"次瀏覽","endorse.label":"主辦・指導單位",
 
     "foot.org1":"<span class=\"mono\">承辦單位</span> 亞洲大學",
-    "foot.org2":"<span class=\"mono\">合作單位</span> 美東台美產業科技協會 TAITA-East",
+    "foot.org2":"<span class=\"mono\">合作單位</span> 南加州台美產業科技協會 TAITA SoCal",
     "foot.org3":"<span class=\"mono\">學術合作單位</span> UCLA 量子科學與工程中心（CQSE）",
     "foot.org4":"<span class=\"mono\">共同主辦</span> UCLA Samueli 工學院 · David Geffen 醫學院 · UCLA Joe C. Wen 護理學院",
     "foot.initiative":"<span class=\"mono\">所屬計畫</span> 教育部青年百億海外圓夢基金計畫 · 海外翱翔組",
@@ -42,7 +42,7 @@
     /* program */
     "brief.title":"在醫學與量子交界的田野研究。",
     "brief.lede":"九位臺灣學員在 UCLA 度過六十天（2026 年 7 月 6 日至 9 月 3 日），閱讀生醫工程與量子科學交會的前沿。",
-    "brief.p2":"本計畫屬臺灣<strong>青年百億海外圓夢基金計畫</strong>（教育部青年發展署 · 海外翱翔組）。由<strong>亞洲大學</strong>承辦、<strong>美東台美產業科技協會（TAITA-East）</strong>合作，<strong>UCLA 量子科學與工程中心（CQSE）</strong>學術主辦，並與 UCLA Samueli 工學院、David Geffen 醫學院及 UCLA Joe C. Wen 護理學院共同主辦。",
+    "brief.p2":"本計畫屬臺灣<strong>青年百億海外圓夢基金計畫</strong>（教育部青年發展署 · 海外翱翔組）。由<strong>亞洲大學</strong>承辦、<strong>南加州台美產業科技協會（TAITA SoCal）</strong>合作，<strong>UCLA 量子科學與工程中心（CQSE）</strong>學術主辦，並與 UCLA Samueli 工學院、David Geffen 醫學院及 UCLA Joe C. Wen 護理學院共同主辦。",
     "brief.p3":"計畫由 UCLA 傑出教授、CQSE 主任之一<strong>王康隆教授</strong>領銜。團隊刻意精簡為九人，讓每位學員都上台報告、提問、實作，而非旁觀。",
     "pub.label":"計畫支持單位",
     "themes.title":"四個領域，誠實以對。",
