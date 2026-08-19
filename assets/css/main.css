@@ -586,3 +586,21 @@ body[data-lang="zh"] .pullquote p{font-family:var(--f-tc);font-weight:700}
 @media (prefers-reduced-motion:no-preference){.srail--in .srail__spark{animation:srailSpark 6.5s var(--ease) 1.8s infinite}}
 @media (prefers-reduced-motion:reduce){.srail{opacity:1;transform:translate(0,-50%);transition:none}.srail__line{transform:translateX(-50%) scaleY(1);transition:none}.srail__node{animation:none}.srail__dot{animation:none}.srail__spark{display:none}}
 @media (max-width:1199px){.srail{display:none}}
+
+/* News · in-the-media coverage list */
+.medialist{display:flex;flex-direction:column;gap:.85rem;margin-top:.3rem}
+.mediacard{display:flex;gap:1rem;align-items:stretch;border:1px solid var(--line);border-radius:12px;padding:.85rem .95rem;background:var(--bg-2);text-decoration:none;transition:border-color .25s var(--ease),transform .25s var(--ease),box-shadow .25s var(--ease)}
+.mediacard:hover{border-color:color-mix(in oklab,var(--gold-bright) 45%,var(--line));transform:translateY(-2px);box-shadow:0 12px 28px -14px rgba(6,11,27,.5)}
+.mediacard__thumb{position:relative;flex:0 0 136px;border-radius:8px;overflow:hidden;align-self:center;line-height:0}
+.mediacard__thumb img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+.mediacard__play{position:absolute;inset:0;display:grid;place-items:center;background:linear-gradient(rgba(6,11,27,.08),rgba(6,11,27,.42));transition:background .25s var(--ease)}
+.mediacard__play svg{width:30px;height:30px;color:#fff;filter:drop-shadow(0 2px 6px rgba(0,0,0,.55))}
+.mediacard:hover .mediacard__play{background:linear-gradient(rgba(6,11,27,0),rgba(6,11,27,.2))}
+.mediacard__body{display:flex;flex-direction:column;justify-content:center;gap:.42rem;min-width:0}
+.mediacard__meta{display:flex;align-items:center;gap:.6em;font-size:.66rem;letter-spacing:.05em;color:var(--ink-2)}
+.mediacard__type{color:var(--gold);border:1px solid color-mix(in oklab,var(--gold) 42%,var(--line));border-radius:5px;padding:.12em .5em;text-transform:uppercase;letter-spacing:.11em;font-size:.58rem;flex:none}
+.mediacard__title{font-family:var(--f-tc);font-weight:600;font-size:1.02rem;line-height:1.5;color:var(--heading)}
+.mediacard__foot{font-size:.68rem;color:var(--ink-2);letter-spacing:.04em;display:flex;align-items:center;gap:.5em}
+.mediacard__foot .arr{color:var(--gold);transition:transform .25s var(--ease);display:inline-block}
+.mediacard:hover .mediacard__foot .arr{transform:translateX(3px)}
+@media(max-width:520px){.mediacard{flex-direction:column;gap:.7rem}.mediacard__thumb{flex-basis:auto;width:100%}}
