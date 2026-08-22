@@ -84,6 +84,42 @@
   document.body.appendChild(srail);
   requestAnimationFrame(function(){ requestAnimationFrame(function(){ srail.classList.add("srail--in"); }); });
 
+  // homepage only: a brief "latest news" flash toast nudging visitors to the News page
+  if (page === "home") {
+    var nfSuppressed = false;
+    try {
+      if (sessionStorage.getItem("ucla-nf-shown")) nfSuppressed = true;
+      var nfOff = localStorage.getItem("ucla-nf-off");
+      if (nfOff && Date.now() - (+nfOff) < 6048e5) nfSuppressed = true; // hidden 7 days after an explicit dismiss
+    } catch (e) {}
+    if (!nfSuppressed) {
+      var nf = document.createElement("aside");
+      nf.className = "newsflash"; nf.setAttribute("role", "status"); nf.setAttribute("aria-live", "polite");
+      nf.innerHTML =
+        '<a class="newsflash__link" href="news.html">' +
+          '<span class="newsflash__eyebrow mono"><span class="live-dot" aria-hidden="true"></span><span data-i18n="flash.kicker">Latest news</span></span>' +
+          '<span class="newsflash__title" data-i18n="flash.title">The program was featured on PTS Evening News</span>' +
+          '<span class="newsflash__cta mono"><span data-i18n="flash.cta">Read the story</span> <span class="arr" aria-hidden="true">&rarr;</span></span>' +
+        '</a>' +
+        '<button class="newsflash__close" type="button" aria-label="Dismiss"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>';
+      document.body.appendChild(nf);
+      try { sessionStorage.setItem("ucla-nf-shown", "1"); } catch (e) {}
+      var nfHide;
+      var nfDismiss = function () {
+        clearTimeout(nfHide);
+        nf.classList.remove("newsflash--in"); nf.classList.add("newsflash--out");
+        setTimeout(function () { if (nf.parentNode) nf.parentNode.removeChild(nf); }, 600);
+      };
+      nf.querySelector(".newsflash__close").addEventListener("click", function (e) {
+        e.preventDefault(); e.stopPropagation();
+        try { localStorage.setItem("ucla-nf-off", "" + Date.now()); } catch (x) {}
+        nfDismiss();
+      });
+      nf.addEventListener("mouseenter", function () { clearTimeout(nfHide); });
+      nf.addEventListener("mouseleave", function () { clearTimeout(nfHide); nfHide = setTimeout(nfDismiss, 4000); });
+      setTimeout(function () { nf.classList.add("newsflash--in"); nfHide = setTimeout(nfDismiss, 9000); }, 2200);
+    }
+  }
 
   // theme toggle
   var tbtn = document.getElementById("theme-switch");
