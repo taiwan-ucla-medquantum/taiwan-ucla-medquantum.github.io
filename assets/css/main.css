@@ -622,6 +622,16 @@ body[data-lang="zh"] .pullquote p{font-family:var(--f-tc);font-weight:700}
 .mediahero__sidehd{font-family:var(--f-mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);margin:.15rem 0 .05rem}
 .mediahero__rule{height:1px;background:var(--line);border:0;margin:clamp(1.8rem,4vw,2.8rem) 0 0}
 
+/* in-print newspaper clipping */
+.inprint{margin:1.7rem 0 0}
+.inprint__link{display:block;border-radius:12px;overflow:hidden;border:1px solid var(--line);background:var(--bg-2);line-height:0;transition:border-color .25s var(--ease),transform .25s var(--ease),box-shadow .25s var(--ease)}
+.inprint__link:hover{border-color:color-mix(in oklab,var(--gold-bright) 45%,var(--line));transform:translateY(-2px);box-shadow:0 16px 36px -18px rgba(6,11,27,.5)}
+.inprint__link img{width:100%;height:auto;display:block}
+.inprint__cap{display:flex;align-items:center;gap:.6em .8em;flex-wrap:wrap;margin-top:.7rem;font-size:.68rem;letter-spacing:.04em;color:var(--ink-2)}
+.inprint__tag{flex:none;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);border:1px solid color-mix(in oklab,var(--gold) 42%,var(--line));border-radius:5px;padding:.2em .5em}
+.inprint__hint{color:var(--gold);text-decoration:none;transition:opacity .2s var(--ease)}
+.inprint__hint:hover{opacity:.7}
+
 /* click-to-play YouTube facade */
 .ytlite{position:relative;display:block;width:100%;aspect-ratio:16/9;border-radius:16px;overflow:hidden;cursor:pointer;border:1px solid var(--line);background:#05070f;box-shadow:0 34px 74px -34px rgba(4,10,30,.62);-webkit-tap-highlight-color:transparent}
 .ytlite__thumb{width:100%;height:100%;object-fit:cover;display:block;transition:transform .55s var(--ease),filter .35s var(--ease)}
